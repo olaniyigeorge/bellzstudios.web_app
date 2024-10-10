@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import ScrollDownAnimation from "./_components/scroll";
+import ContactSection from "./_components/contact-section";
+import AboutUsSection from "./_components/about-us-section";
+import DevStoriesSection from "./_components/dev-stories-section";
 
 export default function Landing() {
   const links = [
@@ -23,7 +26,7 @@ export default function Landing() {
   ]
     return (
       <div className="dark:bg-gray-950">
-        <section className=" w-full flex flex-col md:gap-4 lg:gap-6 md:flex-row md:justify-between md:items-center px-2 md:px-20 lg:px-30 h-screen">
+        <section className=" w-full flex flex-col md:gap-4 lg:gap-6 md:flex-row md:justify-between md:items-center px-2 md:px-20 lg:px-30 h-full md:h-screen">
             <div className="w-full p-4 md:w-1/2 flex flex-col gap-2">
                 <div className=" ">
                     <h1 className=" text-white text-xl font-light md:text-2xl">
@@ -71,21 +74,57 @@ export default function Landing() {
             </div>
         </section>
     
-        <section 
-            id="about-us"
-            className="h-screen"
-        >
-          <span className="text-5xl"> About Us</span>
-          
-        </section>
+  
+        <div className="w-full md:h-screen w-full container mx-auto my-6 px-2 md:px-10 lg:px-16">
+          <AboutUsSection />
+        </div>
 
-        <section 
-          id="contact"
-          className="h-screen"
-        >
-        <span className="text-5xl"> Contact</span>
+        <div className="h-screen w-full container mx-auto my-6 px-2 md:px-10 lg:px-16">
+          <ContactSection />
+        </div>
 
-        </section>
+        <div className="h-screen w-full container mx-auto my-6 px-2 md:px-10 lg:px-16">
+          <DevStoriesSection />
+        </div>
+
+  
+        <div className="h-screen w-full container mx-auto border p">
+          <section 
+              id="about-us"
+              className="w-full border "
+          >
+            <div className="">
+              <h1 id="hero-title" className="text-5xl"> About Us</h1>
+            </div>
+            
+            
+          </section>
+        </div>
+
+        <div className="h-screen w-full container mx-auto p-2 md:p-10 lg:p-16">
+          <section 
+              id="contact"
+              className="w-full borde flex flex-col gap-2"
+          >
+            <section className="w-full flex flex-col gap-3">
+                    
+            </section>
+            
+            <section className="w-full flex items-center justify-center container mx-auto px-2 md:px-10 lg:px-16">
+               <div className="rounded-lg w-[70%] bg-white flex justify-between items-center ">
+                    {["Twitter", "Email", "LinkedIn"].map((social) => (
+                      <button key={social} className="p-2 w-full flex justify-center hover:bg-purple-500 hover:text-white">
+                          {social}
+                      </button>
+                    ))}
+               </div>
+
+            </section>
+            
+          </section>
+        </div>
+
+        
 
         <section 
           id="note"
@@ -95,13 +134,7 @@ export default function Landing() {
 
         </section>
 
-        <section 
-          id="dev-stories"
-          className="h-screen"
-        >
-        <span className="text-5xl"> Stories</span>
 
-        </section>
 
 
       </div>
