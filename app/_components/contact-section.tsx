@@ -26,7 +26,6 @@ export default function ContactSection() {
             'social_logo': "linkedin_pfp.jpeg"
         },
     ]
-    const [aci, setAci] = useState<number>(0)
     const [activeSocial, setActiveSocial] = useState<iSocial>(contacts[0])
     return (
         <section 

@@ -1,34 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image"
 import Link from "next/link";
 
-type iSocial ={
-    name: string;
-    url: string;
-    social_logo: string;
-}
+
 export default function DevStoriesSection() {
-    const contacts: iSocial[] = [
-        {
-            "name": "Twitter",
-            "url": "https://x.com/imoctborn",
-            'social_logo': "my-twitter.png"
-        },
-        {
-            "name": "Email",
-            "url": "olaniyigeorge77@gmail",
-            'social_logo': "memoji.png"
-        },
-        {
-            "name": "LinkedIn",
-            "url": "https://linkedin.com/abelejolaniyi",
-            'social_logo': "linkedin_pfp.jpeg"
-        },
-    ]
-    const [aci, setAci] = useState<number>(0)
-    const [activeSocial, setActiveSocial] = useState<iSocial>(contacts[0])
+
     return (
         <section 
             id="dev-stories"
@@ -51,8 +28,8 @@ export default function DevStoriesSection() {
 
                 <div className="w-full flex justify-center transform duration-900">
                     <Image
-                        src={`/assets/images/socials/${activeSocial.social_logo}`}
-                        alt={`Olaniyi George's ${activeSocial.name} page`} 
+                        src={`/assets/images/vision.png`}
+                        alt={`Dev Stories`} 
                         className="w-auto h-[500px] rounded-xl"
                         height={200}
                         width={200}
