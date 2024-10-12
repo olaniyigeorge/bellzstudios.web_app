@@ -60,6 +60,10 @@ const config: Config = {
             "0%": { opacity: "0.2" },
             "100%": { opacity: "1" },
         },
+        rollIn: {
+          from: { transform: "rotate(90deg)" },
+          to: { transform: "rotate(0deg)" },
+        },
         wiggle: {
             "0%, 100%": { transform: "rotate(-5deg)" },
             "50%": { transform: "rotate(5deg)" },
@@ -73,7 +77,7 @@ const config: Config = {
             to: { transform: "scale(100%)" },
         },
         slideRtL: {
-            from: { transform: "translateX(25%)" },
+            from: { transform: "translateX(50%)" },
             to: { transform: "translateX(0%)" },
         },
         slideLtR: {
@@ -100,6 +104,7 @@ const config: Config = {
           slideTtB: "slideTtB 1s ease-in-out ",
           slideBtT: "slideBtT 1s ease-in-out ",
           scaleUp: "scaleUp 1s ease-in-out ",
+          rollIn: "rollIn 1.5s ease-in-out "
       },
     },
   },

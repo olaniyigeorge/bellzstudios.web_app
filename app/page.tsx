@@ -58,14 +58,14 @@ import NotesSection from "./_components/notes-section";
                   </div>
               </div>
 
-              <div className="w-full animate-slideBtT md:animate-[slideRtL_1.5s_ease-in-out] p-4 md:w-1/2  flex justify-center">
+              <div className="w-full animate-slideRtL md:animate-[slideRtL_1.5s_ease-in-out] p-4 md:w-1/2  flex justify-center">
                   <Link
                       href=""
                       className="text-5xl z-10 mb-5 md:mb-0  font-bold w-full flex justify-center h-auto"
                   >
                       <Image
                           src="/assets/images/memoji.png"
-                          className="border-4 border-purple-600 w-full h-full rounded-full"
+                          className="border-4 flex items-center justify-center animate-rollIn border-purple-600 w-full h-full rounded-full"
                           height={200}
                           width={200}
                           priority={true}
@@ -107,11 +107,6 @@ import NotesSection from "./_components/notes-section";
           <div className="h-screen w-full container mx-auto mt-10 px-2 md:px-10 lg:px-16">
             <NotesSection />
           </div>
-
-
-
-
-
         </div>
       );
   }
