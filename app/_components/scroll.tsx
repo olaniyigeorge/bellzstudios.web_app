@@ -31,7 +31,7 @@ export default function ScrollDownAnimation(props: ScrollDownAnimationProps) {
     <> 
         <button 
           onClick={scrollDown} 
-          className=" object-contain p-2 md:p-1 w-full lg:p-2 rounded-md   transition ease-in-out flex items-center justify-center px-5 hover:bg-purple-600 hover:text-white  border"
+          className="animate-fadeIn object-contain p-2 md:p-1 w-full lg:p-2 rounded-md   transition ease-in-out flex items-center justify-center px-5 hover:bg-purple-600 hover:text-white dark:text-slate-300 border"
           >
           {child}
         </button>
