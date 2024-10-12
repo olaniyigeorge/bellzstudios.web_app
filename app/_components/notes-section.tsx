@@ -16,7 +16,7 @@ export default function NotesSection() {
                 <section className="w-full flex flex-col  gap-4">
                     <span className="text-xl text- md:text-2xl text-slate-200 text-center md:text-start font-medium w-full my-3 ">
                         This is a journal for me where I think out loud. Write about my thought 
-                        process when I'm brainstorming, leave notes about what I would build next 
+                        process when I&apos;m brainstorming, leave notes about what I would build next 
                         and how I would go about it.
 
                     </span>

@@ -92,7 +92,7 @@ import NotesSection from "./_components/notes-section";
           </section>
       
     
-          <div className="w-full md:h-screen w-full container mx-auto my-10 px-2 md:px-10 lg:px-16">
+          <div className="w-full md:h-screen  container mx-auto my-10 px-2 md:px-10 lg:px-16">
             <AboutUsSection />
           </div>
 
