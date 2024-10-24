@@ -11,6 +11,7 @@ export interface iDevStory{
     description: string;
     open_source_url: string;
     product_url: string;
+    status: "live" | "dev" | "dropped";
     inspirations: Inspiration[]
 }
 
@@ -19,13 +20,17 @@ export default function DevStoryCard(data: iDevStory) {
 
 
     return ( 
-        <div className="w-full p-3 gap-2 flex flex-col md:p-6 rounded-md shadow-md bg-gray-900">
+        <div className="w-full p-3 gap-2 flex flex-col md:p-6 rounded-lg shadow-md bg-gray-900">
             
             <div className="flex items-center justify-between ">
                 <h2 className="text-bold text-2xl">
                     <Link href={`/dev-stories/${data.id}`}>{data.title}</Link>
                 </h2>
-                <Link href={data.product_url} target="_blank" className="w-4 h-4 animate-pulse bg-green-500 rounded-full">
+                <Link href={data.product_url} target="_blank" className={`w-4 h-4 animate-pulse ${
+                        data.status === 'live' ? 'bg-green-500' :
+                        data.status === 'dev' ? 'bg-orange-500' :
+                        data.status === 'dropped' ? 'bg-red-700' : ''
+                        } rounded-full`}>
                     {/* <Image
                         src="/assets/images/notes.png"
                         className="object-contain rounded-full"

@@ -33,6 +33,9 @@ export default function DevStoryPage({ params }: { params: { id: string } }) {
         if (response.ok) {
             console.log(res);
             toast.success("Thanks for joining our waitlist")
+        } else if (response.status == 401) {
+            console.error(res);
+            toast.error("You've added this email to our list.")
         } else {
             console.error(res);
             toast.error("An error occured while attempting to join our waitlist")
@@ -46,15 +49,16 @@ export default function DevStoryPage({ params }: { params: { id: string } }) {
                 <h1 className="text-3xl md:text-5xl font-bold">{story.title}</h1>
                 <p className="text-xs w-fit rounded-full p-1 border border-purple-500">{story.tag}</p>
             </span>
-            <p className="text-sm">{story.description}</p>
-            <form onSubmit={joinWaitlist} className="flex flex-col items-center gap-3 justify-center">
+            <p className="text-md md:text-lg text-pretty">{story.description}</p>
+            <form onSubmit={joinWaitlist} className="my-3 flex flex-col items-center gap-3 md:gap-6 justify-center">
                 <input
                     type="email"
                     name="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-[90%] md:w-[70%] lg:w-[60] text-white bg-transparent border outline-none px-4 py-2 rounded-full"
+                    placeholder="your@email.com"
+                    className="w-[90%] md:w-[70%] lg:w-[60] shadow shadow-purple-500 border-purple-500 text-white bg-transparent border outline-none px-4 py-2 rounded-full"
                 />
                 <span className="flex items-center gap-3">
                     <span className="p-2 gap-2 flex items-center  rounded-md italics">
@@ -73,18 +77,18 @@ export default function DevStoryPage({ params }: { params: { id: string } }) {
                             ))}
                         </select>
                     </span>
-                    <button className="p-2 border hover:text-purple-200 hover:bg-purple-950 border-purple-600 rounded-md">
+                    <button className="p-2 border transition-all duration-500 ease-in-out hover:text-purple-200 hover:bg-purple-950 hover:animate-out rounded-md">
                         Join Waitlist
                     </button>
                 </span>
             </form>
             
-            <section className="flex flex-col items-center">
-                <h1 className="text-3xl font-medium">
+            <section className="flex flex-col mt-4 items-center">
+                <h1 className="text-3xl font-medium py-2">
                     Join the conversion on 
                     <span className="text-purple-600">{" "}{story.title}</span> 
                 </h1>
-                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 lg:gap-8 p-2">
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8 p-2">
                     {story.inspirations.map((tweet: Inspiration) => (
                         <TwitterTweetEmbed key={tweet.tweetId} tweetId={tweet.tweetId} />
                     ))}
