@@ -17,6 +17,9 @@ export default function DevStoryPage({ params }: { params: { id: string } }) {
 
     async function joinWaitlist(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
+         // Default to "friends_family" if no location is selected
+         const location = selectedLocation || "friends_family";
+
 
         const response = await fetch("/api/waitlist", {
             method: "POST",
@@ -25,7 +28,7 @@ export default function DevStoryPage({ params }: { params: { id: string } }) {
             },
             body: JSON.stringify({
                 email,
-                discovery_location: selectedLocation,
+                discovery_location: location,
             }),
         });
 
@@ -64,15 +67,14 @@ export default function DevStoryPage({ params }: { params: { id: string } }) {
                     <span className="p-2 gap-2 flex items-center  rounded-md italics">
                         <select
                             className="flex gap-2 border-none ring-0 outline-none bg-transparent justify-center text-purple-600"
-                            defaultValue="friends_family"
                             onChange={(e) => setSelectedLocation(e.target.value)}
                         >
-                            <option className="bg-transparent  text-slate-900" value="friends_family">
+                            <option className="bg-transparent  text-slate-900" value="friends_family" >
                                 How did you hear about us?
                             </option>
                             {DISCOVERY_LOCATION.map((location: string) => (
                                 <option key={location} className="bg-transparent   text-slate-900" value={location}>
-                                    {location}
+                                    {location.toUpperCase().replace("_", " ")}
                                 </option>
                             ))}
                         </select>
