@@ -26,8 +26,8 @@ import NotesSection from "./_components/notes-section";
       },
     ]
       return (
-        <div className="dark:bg-gray-950">
-          <section className=" w-full flex flex-col md:gap-4 lg:gap-6 md:flex-row md:justify-between md:items-center px-2 md:px-20 lg:px-30 h-full md:h-screen">
+        <div className="w-full dark:bg-gray-950">
+          <section className="relative w-full border-gray-900 shadow shadow-gray-950- border object-contain rounded-[80px] z-70 flex flex-col md:gap-4 lg:gap-6 md:flex-row md:justify-between md:items-center px-2 md:px-20 lg:px-30 h-full md:h-screen">
               <div className="w-full p-4 md:w-1/2 flex flex-col gap-2">
                   <div className="z-10 mt-5 ">
                       <h1 className=" text-white text-xl font-light md:text-2xl">
@@ -75,7 +75,7 @@ import NotesSection from "./_components/notes-section";
               </div>
               <Image
                   src="/assets/images/curlyVectorTop.svg"
-                  className="absolute top-0 left-0"
+                  className="absolute object-contain top-0 left-0"
                   height={200}
                   width={200}
                   priority={true}
@@ -83,7 +83,7 @@ import NotesSection from "./_components/notes-section";
               />
               <Image
                   src="/assets/images/curlyVectorBottom.svg"
-                  className=" absolute  -bottom-16 md:-bottom-1 right-0 "
+                  className=" absolute bottom-0 right-0 "
                   height={300}
                   width={300}
                   priority={true}
