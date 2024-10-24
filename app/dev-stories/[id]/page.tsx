@@ -1,6 +1,6 @@
 "use client";
+import { DEV_STORIES, DISCOVERY_LOCATION } from "@/utils/dev-stories";
 import { FormEvent, useState } from "react";
-import { DEV_STORIES, DISCOVERY_LOCATION } from "../page";
 import { toast } from "react-toastify";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
