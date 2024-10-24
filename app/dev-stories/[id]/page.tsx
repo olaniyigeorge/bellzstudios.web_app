@@ -35,7 +35,7 @@ export default function DevStoryPage({ params }: { params: { id: string } }) {
             toast.success("Thanks for joining our waitlist")
         } else if (response.status == 401) {
             console.error(res);
-            toast.error("You've added this email to our list.")
+            toast.success("You've added this email to our list.")
         } else {
             console.error(res);
             toast.error("An error occured while attempting to join our waitlist")
