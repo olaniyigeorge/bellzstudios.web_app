@@ -1,4 +1,5 @@
 "use client";
+import { Inspiration } from "@/app/_components/dev-story-card";
 import { DEV_STORIES, DISCOVERY_LOCATION } from "@/utils/dev-stories";
 import { FormEvent, useState } from "react";
 import { toast } from "react-toastify";
@@ -65,7 +66,7 @@ export default function DevStoryPage({ params }: { params: { id: string } }) {
                             <option className="bg-transparent  text-slate-900" value="">
                                 How did you hear about us?
                             </option>
-                            {DISCOVERY_LOCATION.map((location) => (
+                            {DISCOVERY_LOCATION.map((location: string) => (
                                 <option key={location} className="bg-transparent   text-slate-900" value={location}>
                                     {location}
                                 </option>
@@ -84,7 +85,7 @@ export default function DevStoryPage({ params }: { params: { id: string } }) {
                     <span className="text-purple-600">{" "}{story.title}</span> 
                 </h1>
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 lg:gap-8 p-2">
-                    {story.inspirations.map((tweet) => (
+                    {story.inspirations.map((tweet: Inspiration) => (
                         <TwitterTweetEmbed key={tweet.tweetId} tweetId={tweet.tweetId} />
                     ))}
                 </div>

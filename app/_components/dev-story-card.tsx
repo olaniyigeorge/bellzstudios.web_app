@@ -1,7 +1,7 @@
 import Link from "next/link";
 // import Image from "next/image"
 
-type Inspiration = {
+export type Inspiration = {
     tweetId: string;
 };
 export interface iDevStory{
