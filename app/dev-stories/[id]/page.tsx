@@ -64,10 +64,10 @@ export default function DevStoryPage({ params }: { params: { id: string } }) {
                     <span className="p-2 gap-2 flex items-center  rounded-md italics">
                         <select
                             className="flex gap-2 border-none ring-0 outline-none bg-transparent justify-center text-purple-600"
-                            defaultValue=""
+                            defaultValue="friends_family"
                             onChange={(e) => setSelectedLocation(e.target.value)}
                         >
-                            <option className="bg-transparent  text-slate-900" value="">
+                            <option className="bg-transparent  text-slate-900" value="friends_family">
                                 How did you hear about us?
                             </option>
                             {DISCOVERY_LOCATION.map((location: string) => (
