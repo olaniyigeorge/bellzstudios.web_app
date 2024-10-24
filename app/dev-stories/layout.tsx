@@ -1,5 +1,4 @@
 import React from "react"
-import DevStoryCard, { iDevStory } from "../_components/dev-story-card"
 import Link from "next/link"
 
 
