@@ -49,7 +49,8 @@ export const DEV_STORIES: iDevStory[] = [
     },
     
 ]
-
+console.log(DEV_STORIES)
+console.log(DISCOVERY_LOCATION)
 export default function Note() {
 
     return (
