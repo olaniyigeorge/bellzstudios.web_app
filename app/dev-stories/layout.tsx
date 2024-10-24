@@ -13,7 +13,9 @@ export default function DevStorysLayout({children}: {children: React.ReactNode})
                 <h1 className="font-extrabold text-purple-600 shadow-lg text-4xl">
                     <Link href="/">BellzStudios</Link>
                 </h1>
-                <h1 className="font-medium">...dev stories</h1>
+                <h1 className="font-medium">
+                    <Link href="/dev-stories">...dev stories</Link>
+                </h1>
             </nav>
 
             {children} 
