@@ -60,7 +60,7 @@ export default function RootLayout({
         //     opensans.className
         // )}
         className={
-          `min-h-screen bg-[#F9FAFB] text-[#18181b] font-opensans antialiased max-w-[1440px] mx-auto",
+          `min-h-screen bg-[#F9FAFB] text-[#18181b] dark:bg-black font-opensans antialiased max-w-[1440px] mx-auto",
           ${opensans.className}`}
       >
         <ToastContainer />

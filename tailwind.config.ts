@@ -61,13 +61,17 @@ const config: Config = {
             "100%": { opacity: "1" },
         },
         rollIn: {
-          from: { transform: "rotate(90deg)" },
-          to: { transform: "rotate(0deg)" },
+          '0%': { transform: 'translateX(18%) rotate(70deg) ' },
+          '100%': { transform: 'translateX(0) rotate(0deg) ' },
         },
         wiggle: {
             "0%, 100%": { transform: "rotate(-5deg)" },
             "50%": { transform: "rotate(5deg)" },
         },
+        swivvleV: {
+          "0%, 100%": { transform: "translateY(-10%)" },
+          "50%": { transform: "translateY(10%)" },
+      },
         swivvle: {
             "0%, 100%": { transform: "translateX(-10%)" },
             "50%": { transform: "translate(10%)" },
@@ -98,6 +102,7 @@ const config: Config = {
           "accordion-up": "accordion-up 0.2s ease-out",
           fadeIn: "fadeIn 1.5s ease-in-out",
           wiggle: "wiggle 1s ease-in infinite",
+          swivvleV: "swivvleV 1.5s ease-in-out infinite",
           swivvle: "swivvle 1.5s ease-in-out infinite",
           slideRtL: "slideRtL 1s ease-in-out ",
           slideLtR: "slideLtR 1s ease-in-out ",

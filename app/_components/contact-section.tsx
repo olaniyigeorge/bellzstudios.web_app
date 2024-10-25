@@ -13,7 +13,7 @@
                 {
                     "name": "Twitter",
                     "url": "https://x.com/imoctborn",
-                    'social_logo': "my-twitter.png"
+                    'social_logo': "twit.png"
                 },
                 {
                     "name": "Email",
@@ -52,9 +52,9 @@
                                 <Image
                                     src={`/assets/images/socials/${activeSocial.social_logo}`}
                                     alt={`Olaniyi George's ${activeSocial.name} page`} 
-                                    className="w-[500px] h-[500px] object-cover rounded-3xl"
-                                    height={200}
-                                    width={200}
+                                    className="w-[500px] h-auto max-h-[500px] object-fill rounded-3xl"
+                                    height={400}
+                                    width={400}
                                     priority={true}
                                 />
                             </a>
