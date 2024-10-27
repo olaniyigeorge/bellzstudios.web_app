@@ -1,5 +1,5 @@
 import { DEV_STORIES } from "@/utils/dev-stories"
-import DevStoryCard, { iDevStory } from "../_components/dev-story-card"
+import DevStoryCard, { iDevStory } from "../../components/dev-story-card"
 
 
 

@@ -1,10 +1,10 @@
     import Link from "next/link";
     import Image from "next/image";
-    import ScrollDownAnimation from "./_components/scroll";
-    import ContactSection from "./_components/contact-section";
-    import AboutUsSection from "./_components/about-us-section";
-    import DevStoriesSection from "./_components/dev-stories-section";
-    import NotesSection from "./_components/notes-section";
+    import ScrollDownAnimation from "../components/scroll";
+    import ContactSection from "../components/contact-section";
+    import AboutUsSection from "../components/about-us-section";
+    import DevStoriesSection from "../components/dev-stories-section";
+    import NotesSection from "../components/notes-section";
 
     export default function Landing() {
       const links = [
@@ -35,7 +35,7 @@
                                 Hi there! This is
                             </h1>
                             <Link
-                                href=""
+                                href="/home"
                                 className="font-extrabold text-purple-600 text-7xl w-full text-start "
                             >
                                 Bellz Studio

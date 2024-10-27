@@ -21,9 +21,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'primary-orange': '#FF5722',
       },
       fontFamily: {
         opensans: ["var(--opensans)", ...fontFamily.sans],
+        satoshi: ['Satoshi', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       screens: {
           xs: "375px",

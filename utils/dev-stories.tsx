@@ -1,4 +1,4 @@
-import { iDevStory } from "@/app/_components/dev-story-card"
+import { iDevStory } from "@/components/dev-story-card"
 
 export const DISCOVERY_LOCATION: string[] = [
     'telegram_bot',

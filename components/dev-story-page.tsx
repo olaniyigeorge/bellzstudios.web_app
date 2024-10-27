@@ -1,5 +1,5 @@
 "use client";
-import { Inspiration } from "@/app/_components/dev-story-card";
+import { Inspiration } from "@/components/dev-story-card";
 import { DEV_STORIES, DISCOVERY_LOCATION } from "@/utils/dev-stories";
 import { FormEvent, useState } from "react";
 import { toast } from "react-toastify";
