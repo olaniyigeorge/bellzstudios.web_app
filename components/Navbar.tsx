@@ -23,7 +23,7 @@ export default async function Navbar() {
             {/* Modile Nav */}
             <span className="flex sm:hidden gap-2 items-center">
                 {session?.user ?
-                    <Link href='/profile'>
+                    <Link href='/home/profile'>
                     <Image
                       src={session!.user.image || '/assets/images/logo.svg'}
                       width={37}
@@ -44,7 +44,7 @@ export default async function Navbar() {
                 </Link>
                 <Auth />  
                 {session?.user ?
-                    <Link href='/profile'>
+                    <Link href='/home/profile'>
                     <Image
                       src={session!.user.image || '/assets/images/logo.svg'}
                       width={37}

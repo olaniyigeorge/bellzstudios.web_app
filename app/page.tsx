@@ -49,7 +49,7 @@ export default async  function Landing() {
                               <> Hi there! This is </>
                             }
                         </h1>
-                        <h2 className="font-extrabold text-purple-600 text-5xl">
+                        <h2 className="font-extrabold text-purple-600 text-[60px]">
                             <a href="/home" className="w-full text-start ">Bellz Studio </a> 
                         </h2>
                     </div>

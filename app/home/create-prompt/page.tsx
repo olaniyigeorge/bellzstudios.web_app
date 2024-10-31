@@ -1,12 +1,12 @@
 "use client"
 import { useEffect, useState } from "react"
 import Form from "@/components/Form"
-import { auth } from "@/utils/auth";
-import router from "next/router";
 import { toast } from "react-toastify";
 import { getUser } from "./action";
+import { useRouter } from "next/navigation";
 
 const CreatePromptPage = () => {
+    const router = useRouter();
     const [user, setUser] = useState<any>()
     const [submitting, setSubmitting] = useState(false)
     const [post, setPost] = useState({
@@ -46,10 +46,8 @@ const CreatePromptPage = () => {
 
             const res = response.json()
             if (response.ok) {
-                // router.push('/')
-                console.log("Success", res)
-
-                toast.success("Prompt created")
+               toast.success("Prompt created")
+               router.push('/home')
             } else {
                 toast.error(`Error ${response.status} while creating prompt`)
             }
