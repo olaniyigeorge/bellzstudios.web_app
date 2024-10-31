@@ -5,9 +5,10 @@ import ContactSection from "../components/contact-section";
 import AboutUsSection from "../components/about-us-section";
 import DevStoriesSection from "../components/dev-stories-section";
 import NotesSection from "../components/notes-section";
+import { auth } from "@/utils/auth";
 
-export default function Landing() {
-  const isAuthd = false
+export default async  function Landing() {
+  const session = await auth()
   const user = {
     first_name: "Olaniyi",
     last_name: "George"
@@ -42,14 +43,14 @@ export default function Landing() {
                         <h1 
                             className="font-medium text-gray-200 text-xl md:text-2xl"
                             >
-                            {isAuthd ? 
-                              <> Hi <span className="text-purple-700"> {user.first_name}</span>! Welcome to </>
+                            {session?.user ? 
+                              <> Hi <span className="text-purple-700"> {session?.user.name}</span>! Welcome to </>
                             : 
                               <> Hi there! This is </>
                             }
                         </h1>
                         <h2 className="font-extrabold text-purple-600 text-5xl">
-                            <a href="" className="w-full text-start ">Bellz Studio </a> 
+                            <a href="/home" className="w-full text-start ">Bellz Studio </a> 
                         </h2>
                     </div>
                     

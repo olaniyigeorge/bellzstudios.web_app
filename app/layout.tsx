@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Provider from "@/components/Provider";
+import { auth } from "@/utils/auth";
   
 
 
@@ -47,11 +49,13 @@ export const metadata: Metadata = {
 },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth()
+
   return (
     <html lang="en">
       <body
@@ -60,11 +64,13 @@ export default function RootLayout({
         //     opensans.className
         // )}
         className={
-          `min-h-screen bg-[#F9FAFB] text-[#18181b] dark:bg-black font-opensans antialiased max-w-[1440px] mx-auto",
+          `min-h-screen bg-slate-100 text-[#18181b] dark:bg-black font-opensans antialiased max-w-[1440px] mx-auto",
           ${opensans.className}`}
       >
-        <ToastContainer />
-        {children}
+        <Provider session={session}>
+          <ToastContainer />
+          {children}
+        </Provider>
       </body>
     </html>
   );

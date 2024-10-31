@@ -1,55 +1,52 @@
 
 import NextAuth from "next-auth"
 import Google from "next-auth/providers/google"
-import { AuthenticatedUser} from "@/types"
+import { connectToDB } from "./database";
+import User from "@/models/user"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [Google],
   callbacks: {
-    async signIn({user: AuthenticatedUser, account, profile}){
-      if (account?.provider == "google") {
-        const { access_token, id_token} = account
-        const url = "http://localhost:8000/api/accounts/auth/google/"
-        console.log("access_token", access_token)
-        console.log("id_token", id_token)
-        try {
-          const response = await fetch(url, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              access_token: access_token,
-              id_token: id_token
-            })
-          })
-          // const { access_token } = response.data;
-          // user.accessToken = access_token
+    async signIn({profile}) {
+      try {
+        console.log("....connecting to db")
+        await connectToDB
 
-          return true
-        } catch(error) {
-          return false
+        // check if user exists
+        const userExists = await User.findOne({
+          email: profile?.email
+        })
+
+        // if not, create new user
+        if (!userExists) {
+          await User.create( {
+            email: profile?.email,
+            username: profile?.name?.replace(" ", ""),
+            image: profile?.picture
+          })
         }
+
+        return true
+      } catch(error) {
+        console.log(error)
+        return false
       }
-      return true
     },
-    async jwt({ token, user: AuthenticatedUser, account }) {
-      // if (user) {
-      //   const { accessToken } = user
-      //   token.accessToken = accessToken
-      // }
-      // console.log("Account", account)
-      // // if (account) {
-      // //   token.accessToken = account.access_token; // Save access token
-      // // }
-      return token;
-    },
-    async session({ session, user: AuthenticatedUser }) {
-      //session.accessToken = user.accessToken
-      //console.log("Session", session)
-      // session.accessToken = token.accessToken; // Add access token to session
-      return session;
-    },
+    async session({session}) {
+      const sessionUser = await User.findOne({
+        email: session.user.email
+      })
+      session.user.id = sessionUser._id.toSring();
+
+      return session
+    }
   }
 })
 
+
+export const providers = [
+  {
+    id: "google",
+    name: "Google",
+  },
+];

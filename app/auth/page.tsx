@@ -1,4 +1,4 @@
-import SignIn from "@/components/sign-in";
+import Auth from "@/components/sign-in";
 import { auth, signIn } from "@/utils/auth";
 
 
@@ -32,7 +32,7 @@ export default async function AuthPage() {
                 
                 <span className="w-full border-t border-white my-4"> </span>
 
-                <SignIn />
+                <Auth />
             </div>
         </main>
     )

@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 let isConnected = false; // track the connection
 
 export const connectToDB = async () => {
+  console.log("Mongoose connecting to \n", process.env.MONGODB_URI)
   mongoose.set('strictQuery', true);
 
   if(isConnected) {

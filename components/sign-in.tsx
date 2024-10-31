@@ -1,6 +1,6 @@
 import { auth, signIn, signOut } from "@/utils/auth"
  
-export default async function AuthPage() {
+export default async function Auth() {
   const session = await auth() 
   // console.log(session)
   const user = session?.user
@@ -12,7 +12,7 @@ export default async function AuthPage() {
           await signOut()
         }}
       >
-        <button className="p-2 btn_black border text-white rounded-3xl" 
+        <button className="outline_btn" 
         type="submit">Sign Out</button>
       </form>
     ) 
@@ -24,7 +24,7 @@ export default async function AuthPage() {
           await signIn("google")
         }}
       >
-        <button className="p-2 flex gap-2 items-center border text-sm text-white rounded-3xl" 
+        <button className="black_btn flex gap-2" 
         type="submit">
           <><img src="assets/images/socials/google.svg" className="w-5 h-5" /> </>
           <>Sign in with Google</></button>
