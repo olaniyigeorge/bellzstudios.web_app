@@ -10,7 +10,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async signIn({profile}) {
       try {
         console.log("....connecting to db")
-        await connectToDB
+        await connectToDB()
 
         // check if user exists
         const userExists = await User.findOne({
@@ -21,7 +21,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         if (!userExists) {
           await User.create( {
             email: profile?.email,
-            username: profile?.name?.replace(" ", ""),
+            username: profile?.name?.replace(" ", "").toLowerCase(),
             image: profile?.picture
           })
         }
@@ -36,7 +36,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       const sessionUser = await User.findOne({
         email: session.user.email
       })
-      session.user.id = sessionUser._id.toSring();
+      session.user.id = sessionUser._id.toString();
 
       return session
     }

@@ -41,7 +41,7 @@ export default async function Navbar() {
 
             {/* Desktop */}
             <span className="hidden sm:flex gap-2 items-center">
-                <Link href='/create-prompt' className='black_btn'>
+                <Link href='/home/create-prompt' className='black_btn'>
                 Create Post
                 </Link>
                 <Auth />  
