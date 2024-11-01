@@ -3,8 +3,6 @@ import { auth, signIn } from "@/utils/auth";
 
 
 export default async function AuthPage() {
-    const session = await auth()
-    const user = session?.user
 
     return (
         <main className="w-full min-h-screen flex justify-center items-center">

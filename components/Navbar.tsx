@@ -1,11 +1,11 @@
 import Auth from "@/components/sign-in";
-import { auth, signIn } from "@/utils/auth";
+import { auth } from "@/utils/auth";
 import Link from "next/link";
 import Image from "next/image"
 
 export default async function Navbar() {
     const session = await auth()
-    const user = session?.user
+    // const user = session?.user
 
     return (
         <main className="flex-between w-full mb-16 pt-3">

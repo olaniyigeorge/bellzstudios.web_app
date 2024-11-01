@@ -44,7 +44,6 @@ const CreatePromptPage = () => {
                 })
             })
 
-            const res = response.json()
             if (response.ok) {
                toast.success("Prompt created")
                router.push('/home')
@@ -53,6 +52,7 @@ const CreatePromptPage = () => {
             }
         } catch(error) {
             toast.error(`Error while creating prompt`)
+            console.log(error)
             return false
         } finally {
             setSubmitting(false)

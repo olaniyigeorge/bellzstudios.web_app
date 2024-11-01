@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import ScrollDownAnimation from "../components/scroll";
 import ContactSection from "../components/contact-section";
@@ -9,10 +8,6 @@ import { auth } from "@/utils/auth";
 
 export default async  function Landing() {
   const session = await auth()
-  const user = {
-    first_name: "Olaniyi",
-    last_name: "George"
-  }
   const links = [
     {
       name: "About Us",
