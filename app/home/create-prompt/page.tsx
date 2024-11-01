@@ -4,10 +4,11 @@ import Form from "@/components/Form"
 import { toast } from "react-toastify";
 import { getUser } from "./action";
 import { useRouter } from "next/navigation";
+import { User } from "next-auth";
 
 const CreatePromptPage = () => {
     const router = useRouter();
-    const [user, setUser] = useState<any>()
+    const [user, setUser] = useState<User>()
     const [submitting, setSubmitting] = useState(false)
     const [post, setPost] = useState({
         prompt: "",
@@ -26,20 +27,20 @@ const CreatePromptPage = () => {
 
     
 
-    const createPrompt = async (e: any) => {
+    const createPrompt = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setSubmitting(true)
         try {
             console.log({
                 prompt: post.prompt,
-                userId: user.id,
+                userId: user?.id,
                 tag: post.tag
             })
             const response = await fetch("/api/prompt/new", {
                 method: "POST",
                 body: JSON.stringify({
                     prompt: post.prompt,
-                    userId: user.id,
+                    userId: user?.id,
                     tag: post.tag
                 })
             })
