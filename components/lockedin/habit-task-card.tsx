@@ -36,10 +36,10 @@ export default function HabitTaskCard(hbtk: iHabitTask) {
                     {hbtk.title}
                 </Link>
             </h1>
-            <span className="">{hbtk.description}</span>
+            <span className="text-sm ">{hbtk.description}</span>
             <div className="text-sm text-gray-600 mt-2">
-                <p>Starts: {formatDate(start_date)}</p>
-                <p>Ends: {formatDate(end_date)}</p>
+                <p className="text-xs">Starts: {formatDate(start_date)}</p>
+                <p className="text-xs">Ends: {formatDate(end_date)}</p>
             </div>
         </div>
     );

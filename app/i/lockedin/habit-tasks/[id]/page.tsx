@@ -13,7 +13,7 @@ export default async function HabitTaskDetailsPage({ params }: { params: { id: s
             return (
                 <div className="container mx-auto p-4 shadow-lg rounded-lg">
                     <h1 className="text-2xl font-bold mb-2">{habitTask.title}</h1>
-                    <p className="text-gray-700 mb-4">{habitTask.description}</p>
+                    <p className="text-gray-700 text-sm mb-4">{habitTask.description}</p>
 
                     <div className="flex justify-between items-center mb-4">
                         <span className={`badge p-1 rounded-full ${habitTask.accessibility === "public" ? "bg-green-200" : habitTask.accessibility === "private" ? "bg-red-200" : "bg-blue-200"}`}>
