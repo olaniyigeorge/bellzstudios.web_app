@@ -1,12 +1,18 @@
 "use client";
 import { Inspiration } from "@/components/dev-story-card";
 import { DEV_STORIES, DISCOVERY_LOCATION } from "@/utils/dev-stories";
+import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { toast } from "react-toastify";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
 
-export default function DevStoryPage(id:string) {
+interface DevStoryPageProps {
+    id: string;
+}
+
+
+export default function DevStoryPage({ id }: DevStoryPageProps) {
     const [email, setEmail] = useState<string>("");
     const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
     const story = DEV_STORIES.find((story) => story.id === id);
@@ -49,10 +55,16 @@ export default function DevStoryPage(id:string) {
     return (
         <div className="flex flex-col gap-2 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">
             <span className="flex justify-between items-center">
+
                 <h1 className="text-3xl md:text-5xl font-bold">{story.title}</h1>
-                <p className="text-xs w-fit rounded-full p-1 border border-purple-500">{story.tag}</p>
+                <p className="text-[8px] w-fit rounded-full p-1 border border-purple-500">{story.tag}</p>                
             </span>
             <p className="text-md md:text-lg text-pretty">{story.description}</p>
+            <span className="flex justify-center ">
+            <Link href={`/i/${story.id}`} className="bg-green-500 p-2 rounded-full">
+                Get Started
+            </Link>
+            </span>
             <form onSubmit={joinWaitlist} className="my-3 flex flex-col items-center gap-3 md:gap-6 justify-center">
                 <input
                     type="email"

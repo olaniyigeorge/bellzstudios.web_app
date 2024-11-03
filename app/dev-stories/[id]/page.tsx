@@ -1,8 +1,11 @@
+import DevStoryCard, { iDevStory } from "@/components/dev-story-card";
+import DevStoryPage from "@/components/dev-story-page";
+import { DEV_STORIES } from "@/utils/dev-stories";
 import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: "Dev Stories | Bellz Studios",
+    title: `Dev Stories | Bellz Studios`,
     description: "Stories behind al the solutions we build",
     openGraph: {
       title: "Dev Stories",
@@ -24,12 +27,19 @@ export const metadata: Metadata = {
       images: "/assets/images/bellzstudio.png",
   },
   }; 
-export default async function DevStoryPage({ params }: { params: { id: string } }) {
-    
 
-    return (
-        <DevStoryPage params={{
-            id: params.id
-        }} />
-    );
+  
+export default async function DevStoryyy({ params }: { params: { id: string } }) {
+  const STORY: iDevStory | undefined = DEV_STORIES.find(story => story.id === params.id);
+
+  // Check if the story exists to handle any potential errors
+  if (!STORY) {
+      return <div className="w-full">Story not found</div>;
+  }
+
+  return (
+      <div className="w-full">
+          <DevStoryPage id={params.id} />
+      </div>
+  );
 }

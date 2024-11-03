@@ -7,12 +7,12 @@ export const DISCOVERY_LOCATION: string[] = [
 ]
 export const DEV_STORIES: iDevStory[] = [
     {
-        id: "lockedin-api",
+        id: "lockedin",
         title: "LockedIn",
         tag: "habit-tracking",
         description: "LockedIn is a habit-tracking app that enables users to set habit-forming tasks and track their progress in real-time as they strive to build lasting habits. It allows them to invite accountability partners for support, fostering a community-driven approach to personal growth and habit development.",
-        open_source_url: "https://lockedin_api.com",
-        product_url: "https://lockedin-api.onrender.com",
+        open_source_url: "/i/lockedin", // "https://github/olaniyigeorge77/lockedin.com",
+        product_url: "/i/lockedin", // "https://lockedin_api.com https://lockedin-api.onrender.com",
         status: "live",
         inspirations: [
             { tweetId: "1844763363533820066" },
