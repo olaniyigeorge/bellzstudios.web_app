@@ -58,7 +58,7 @@ export default function HabitTaskForm({ type, user, aspects, task }: HabitTaskFo
 
             if (response.ok) {
                 toast.success("Habit Task created");
-                router.push('/i/habit-tasks');
+                router.push('/i/lockedin/habit-tasks');
             } else {
                 toast.error(`Error ${response.status} while creating habit task`);
             }
@@ -99,7 +99,7 @@ export default function HabitTaskForm({ type, user, aspects, task }: HabitTaskFo
     return (
         <div className="w-full flex flex-col items-center">
             <h1 className="text-3xl lockedin_purple_gradient font-extrabold">{type} Habit Task</h1>
-            <form className="w-full text-gray-800 p-3 md:p-5 flex gap-2 flex-col border rounded-xl" onSubmit={(e) => {
+            <form className="w-full text-gray-800 p-3 md:p-5 flex gap-2 flex-col  border border-gray-900 rounded-xl" onSubmit={(e) => {
                 if (type === "Create") {
                     createHabitTask(e);
                 } else if (type === "Edit") {
@@ -143,7 +143,7 @@ export default function HabitTaskForm({ type, user, aspects, task }: HabitTaskFo
                     required
                 />
                 <textarea
-                    className="p-2 rounded-md"
+                    className="p-2 rounded-md "
                     name="description"
                     value={habitTask.description}
                     onChange={(e) => setHabitTask({ ...habitTask, description: e.target.value })}
@@ -168,14 +168,18 @@ export default function HabitTaskForm({ type, user, aspects, task }: HabitTaskFo
                     onChange={(e) => setHabitTask({ ...habitTask, end_date: new Date(e.target.value) })}
                 />
                 </div>
+            
+                <span className="w-full flex justify-center">
+                    <button
+                        type="submit"
+                        disabled={submitting}
+                        className='border  hover:bg-gray-950 py-2 px-4 md:px-8 w-fit justify-end rounded-md text-white'
+                    >
+                        {submitting ? `${type}ing...` : type}
+                    </button>
+                </span>
+
                 
-                <button
-                    type="submit"
-                    disabled={submitting}
-                    className='border hover:bg-green-500 p-2 w-fit justify-end rounded-md text-white'
-                >
-                    {submitting ? `${type}ing...` : type}
-                </button>
             </form>
         </div>
     );

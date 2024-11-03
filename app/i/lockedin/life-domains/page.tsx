@@ -17,9 +17,14 @@ export default async function LifeDomains() {
         console.log("response ok")
         return ( <div className="w-full">
             <span className="w-full flex items-center justify-between">
-               <>Life Domains</>
+               <>Create tags for areas of your life where you want to builds better habits.</>
                <>{session?.user ?
-                   <Link href="/i/lockedin/life-domains/new"> Add Domain</Link>
+                    <Link 
+                        className="border border-black hover:border-gray-900 p-1 rounded-md"
+                        href="/i/lockedin/life-domains/new"
+                    > 
+                        Add Domain
+                    </Link>
                : <Auth />
                }</>
             </span>

@@ -1,4 +1,5 @@
 import HabitTask from "@/models/lockedin.habit-task";
+import HabitTaskEntry from "@/models/lockedin.task-entry";
 import { connectToDB } from "@/utils/database";
 
 export async function GET(request: Request) {
@@ -20,15 +21,27 @@ export async function GET(request: Request) {
             return new Response(JSON.stringify(my_habit_tasks), { status: 200 })
         //     return new Response("Owner ID is required", { status: 400 });
         }
+        // 
 
         if (id) {
-            console.log("Getting this habit task")
-            await connectToDB();
-            const habit_task = await HabitTask.findById(id); // Use the extracted ID
-            // const my_life_domains = await LifeDomain.find({ owner: id }); // Use the extracted ID
-            // const my_life_domains = lfs // Use the extracted ID
-            return new Response(JSON.stringify(habit_task), { status: 200 })
-            //return new Response("Owner ID is required", { status: 400 });
+            console.log("Getting this habit task");
+            const habit_task = await HabitTask.findById(id); // Get the habit task by ID
+
+            if (!habit_task) {
+                return new Response("Habit task not found", { status: 404 });
+            }
+
+            // Fetch entries for the habit task
+            const entries = await HabitTaskEntry.find({ habit: id }); // Fetch entries for the habit task
+            
+            // Create a plain object with the habit task details and entries
+            const habitTaskWithEntries = {
+                ...habit_task.toObject(), // Convert Mongoose document to plain object
+                entries, // Add the entries array
+            };
+
+            console.log("Entries: ", habitTaskWithEntries)
+            return new Response(JSON.stringify(habitTaskWithEntries), { status: 200 });
         }
 
         // const my_life_domains = await LifeDomain.find({ owner: id }); // Use the extracted ID

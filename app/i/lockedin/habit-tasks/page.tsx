@@ -34,16 +34,21 @@ export default async function HabitTasksPage() {
         console.log("response ok")
         return ( <div className="w-full">
             <span className="w-full flex items-center justify-between">
-               <>Habit Tasks </>
+               <span className="">Build new habits one task at a time</span>
                <>{session?.user ?
-                   <Link href="/i/lockedin/habit-tasks/new"> Add Habit task</Link>
+                    <Link 
+                        className="border border-black hover:border-gray-900 p-1 rounded-md" 
+                        href="/i/lockedin/habit-tasks/new"
+                    > 
+                        Add Habit task
+                    </Link>
                : <Auth />
                }</>
             </span>
             <section className="w-full my-4 gap-2 grid grid-cols-1 md:grid-cols-3">
                {res.map((lfd: any) => (
-                <div key={lfd.id} className="w-full flex flex-col  ">
-                   <HabitTaskCard key={lfd._id} {...lfd}/>
+                <div key={lfd._id} className="w-full flex flex-col  ">
+                   <HabitTaskCard {...lfd}/>
                 </div>
                ))}
             </section>
