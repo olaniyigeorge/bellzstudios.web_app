@@ -9,11 +9,10 @@ import Image from "next/image"
 export default async function LockedInLayout({children}: {children: React.ReactNode}) {
     const session = await auth()
     return (
-        <div className="text-white w--full h-screen flex flex-col items-center justify-between">
-          
-            <nav className="flex w-full items-center justify-between p-2 md:p-6 lg:p-10">
+        <div className="text-gray-800  bg-[url('/assets/images/grid.svg')] lockedin_bg_gradient bg-slate-50 w-full min-h-screen flex flex-col items-center justify-between">
+            <nav className="flex w-full items-center justify-between p-2 md:p-6 lg:p-8">
                 <Link href="/i/lockedin">
-                <h1 className="text-3xl font-extrabold">Locked<span className="text-purple-500 px-1 rounded-md border">In</span></h1>
+                <h1 className="text-3xl font-extrabold">Locked<span className="text-white px-1 rounded-md bg-purple-500  border-gray-800">In</span></h1>
                 </Link>
                 <span className="hidden sm:flex gap-2 items-center">
                     {!session ?
@@ -43,9 +42,10 @@ export default async function LockedInLayout({children}: {children: React.ReactN
                 </span>
             </nav> 
 
-            <section className="w-full flex-1 md:w-[90%] lg:w-[65%] flex justify-center ">
+            <section className="w-full mx-w-[1200px] flex-1 flex-grow md:w-[90%] lg:w-[65%] flex justify-center ">
                 {children}
             </section>
+
             <FooterControls />
         </div>
     )

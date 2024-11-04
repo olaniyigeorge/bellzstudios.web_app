@@ -181,9 +181,33 @@
 
 
 .footer-controls-btn {
-  @apply p-2 flex text-gray-400 justify-center border-gray-900 transition-all duration-500  ease-in hover:bg-gray-900 hover:text-white rounded-xl border
+  @apply p-2 flex text-gray-800   border-purple-400 bg-white/20 bg-opacity-50 backdrop-blur  justify-center  transition-all duration-500  ease-in hover:bg-purple-500 hover:text-white rounded-xl border
 }
 
 .active-footer-controls-btn {
-  @apply p-2 flex justify-center lockedin_purple_gradient_bg border-gray-900 transition-all duration-500  ease-in hover:bg-gray-900 hover:text-white text-black rounded-xl border
+  @apply p-2 flex justify-center bg-purple-500 border-purple-400 transition-all duration-500 shadow-glow shadow-purple-400   ease-in hover:bg-purple-600 hover:text-white text-black rounded-xl border
+}
+
+
+.lockedin_bg_gradient {
+  width: 100%;
+  background-image: radial-gradient(
+      at 27% 37%,
+      rgb(239, 244, 252) 0px,
+      transparent 0%
+    ),
+  radial-gradient(at 80% 40%, rgb(35, 252, 161) 0px, transparent 40%),
+  radial-gradient(at 52% 99%, rgb(242, 255, 126) 0px, transparent 50%),
+  radial-gradient(at 10% 29%, rgb(238, 215, 253) 0px, transparent 50%),
+  radial-gradient(at 97% 96%, rgb(217, 65, 255) 0px, transparent 50%),
+  radial-gradient(at 50% 70%, rgb(222, 142, 247) 0px, transparent 50%),
+  radial-gradient(at 79% 53%, rgb(255, 127, 163) 0px, transparent 50%);
+  position: absolute;
+  /* content: ""; */
+  width: 100%;
+  height: 100%;
+  /* filter: blur(100px) saturate(150%); */
+  /* top: 80px;*/
+  fill-opacity: 0.5;
+
 }

@@ -99,7 +99,7 @@ export default function HabitTaskForm({ type, user, aspects, task }: HabitTaskFo
     return (
         <div className="w-full flex flex-col items-center">
             <h1 className="text-3xl lockedin_purple_gradient font-extrabold">{type} Habit Task</h1>
-            <form className="w-full text-gray-800 p-3 md:p-5 flex gap-2 flex-col  border border-gray-900 rounded-xl" onSubmit={(e) => {
+            <form className="w-full glassmorphism text-gray-800 p-3 md:p-5 flex gap-2 flex-col  border border-gray-900 rounded-xl" onSubmit={(e) => {
                 if (type === "Create") {
                     createHabitTask(e);
                 } else if (type === "Edit") {

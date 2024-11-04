@@ -22,33 +22,22 @@ export const DEV_STORIES: iDevStory[] = [
     },
     {
         id: "1",
-        title: "Story 2",
-        tag: "habit-tracking",
-        description: "Story, story telling, story telling",
-        open_source_url: "https://lockedin_api.com",
-        product_url: "https://lockedin-api.onrender.com",
+        title: "ReSpace",
+        tag: "real-estate",
+        description: "ReSpace aims to eliminate the challenges of house hunting by providing a smooth, personalized real estate experience. We want to empower users to effortlessly search for and rent apartments or spaces online while managing their utilities—such as cleaning, waste disposal, and internet bills—through our app",
+        open_source_url: "https://github.com/olaniyigeorge/raspa-client",
+        product_url: "https://github.com/olaniyigeorge/raspa-client",
         status: "dev",
         inspirations: []
     },        
     {
         id: "2",
-        title: "Story 3",
-        tag: "habit-tracking",
-        description: "Story, story telling, story telling",
-        open_source_url: "https://lockedin_api.com",
-        product_url: "https://lockedin-api.onrender.com",
+        title: "Bellz Mini",
+        tag: "super-apps",
+        description: "Bellz Mini is all about creating mini apps within the Telegram ecosystem. With this initiative, I’m looking to explore the upsides and downsides of super apps while evaluating the best platforms for building these mini applications on existing frameworks.",
+        open_source_url: "https://github.com/olaniyigeorge/bellz-tg-mini",
+        product_url: "https://github.com/olaniyigeorge/bellz-tg-mini",
         status: "dev",
         inspirations: []
-    }, 
-    {
-        id: "3",
-        title: "Story 4",
-        tag: "habit-tracking",
-        description: "Story, story telling, story telling",
-        open_source_url: "https://lockedin_api.com",
-        product_url: "https://lockedin-api.onrender.com",
-        status: "dropped",
-        inspirations: []
-    },
-    
+    }    
 ]

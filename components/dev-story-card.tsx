@@ -31,18 +31,10 @@ export default function DevStoryCard(data: iDevStory) {
                         data.status === 'dev' ? 'bg-orange-500' :
                         data.status === 'dropped' ? 'bg-red-700' : ''
                         } rounded-full`}>
-                    {/* <Image
-                        src="/assets/images/notes.png"
-                        className="object-contain rounded-full"
-                        height={20}
-                        width={20}
-                        priority={true}
-                        alt="product-link"
-                    /> */}
                 </Link>
             </div>
 
-            <span className="text-xs w-fit border border-purple-600 p-1 rounded-full"> {data.tag}</span>
+            <span className="text-[10px] w-fit border border-purple-600 p-1 rounded-full"> {data.tag}</span>
 
             <p className="line-clamp-3">
                 {data.description}

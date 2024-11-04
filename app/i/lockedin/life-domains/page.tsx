@@ -17,7 +17,7 @@ export default async function LifeDomains() {
         console.log("response ok")
         return ( <div className="w-full">
             <span className="w-full flex items-center justify-between">
-               <>Create tags for areas of your life where you want to builds better habits.</>
+               <>Define tags for the areas where you want to build better habits..</>
                <>{session?.user ?
                     <Link 
                         className="border border-black hover:border-gray-900 p-1 rounded-md"

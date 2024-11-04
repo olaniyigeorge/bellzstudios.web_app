@@ -12,16 +12,34 @@ export async function GET(request: Request) {
         const id = url.searchParams.get("id"); // Extract the owner from query parameters
 
         if (owner) {
-            console.log("Getting habit tasks from this user")
+            console.log("Getting habit tasks from this user");
             await connectToDB();
-            const my_habit_tasks = await HabitTask.find({ filter}); // Use the extracted ID
-
-            // const my_life_domains = await LifeDomain.find({ owner: id }); // Use the extracted ID
-            // const my_life_domains = lfs // Use the extracted ID
-            return new Response(JSON.stringify(my_habit_tasks), { status: 200 })
-        //     return new Response("Owner ID is required", { status: 400 });
+        
+            // Fetch habit tasks based on the filter
+            const my_habit_tasks = await HabitTask.find({ filter });
+        
+            // Fetch entries for the habit tasks using their IDs
+            const habitTaskIds = my_habit_tasks.map(task => task._id);
+            const entries = await HabitTaskEntry.find({ habit: { $in: habitTaskIds } });
+        
+            // Create a mapping of entries for easier access
+            const entriesMap = entries.reduce((acc, entry) => {
+                if (!acc[entry.habit]) {
+                    acc[entry.habit] = [];
+                }
+                acc[entry.habit].push(entry);
+                return acc;
+            }, {});
+        
+            // Combine the tasks with their respective entries
+            const habitTasksWithEntries = my_habit_tasks.map(task => ({
+                ...task.toObject(), // Convert each Mongoose document to a plain object
+                entries: entriesMap[task._id] || [], // Add entries for this task or an empty array if none
+            }));
+        
+            return new Response(JSON.stringify(habitTasksWithEntries), { status: 200 });
         }
-        // 
+        
 
         if (id) {
             console.log("Getting this habit task");
@@ -40,7 +58,6 @@ export async function GET(request: Request) {
                 entries, // Add the entries array
             };
 
-            console.log("Entries: ", habitTaskWithEntries)
             return new Response(JSON.stringify(habitTaskWithEntries), { status: 200 });
         }
 
