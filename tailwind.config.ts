@@ -21,6 +21,9 @@ const config: Config = {
       boxShadow: {
         glow: '0 0 10px rgba(59, 130, 246, 0.6), 0 0 10px rgba(59, 130, 246, 0.6)', // Blue glow
       },
+      fontWeight: {
+        '200': '200',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

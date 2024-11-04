@@ -9,7 +9,7 @@ export default function FooterControls() {
     const isActive = (link: string) => pathname.startsWith(link);
 
     return (
-        <section className="w-full grid grid-cols-4 items-center gap-3 justify-between sticky bottom-0 right-0 p-3 md:px-40">
+        <section className="w-full z-10 grid grid-cols-4 items-center gap-3 justify-between sticky bottom-0 right-0 p-3 md:px-40">
             <Link
                 href="/i/lockedin/life-domains"
                 className={`${isActive('/i/lockedin/life-domains') ? 'active-footer-controls-btn' : 'footer-controls-btn'}`}

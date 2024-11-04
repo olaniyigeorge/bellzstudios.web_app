@@ -7,7 +7,7 @@ export default async function ProfilePage() {
     const session = await auth()
     if (!session?.user) {
         return (
-        <div className="p-10 border rounded-xl font-extrabold text-3xl">
+        <div className="p-10 w-full justify-center flex rounded-xl font-extrabold text-3xl">
             <form action={async () => {
                 "use server"
                 await signIn("google")
