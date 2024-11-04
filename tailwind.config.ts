@@ -22,7 +22,7 @@ const config: Config = {
         glow: '0 0 10px rgba(59, 130, 246, 0.6), 0 0 10px rgba(59, 130, 246, 0.6)', // Blue glow
       },
       fontWeight: {
-        '200': '200',
+        '400': '400',
       },
       colors: {
         background: "var(--background)",

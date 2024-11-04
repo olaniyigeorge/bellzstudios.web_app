@@ -196,10 +196,10 @@
       rgb(239, 244, 252) 0px,
       transparent 0%
     ),
-  radial-gradient(at 80% 40%, rgb(35, 252, 161) 0px, transparent 40%),
-  radial-gradient(at 52% 99%, rgb(242, 255, 126) 0px, transparent 50%),
+  radial-gradient(at 90% 40%, rgb(149, 255, 211) 0px, transparent 50%),
+  radial-gradient(at 52% 40%, rgb(249, 255, 192) 0px, transparent 50%),
   radial-gradient(at 10% 29%, rgb(238, 215, 253) 0px, transparent 50%),
-  radial-gradient(at 97% 96%, rgb(217, 65, 255) 0px, transparent 50%),
+  radial-gradient(at 97% 69%, rgb(234, 148, 255) 0px, transparent 50%),
   radial-gradient(at 50% 70%, rgb(222, 142, 247) 0px, transparent 50%),
   radial-gradient(at 79% 53%, rgb(255, 127, 163) 0px, transparent 50%);
   position: absolute;
