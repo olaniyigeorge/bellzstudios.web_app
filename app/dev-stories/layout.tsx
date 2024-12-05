@@ -18,7 +18,7 @@ export default function DevStorysLayout({children}: {children: React.ReactNode})
                         priority={true}
                         alt="product-link"
                     /> 
-                    <Link href="/#dev-stories">BellzStudios</Link>
+                    <Link href="/#dev-stories">Bellz Studio</Link>
                 </h1>
                 <h1 className="font-medium">
                     <Link href="/dev-stories">...dev stories</Link>

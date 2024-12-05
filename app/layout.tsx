@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bellz Studio",
     description: "Proferring solutions one product at a time",
-    url: "https://bellzstudios.vercel.app/",
+    url: "https://Bellz Studio.vercel.app/",
     siteName: "Bellz Studio",
     images: [
       {
@@ -65,7 +65,7 @@ export default async function RootLayout({
 
           <main className=" max-w-9xl">{children}</main>
           
-          <footer className="p-6 text-center bg-purple-900 text-white">
+          <footer className="p-6 w-full text-center blur-backdrop-lg  bg-opacity-20 bg-black absolute bottom-0 right-0 text-white">
             © {new Date().getFullYear()} Bellz Studio. All Rights Reserved.
           </footer>
           <ToastContainer />

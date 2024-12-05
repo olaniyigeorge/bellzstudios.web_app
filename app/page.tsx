@@ -54,7 +54,7 @@
   //               height={200}
   //               width={200}
   //               priority
-  //               alt="bellzstudios"
+  //               alt="Bellz Studio"
   //             />
   //           </a>
   //         </div>
@@ -115,7 +115,7 @@ export default async function Landing() {
               <h1 className="font-medium text-gray-200 text-2xl">Hi there! Welcome to</h1>
             )}
             <h2 className="font-extrabold text-purple-300 text-[60px]">
-              BellzStudios
+              Bellz Studio
             </h2>
             <p className="text-purple-400">
               Building microservices and products that make life easier.
@@ -139,18 +139,18 @@ export default async function Landing() {
                 height={200}
                 width={200}
                 priority
-                alt="bellzstudios"
+                alt="Bellz Studio"
               />
           </a>
       </div>
        
       {/* Sections */}
-      <section id="about-us" className="py-16text-gray-100">
+      <section id="about-us" className="py-16 text-gray-100">
         <div className="px-6 lg:px-40">
           <AboutUsSection />
         </div>
       </section>
-      <section id="contact" className="py-16 bg-purple-100 text-gray-100">
+      <section id="contact" className="py-16  text-gray-100">
         <div className="px-6 lg:px-40">
           <ContactSection />
         </div>

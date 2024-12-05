@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     openGraph: {
       title: "Dev Stories",
       description: "Stories behind al the solutions we build",
-      url: "https://bellzstudios.vercel.app/", // "https://www.bellzstudio.com",  // Replace with your actual site URL
+      url: "https://Bellz Studio.vercel.app/", // "https://www.bellzstudio.com",  // Replace with your actual site URL
       siteName: "Bellz Studios",
       images: [
         {
