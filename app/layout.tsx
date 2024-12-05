@@ -1,24 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import "@/styles/globals.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Provider from "@/components/Provider";
 import { auth } from "@/utils/auth";
-  
 
-
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
-
+// Load the OpenSans font
 const opensans = localFont({
   src: "./fonts/opensans.ttf",
   display: "swap",
@@ -31,14 +20,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bellz Studio",
     description: "Proferring solutions one product at a time",
-    url: "https://bellzstudios.vercel.app/", // "https://www.bellzstudio.com",  // Replace with your actual site URL
+    url: "https://bellzstudios.vercel.app/",
     siteName: "Bellz Studio",
     images: [
       {
-        url: "/assets/images/bellzstudio.png",  // Replace with the correct image path
+        url: "/assets/images/bellzstudio.png",
         width: 1200,
         height: 630,
-        alt: "Bellz Studio Logo",  // Image description for accessibility
+        alt: "Bellz Studio Logo",
       },
     ],
     type: "website",
@@ -46,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     images: "/assets/images/bellzstudio.png",
-},
+  },
 };
 
 export default async function RootLayout({
@@ -54,25 +43,34 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await auth()
+  const session = await auth();
 
   return (
     <html lang="en">
       <body
-        // className={cn(
-        //     "min-h-screen bg-[#F9FAFB] text-[#18181b] font-opensans antialiased max-w-[1440px] mx-auto",
-        //     opensans.className
-        // )}
-        className={
-          `min-h-screen bg-slate-100 text-[#18181b] dark:bg-black font-opensans antialiased max-w-[1440px] mx-auto",
-          ${opensans.className}`}
+        className={`min-h-screen relative bg-gradient-to-br from-purple-800 via-black to-black text-white font-opensans antialiased max-w-[1440px] mx-auto ${opensans.className}`}
       >
         <Provider session={session}>
+          <header className="px-6 py-2 w-full bg-purple-950 bg-opacity-60 blur-backdrop-lg shadow sticky top-0 right-0 z-3000 ">
+            <div className="flex justify-between items-center max-w-7xl z-200 mx-auto">
+              <h1 className="text-2xl text-white font-bold">B-Stdio</h1>
+              <a
+                href="mailto:olaniyigeorge77@gmail.com"
+                className="bg-white text-black px-6 py-2 rounded-full hover:bg-purple-700 hover:text-white transition-all duration-300"
+              >
+                Hire Me
+              </a>
+            </div>
+          </header>
+
+          <main className=" max-w-9xl">{children}</main>
+          
+          <footer className="p-6 text-center bg-purple-900 text-white">
+            © {new Date().getFullYear()} Bellz Studio. All Rights Reserved.
+          </footer>
           <ToastContainer />
-          {children}
         </Provider>
       </body>
     </html>
   );
 }
- 

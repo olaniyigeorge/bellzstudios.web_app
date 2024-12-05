@@ -31,7 +31,7 @@ export default function ScrollDownAnimation(props: ScrollDownAnimationProps) {
     <> 
         <button 
           onClick={scrollDown} 
-          className="hover:animate-swivvleV animate-slideLt shadow-purple-500 shadow object-contain p-2 md:p-1 w-full lg:p-2 rounded-full   transition ease-in-out flex items-center justify-center px-5 hover:bg-purple-600 hover:text-white dark:text-slate-300 border text-sm"
+          className="hover:animate-swivvleV animate-slideLt shadow-purple-500 shadow object-contain p-2 md:p-1 w-full lg:p-2 rounded-full   transition ease-in-out flex items-center justify-center px-5 hover:bg-white hover:text-purple-950 hover:font-medium dark:text-slate-300 border text-sm"
           >
           {child}
         </button>

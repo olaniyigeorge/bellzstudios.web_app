@@ -2,10 +2,12 @@
 
         import { useState } from "react";
         import Image from "next/image"
+import Link from "next/link";
 
         type iSocial ={
             name: string;
             url: string;
+            msg: string;
             social_logo: string;
         }
         export default function ContactSection() {
@@ -13,71 +15,51 @@
                 {
                     "name": "Twitter",
                     "url": "https://x.com/imoctborn",
-                    'social_logo': "twit.png"
+                    "msg": "Follow and send a DM",
+                    'social_logo': "/assets/images/socials/twit.png"
                 },
                 {
                     "name": "Email",
                     "url": "olaniyigeorge77@gmail",
-                    'social_logo': "memoji.png"
+                    "msg": "Email Me",
+                    'social_logo': "/assets/images/socials/memoji.png"
                 },
                 {
                     "name": "LinkedIn",
                     "url": "https://linkedin.com/abelejolaniyi",
-                    'social_logo': "linkedin_pfp.jpeg"
+                    "msg": "Connect with me",
+                    'social_logo': "/assets/images/socials/linkedin_pfp.jpeg"
                 },
             ]
             const [activeSocial, setActiveSocial] = useState<iSocial>(contacts[0])
             return (
                 <section 
                     id="contact"
-                    className="w-full borde flex flex-col gap-2"
+                    className="w-full  flex flex-col gap-2 my-5 md:my-10 lg:my-16"
                 >
-                <section className="w-full flex flex-col justify-center items-center gap-3">
-                    <div className="flex flex-col gap-3  md:flex-row-reverse justify-between items-center">
-                        <h1 className="text-3xl md:text-7xl text-slate-200 text-center md:text-start font-bold w-full my-3 ">
-                            {
-                                activeSocial.name == 'Email' ? <>
-                                Send me an <a href={activeSocial.url} target="_blank"  className="light:text-black dark:text-purple-500 underline">{ activeSocial.name }</a>
-                                </>
-                                :
-                                <>
-                                Reach out to me on <a href={activeSocial.url} target="_blank"  className="light:text-black dark:text-purple-500 underline">{ activeSocial.name }</a>
-                                </>
-
-                            }
-                        </h1>
-
-                        <div className="w-full flex justify-center transform  duration-900">
-                            <a href={activeSocial.url} target="_blank" className="w-full flex justify-center md:justify-start object-contain">
-                                <Image
-                                    src={`/assets/images/socials/${activeSocial.social_logo}`}
-                                    alt={`Olaniyi George's ${activeSocial.name} page`} 
-                                    className="w-[500px] h-auto max-h-[500px] object-fill rounded-3xl"
-                                    height={400}
-                                    width={400}
-                                    priority={true}
-                                />
-                            </a>
+                <section className="w-full  flex flex-col md:flex-row justify-between items-center gap-3 md:gap-5">
+                    {contacts.map((contact)=> (
+                        <div className="shadow-md hover:border-purple-600 w-full bg-gradient-to-br from-purple-800 via-purple-950 to-purple-950 dark:text-slate-200 rounded-xl items-center gap-5 p-3 md:p-5 flex flex-col">
+                            <img 
+                                src={contact.social_logo} 
+                                alt="contact"
+                                className="w-24 h-24 object-fill rounded-full " 
+                            />
+                            
+                            <div className="mt-2 flex flex-col items-center">
+                                <span className="text-purple-500"> 
+                                {contact.msg}
+                                </span>
+                                <hr className=""/>
+                                <Link href={contact.url} className="underline"> 
+                                    {contact.name}
+                                </Link>
+                            </div>
                         </div>
-                        
-                        
-                    </div>
+                    ))}
                 </section>
                             
-                <section className="w-full flex items-center justify-center container mx-auto px-2 md:px-10 lg:px-16">
-                    <div className="rounded-lg w-[80%] bg-white flex justify-between items-center ">
-                        {contacts.map((social) => (
-                            <button 
-                                onClick={() => setActiveSocial(social)}
-                                key={social.url} 
-                                className="p-2 rounded-lg w-full flex justify-center hover:bg-purple-500 hover:text-white"
-                            >
-                                {social.name}
-                            </button>
-                        ))}
-                    </div>
-
-                </section>
+                
                 
             </section>
             )

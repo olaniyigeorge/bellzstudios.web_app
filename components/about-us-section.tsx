@@ -10,18 +10,16 @@
       >
         <section className="w-full flex flex-col  gap-4 md:gap-8 lg:gap-12">
           <div className="flex flex-col gap-3">
-            <span className="text-xs bg-purple-500 blur-backdrop-lg bg-opacity-40 text-slate-100 w-fit rounded-full p-1"> About Us </span>
-            <h1 id="hero-title" className="dark:text-slate-100 font-bold text-5xl"> About Us</h1>
-            <p className="dark:text-slate-200">
+            <h1 id="hero-title" className="dark:text-purple-300 font-bold text-5xl"> About Us</h1>
+            <p className="text-lg md:text-xl dark:text-purple-100">
               Bellz Studio was birthed from the idea that there is a lot of good that 
               could be done from a small place when tech is applied 
               to doing what it does best; making life easier.
             </p>
           </div>
           <div className="flex flex-col gap-3">
-            <span className="text-xs bg-purple-500 blur-backdrop-lg bg-opacity-40 text-slate-100 w-fit rounded-full p-1"> Vision & Mission </span>
-            <h1 id="hero-title" className="dark:text-slate-100 font-bold text-5xl"> Our Mission</h1>
-            <p className="dark:text-slate-200">
+            <h1 id="hero-title" className="dark:text-purple-300 font-bold text-5xl"> Our Mission</h1>
+            <p className="text-lg md:text-xl dark:text-purple-100">
               Our mission is to build solutions to as many problems as we can 
               in our immediate locale and document the journey while at it. 
               We would consider ourselves successful when we can get at least a thousand 
