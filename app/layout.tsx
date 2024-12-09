@@ -6,6 +6,9 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Provider from "@/components/Provider";
 import { auth } from "@/utils/auth";
+import Image from "next/image";
+import Link from "next/link";
+import Header from "@/components/header";
 
 // Load the OpenSans font
 const opensans = localFont({
@@ -51,17 +54,7 @@ export default async function RootLayout({
         className={`min-h-screen relative bg-gradient-to-br from-purple-800 via-black to-black text-white font-opensans antialiased max-w-[1440px] mx-auto ${opensans.className}`}
       >
         <Provider session={session}>
-          <header className="px-6 py-2 w-full bg-purple-950 bg-opacity-60 blur-backdrop-lg shadow sticky top-0 right-0 z-3000 ">
-            <div className="flex justify-between items-center max-w-7xl z-200 mx-auto">
-              <h1 className="text-2xl text-white font-bold">B-Stdio</h1>
-              <a
-                href="mailto:olaniyigeorge77@gmail.com"
-                className="bg-white text-black px-6 py-2 rounded-full hover:bg-purple-700 hover:text-white transition-all duration-300"
-              >
-                Hire Me
-              </a>
-            </div>
-          </header>
+          <Header />
 
           <main className=" max-w-9xl">{children}</main>
           
