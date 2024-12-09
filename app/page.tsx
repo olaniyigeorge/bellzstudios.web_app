@@ -29,7 +29,7 @@ export default async function Landing() {
             ) : (
               <h1 className="font-medium  text-gray-200 text-2xl">Hi there! Welcome to</h1>
             )}
-            <h2 className="font-extrabold text-purple-200 text-[80px]">
+            <h2 className="font-extrabold text-purple-200 text-[60px] md:text-[80px]">
               Bellz Studio
             </h2>
             <p className="text-purple-400 text-lg">
@@ -47,10 +47,10 @@ export default async function Landing() {
             </div>
           </div>
           {/* Image Section */}
-          <a href="/auth" className="md:w-1/2 hidden md:flex justify-center">
+          <a href="/auth" className="md:w-1/2 slideRtL hidden md:flex justify-center">
               <Image
                 src="/assets/images/memoji.png"
-                className="border-4 swivvle border-purple-600 w-[90%] h-auto rounded-full "
+                className="border-4  border-purple-600 w-[90%] h-auto rounded-full "
                 height={200}
                 width={200}
                 priority

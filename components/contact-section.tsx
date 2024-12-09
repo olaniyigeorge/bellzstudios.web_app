@@ -42,7 +42,7 @@ import Link from "next/link";
                     </h1>
                 <section className="w-full  flex flex-col md:flex-row justify-between items-center gap-3 md:gap-5">
                     {contacts.map((contact)=> (
-                        <div className="shadow-md hover:border-purple-600 w-full bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 dark:text-slate-200 rounded-xl items-center gap-5 p-3 md:p-5 flex flex-col">
+                        <div key={contact.name} className="shadow-md hover:border-purple-600 w-full bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 dark:text-slate-200 rounded-xl items-center gap-5 p-3 md:p-5 flex flex-col">
                             <img 
                                 src={contact.social_logo} 
                                 alt="contact"
