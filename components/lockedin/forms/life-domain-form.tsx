@@ -24,7 +24,7 @@ export default function LifeDomainForm(data : LifeDomainFormProps) {
         description: data.lfd.description,
         owner: data.user
     })
-    const [ user, setUser ] = useState<string>("")
+    // const [ user, setUser ] = useState<string>("")
     const [ type, setType ] = useState<string>("")
     const [ submitting, setSubmitting ] = useState<boolean>(false)
     useEffect(() => {
@@ -94,9 +94,11 @@ export default function LifeDomainForm(data : LifeDomainFormProps) {
                     onClick={(e) => {
                         if (data.type == "Create") {
                             createLifeDomain(e)
+                            setType("creat")
                         }
                         else if(data.type == "Edit") {
                             // editLifeDomain(e)
+                            // setType("edit")
 
                         }}}
                 >

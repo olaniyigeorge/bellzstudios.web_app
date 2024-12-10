@@ -31,7 +31,7 @@ import Link from "next/link";
                     'social_logo': "https://avatars.githubusercontent.com/u/27226623?v=4"
                 },
             ]
-            const [activeSocial, setActiveSocial] = useState<iSocial>(contacts[0])
+            // const [activeSocial, setActiveSocial] = useState<iSocial>(contacts[0])
             return (
                 <section 
                     id="contact"
@@ -43,9 +43,11 @@ import Link from "next/link";
                 <section className="w-full  flex flex-col md:flex-row justify-between items-center gap-3 md:gap-5">
                     {contacts.map((contact)=> (
                         <div key={contact.name} className="shadow-md hover:border-purple-600 w-full bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 dark:text-slate-200 rounded-xl items-center gap-5 p-3 md:p-5 flex flex-col">
-                            <img 
+                            <Image 
                                 src={contact.social_logo} 
                                 alt="contact"
+                                width={200}
+                                height={200}
                                 className="w-24 h-24 object-fill flex justify-center rounded-full " 
                             />
                             
