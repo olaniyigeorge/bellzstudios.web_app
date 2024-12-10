@@ -26,7 +26,7 @@ export default function DevStoryCard(data: iDevStory) {
                 <h2 className="text-bold text-2xl">
                     <Link href={`/dev-stories/${data.id}`}>{data.title}</Link>
                 </h2>
-                <Link href={data.product_url} target="_blank" className={`w-4 h-4 animate-pulse ${
+                <Link href={data.product_url} target="_blank" className={`w-3 h-3 animate-pulse ${
                         data.status === 'live' ? 'bg-green-500' :
                         data.status === 'dev' ? 'bg-orange-500' :
                         data.status === 'dropped' ? 'bg-red-700' : ''

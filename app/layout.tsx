@@ -9,6 +9,7 @@ import { auth } from "@/utils/auth";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 // Load the OpenSans font
 const opensans = localFont({
@@ -58,9 +59,7 @@ export default async function RootLayout({
 
           <main className=" max-w-9xl">{children}</main>
           
-          <footer className="p-6 w-full text-center blur-backdrop-lg  bg-opacity-20 bg-black absolute bottom-0 right-0 text-white">
-            © {new Date().getFullYear()} Bellz Studio. All Rights Reserved.
-          </footer>
+          <Footer />
           <ToastContainer />
         </Provider>
       </body>

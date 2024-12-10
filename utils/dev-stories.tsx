@@ -21,7 +21,7 @@ export const DEV_STORIES: iDevStory[] = [
         ]
     },
     {
-        id: "1",
+        id: "respace",
         title: "ReSpace",
         tag: "real-estate",
         description: "ReSpace aims to eliminate the challenges of house hunting by providing a smooth, personalized real estate experience. We want to empower users to effortlessly search for and rent apartments or spaces online while managing their utilities—such as cleaning, waste disposal, and internet bills—through our app",
@@ -31,7 +31,7 @@ export const DEV_STORIES: iDevStory[] = [
         inspirations: []
     },        
     {
-        id: "2",
+        id: "bellz-mini",
         title: "Bellz Mini",
         tag: "super-apps",
         description: "Bellz Mini is all about creating mini apps within the Telegram ecosystem. With this initiative, I’m looking to explore the upsides and downsides of super apps while evaluating the best platforms for building these mini applications on existing frameworks.",
@@ -39,5 +39,35 @@ export const DEV_STORIES: iDevStory[] = [
         product_url: "https://github.com/olaniyigeorge/bellz-tg-mini",
         status: "dev",
         inspirations: []
-    }    
+    },
+    {
+        id: "promptopia",
+        title: "Promptopia",
+        tag: "llm-prompts",
+        description: " Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
+        open_source_url: "https://github.com/olaniyigeorge/",
+        product_url: "/home/",
+        status: "live",
+        inspirations: []
+    },   
+    {
+        id: "i-scheduler",
+        title: "iScheduler",
+        tag: "tasks-scheduler",
+        description: " Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
+        open_source_url: "https://github.com/olaniyigeorge/",
+        product_url: "/home/",
+        status: "dev",
+        inspirations: []
+    },   
+    {
+        id: "i-hr-manager",
+        title: "iHR",
+        tag: "interviews",
+        description: "An AI-powered platform designed to revolutionize interview preparation and feedback",
+        open_source_url: "https://github.com/olaniyigeorge/iHR",
+        product_url: "https://ihr-mfh9.onrender.com/",
+        status: "live",
+        inspirations: []
+    },   
 ]

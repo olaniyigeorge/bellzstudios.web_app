@@ -6,12 +6,14 @@
     export default function Header() {
         const pathname = usePathname()
 
-        return (
-            <header className="px-6 py-2 w-full bg-purple-950 bg-opacity-60 blur-backdrop-lg shadow sticky top-0 right-0 z-3000 ">
+        console.log("pathname: ", pathname)
+
+        if (pathname == "/" || pathname == "/notes" || pathname.startsWith("/dev-stories")) return (
+            <header className="px-6 py-2 w-full max-w-[1440px bg-purple-950 bg-opacity-60 blur-backdrop-lg shadow sticky top-0 right-0 z-3000 ">
                 <nav className="flex justify-between items-center px-3 md:px-5 container mx-auto">
                     <Link 
                         href="/"
-                        className="font-extrabold flex gap-2 items-center text-purple-600 text-3xl">
+                        className="font-extrabold  flex gap-2 items-center text-purple-600 text-3xl">
                         <Image
                             src="/assets/images/memoji.png"
                             className="object-contain rounded-full"
@@ -20,7 +22,7 @@
                             priority={true}
                             alt="product-link"
                         /> 
-                        <Link href="/" className="text-2xl text-white font-bold">B-Stdio</Link>
+                        <h1 className="text-2xl text-white font-bold">B-Stdio</h1>
                     </Link>
                     <span className="font-medium flex justify-end items-center gap-2">
                         {
@@ -38,6 +40,8 @@
                         </a>
                     </span>
                 </nav>
-            </header>
-        )
+            </header>  
+        );
+
+        return null;
     }

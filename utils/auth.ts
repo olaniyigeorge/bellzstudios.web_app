@@ -9,7 +9,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
     async signIn({profile}) {
       try {
-        console.log("....connecting to db")
+        console.log("....connecting to db (for sign in)")
         await connectToDB()
 
         // check if user exists

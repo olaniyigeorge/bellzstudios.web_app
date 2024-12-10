@@ -29,7 +29,7 @@ export default async function LockedInLayout({children}: {children: React.ReactN
                         : 
                     ""}
                     {session?.user ?
-                        <Link href='/home/profile'>
+                        <Link href='/i/lockedin/profile'>
                         <Image
                         src={session!.user.image || '/assets/images/logo.svg'}
                         width={37}

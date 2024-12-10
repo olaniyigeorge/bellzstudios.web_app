@@ -35,7 +35,8 @@ export default async function Auth() {
               alt="google" 
             /> 
           </>
-          <>Sign in with Google</></button>
+          <>Sign in with Google</>
+          </button>
       </form>
       )
 } 
