@@ -45,53 +45,53 @@ export async function GET(request: Request) {
 
 
 
-const lfs = [
-    {
-        "id": 1,
-        "name": "Financials",
-        "description": "My goals towards my financial life",
-        "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
-    },
-    {
-        "id": 2,
-        "name": "Olaniyi George",
-        "description": "vvvrv",
-        "user": "ccfd6f45-81e1-42bf-bb38-e121c94700d8"
-    },
-    {
-        "id": 3,
-        "name": "Financialsssspppp",
-        "description": "My goals towards my financial life",
-        "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
-    },
-    {
-        "id": 4,
-        "name": "Financialssss",
-        "description": "My goals towards my financial life",
-        "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
-    },
-    {
-        "id": 5,
-        "name": "Health",
-        "description": "My medical well being",
-        "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
-    },
-    {
-        "id": 6,
-        "name": "Personal",
-        "description": "Being sober for a month",
-        "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
-    },
-    {
-        "id": 7,
-        "name": "Personals",
-        "description": "Being sober for a month",
-        "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
-    },
-    {
-        "id": 8,
-        "name": "Testing",
-        "description": "hfdwehfbrhbiqker",
-        "user": "41d45d2a-d350-4201-9999-3fae6a087264"
-    }
-]
+// const lfs = [
+//     {
+//         "id": 1,
+//         "name": "Financials",
+//         "description": "My goals towards my financial life",
+//         "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
+//     },
+//     {
+//         "id": 2,
+//         "name": "Olaniyi George",
+//         "description": "vvvrv",
+//         "user": "ccfd6f45-81e1-42bf-bb38-e121c94700d8"
+//     },
+//     {
+//         "id": 3,
+//         "name": "Financialsssspppp",
+//         "description": "My goals towards my financial life",
+//         "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
+//     },
+//     {
+//         "id": 4,
+//         "name": "Financialssss",
+//         "description": "My goals towards my financial life",
+//         "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
+//     },
+//     {
+//         "id": 5,
+//         "name": "Health",
+//         "description": "My medical well being",
+//         "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
+//     },
+//     {
+//         "id": 6,
+//         "name": "Personal",
+//         "description": "Being sober for a month",
+//         "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
+//     },
+//     {
+//         "id": 7,
+//         "name": "Personals",
+//         "description": "Being sober for a month",
+//         "user": "1a9be89a-058e-4023-b42c-cce288fd979b"
+//     },
+//     {
+//         "id": 8,
+//         "name": "Testing",
+//         "description": "hfdwehfbrhbiqker",
+//         "user": "41d45d2a-d350-4201-9999-3fae6a087264"
+//     }
+// ]
