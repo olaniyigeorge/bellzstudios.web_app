@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-interface iLifeDomain{
+export interface iLifeDomain{
     _id: string;
     name: string;
     description: string;

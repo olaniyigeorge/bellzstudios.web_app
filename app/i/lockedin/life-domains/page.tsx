@@ -2,7 +2,7 @@ import { auth, } from "@/utils/auth"
 import { getLifeDomains } from "./action"
 import Link from "next/link"
 import Auth from "@/components/sign-in"
-import LifeDomainCard from "@/components/lockedin/life-domain-card"
+import LifeDomainCard, { iLifeDomain } from "@/components/lockedin/life-domain-card"
 
 export default async function LifeDomains() {
     const session = await auth()
@@ -29,7 +29,7 @@ export default async function LifeDomains() {
                }</>
             </span>
             <section className="w-full my-4 gap-2 grid grid-cols-1 md:grid-cols-3">
-               {res.map((lfd: any) => (
+               {res.map((lfd: iLifeDomain) => (
                 <div key={lfd._id} className="w-full flex flex-col  ">
                    <LifeDomainCard  {...lfd}/>
                 </div>

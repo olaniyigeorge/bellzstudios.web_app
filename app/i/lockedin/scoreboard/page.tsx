@@ -1,5 +1,5 @@
 import { iHabitTask } from "@/components/lockedin/habit-task-card";
-import HabitTaskChartCard from "@/components/lockedin/habit-task-chart-card";
+import HabitTaskChartCard, { eHabitTask } from "@/components/lockedin/habit-task-chart-card";
 import { auth, signIn } from "@/utils/auth";
 
 export default async function ScoreboardPage() {
@@ -19,7 +19,7 @@ export default async function ScoreboardPage() {
         </div>)
     }
 
-    let habitTasks: iHabitTask[] = []
+    let habitTasks: eHabitTask[] = []
     try {
         const response = await fetch(`${process.env.DOMAIN}/api/lockedin/habit-tasks?owner=${session.user.id}`, {
             method: "GET",
@@ -34,7 +34,7 @@ export default async function ScoreboardPage() {
     return ( <div className="w-full justify-start overflow-auto">
         <h1 className=" font-extrabold text-3xl"> Scoreboard</h1>
         <section className="w-full my-4 gap-2 grid grid-cols-1">
-               {habitTasks.map((lfd: any) => (
+               {habitTasks.map((lfd: eHabitTask) => (
                 <div key={lfd._id} className="w-full flex flex-col  ">
                    <HabitTaskChartCard {...lfd}/>
                 </div>

@@ -1,7 +1,7 @@
 import { auth, signIn, signOut } from "@/utils/auth"
 import Link from "next/link"
 import Auth from "@/components/sign-in"
-import HabitTaskCard from "@/components/lockedin/habit-task-card"
+import HabitTaskCard, { iHabitTask } from "@/components/lockedin/habit-task-card"
 
 export default async function HabitTasksPage() {
     const session = await auth()
@@ -46,7 +46,7 @@ export default async function HabitTasksPage() {
                }</>
             </span>
             <section className="w-full my-4 gap-2 grid grid-cols-1 md:grid-cols-3">
-               {res.map((lfd: any) => (
+               {res.map((lfd: iHabitTask) => (
                 <div key={lfd._id} className="w-full flex flex-col  ">
                    <HabitTaskCard {...lfd}/>
                 </div>

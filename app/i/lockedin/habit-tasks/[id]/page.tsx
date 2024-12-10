@@ -1,3 +1,5 @@
+
+import { eHabitTask } from "@/components/lockedin/habit-task-chart-card";
 import MarkTodayButton from "@/components/lockedin/mark-today-button";
 
 export default async function HabitTaskDetailsPage({ params }: { params: { id: string } }) {
@@ -27,9 +29,9 @@ export default async function HabitTaskDetailsPage({ params }: { params: { id: s
                         <h2 className="text-xl font-semibold mb-2">Entries</h2>
                         {habitTask.entries.length > 0 ? (
                             <ul className="list-disc pl-5">
-                                {habitTask.entries.map((entry: any) => (
+                                {habitTask.entries.map((entry: eHabitTask) => (
                                     <li key={entry._id} className="text-gray-700">
-                                        {new Date(entry.date).toLocaleDateString()}: {entry.completed ? 'Completed' : 'Not Completed'}
+                                        {new Date(entry.end_date).toLocaleDateString()}: {entry.end_date ? 'Completed' : 'Not Completed'}
                                     </li>
                                 ))}
                             </ul>
