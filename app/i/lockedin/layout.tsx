@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import FooterControls from "@/components/lockedin/footer-controls";
 import Link from "next/link";
-import Auth from "@/components/sign-in";
 import { auth, signIn } from "@/utils/auth";
 import Image from "next/image"
 

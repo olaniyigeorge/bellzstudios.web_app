@@ -6,8 +6,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Provider from "@/components/Provider";
 import { auth } from "@/utils/auth";
-import Image from "next/image";
-import Link from "next/link";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 

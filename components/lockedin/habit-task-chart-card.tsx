@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { iLifeDomain } from "./forms/life-domain-form";
 import { iHabitTask } from "./habit-task-card";
 
 interface iHabitTaskEntry {

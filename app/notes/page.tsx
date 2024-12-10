@@ -34,11 +34,11 @@ export default function Note() {
             </h1>
 
             <section className="w-full border-y h-full border-purple-800 grid gap-3 md:gap-4 grid-cols-3 p-2 md:p-4 w-2/3 ">
-                {notes.map((letter) => (
-                    <div className="border p-2 rounded-xl ">
+                {notes.map((letter, index) => (
+                    <div key={index} className="border p-2 rounded-xl ">
                         <p className="font-medium">{letter.body}</p>
                         <span className="w-full text-sm flex justify-end">
-                            
+
                             {letter.written_at}
                         </span>
                     </div>

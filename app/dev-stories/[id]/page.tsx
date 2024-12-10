@@ -1,4 +1,4 @@
-import DevStoryCard, { iDevStory } from "@/components/dev-story-card";
+import { iDevStory } from "@/components/dev-story-card";
 import DevStoryPage from "@/components/dev-story-page";
 import { DEV_STORIES } from "@/utils/dev-stories";
 import { Metadata } from "next";

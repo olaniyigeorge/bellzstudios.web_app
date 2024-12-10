@@ -20,7 +20,15 @@ export default function NotesSection() {
 
                     </span>
                     <Link href="/notes" className="flex items-center gap-2 hover:shadow-purple-600 hover:border-purple-400 border-white transition-all duration-800 ease-in-out shadow shadow-white p-3 md:p-4 dark:text-slate-200 border rounded-full">
-                            <img src="/assets/images/b91e1131ca20f6369aa68d21cb3a8960.gif" className="object-full rounded-full w-10 h-10" /> <>Read Notes</>
+                            <Image 
+                                src="/assets/images/b91e1131ca20f6369aa68d21cb3a8960.gif" 
+                                className="object-full rounded-full w-10 h-10" 
+                                height={200}
+                                width={200}
+                                priority
+                                alt="olaniyigeorge_linkedin"
+                            /> 
+                            <>Read Notes</>
                     </Link>
             </section>
         </section>
