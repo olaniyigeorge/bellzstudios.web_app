@@ -23,7 +23,7 @@ export default async function Landing() {
           <div className="md:w-1/2">
             {session?.user ? (
               <h1 className="font-medium text-gray-200 text-3xl">
-                Hi <span className="text-purple-400">{session.user.name}</span>, Welcome to
+                Hi <span className="text-purple-300">{session.user.name}</span>, Welcome to
               </h1>
             ) : (
               <h1 className="font-medium  text-gray-200 text-2xl">Hi there! Welcome to</h1>
