@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 
-import NoteEntryCard, { NoteEntry } from "./note-entry-card";
+import NoteEntryCard, { iNoteEntry } from "./note-entry-card";
 
 interface NoteEntryCardListProps {
-    data: NoteEntry[];
+    data: iNoteEntry[];
     handleTagClick: (tag: string) => void;
   }
 
@@ -13,7 +13,7 @@ const NoteEntryCardList = (props: NoteEntryCardListProps) => {
     const {data, handleTagClick} = props
   return (
     <div className='mt-16 prompt_layout'>
-      {data.map((entry: NoteEntry) => (
+      {data.map((entry: iNoteEntry) => (
         <NoteEntryCard
           key={entry._id}
           post={entry}
@@ -32,7 +32,7 @@ const Feed = () => {
   // Search states
   const [searchText, setSearchText] = useState("");
   const [searchTimeout, setSearchTimeout] = useState<NodeJS.Timeout | null>(null); // const [searchTimeout, setSearchTimeout] = useState(null);
-  const [searchedResults, setSearchedResults] = useState<NoteEntry[]>([]);
+  const [searchedResults, setSearchedResults] = useState<iNoteEntry[]>([]);
 
   const fetchPosts = async () => {
     const response = await fetch("/api/notes/");
@@ -45,10 +45,10 @@ const Feed = () => {
     fetchPosts();
   }, []);
 
-  const filterPrompts = (searchtext: string): NoteEntry[] => {
+  const filterPrompts = (searchtext: string): iNoteEntry[] => {
     const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
     return allPosts.filter(
-      (item: NoteEntry) =>
+      (item: iNoteEntry) =>
         regex.test(item.author.username) ||
         regex.test(item.tags[0]) ||
         regex.test(item.body)

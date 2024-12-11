@@ -11,6 +11,11 @@ const nextConfig = {
                 hostname: "lh3.googleusercontent.com",
             },
             {
+                protocol: "https",
+                hostname: "avatars.githubusercontent.com",
+            },
+            
+            {
                 protocol: "http",
                 hostname: "127.0.0.1",
             },

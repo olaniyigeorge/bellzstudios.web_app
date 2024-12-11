@@ -1,4 +1,3 @@
-import { iHabitTask } from "@/components/lockedin/habit-task-card";
 import HabitTaskChartCard, { eHabitTask } from "@/components/lockedin/habit-task-chart-card";
 import { auth, signIn } from "@/utils/auth";
 

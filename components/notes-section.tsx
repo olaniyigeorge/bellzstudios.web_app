@@ -23,6 +23,7 @@ export default function NotesSection() {
                             <Image 
                                 src="/assets/images/b91e1131ca20f6369aa68d21cb3a8960.gif" 
                                 className="object-full rounded-full w-10 h-10" 
+                                unoptimized
                                 height={200}
                                 width={200}
                                 priority

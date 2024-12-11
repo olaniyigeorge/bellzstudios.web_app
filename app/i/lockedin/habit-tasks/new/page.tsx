@@ -25,7 +25,7 @@ export default async function NewHabitTaskPage() {
             console.log("Error while getting aspects")
         }
     }catch(error) {
-        console.log("Error")
+        console.log("Error", error)
     }
 
 

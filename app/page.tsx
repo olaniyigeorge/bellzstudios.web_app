@@ -4,7 +4,6 @@ import ContactSection from "../components/contact-section";
 import AboutUsSection from "../components/about-us-section";
 import DevStoriesSection from "../components/dev-stories-section";
 import NotesSection from "../components/notes-section";
-import Link from "next/link";
 import { auth } from "@/utils/auth";
 
 export default async function Landing() {

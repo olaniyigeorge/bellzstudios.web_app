@@ -11,7 +11,7 @@ interface User {
     email: string;
     image: string;
 }
-export interface NoteEntry {
+export interface iNoteEntry {
     _id: string; 
     author: User;
     body: string; 
@@ -25,7 +25,7 @@ export interface NoteEntry {
   
 
 interface NoteEntryCardProps {
-    post: NoteEntry;
+    post: iNoteEntry;
     handleEdit: () => void;
     handleDelete: () => void;
     handleTagClick?: (tag: string) => void; // Optional callback
@@ -101,7 +101,7 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
         #{post.tags[0]}
       </p>
 
-      {session?.user?.id === post.creator._id && pathName === "/profile" && (
+      {session?.user?.id === post.author._id && pathName === "/profile" && (
         <div className='mt-5 flex-center gap-4 border-t border-gray-100 pt-3'>
           <p
             className='font-inter text-sm green_gradient cursor-pointer'
