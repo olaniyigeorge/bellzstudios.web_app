@@ -2,6 +2,7 @@ import NoteEntry from "@/models/notes.note-entry";
 import { connectToDB } from "@/utils/database";
 
 export const GET = async (req: Request) => {
+  console.log("Request: ", req.url)
   try {
     // Connect to the database
     await connectToDB();
