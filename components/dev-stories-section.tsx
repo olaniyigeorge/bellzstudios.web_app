@@ -21,7 +21,7 @@ export default function DevStoriesSection() {
                     </span>
                     <section className="w-full flex justify-center md:justify-start">
                         <Link href="/dev-stories" className="hover:scale-[102%] ease-in-out border-purple-500 transition-all duration-800 shadow shadow-purple-500 p-3 md:p-4 dark:text-slate-200 border rounded-full">
-                            Expore Stories
+                            Explore Stories
                         </Link>
                     </section>
                 </section>

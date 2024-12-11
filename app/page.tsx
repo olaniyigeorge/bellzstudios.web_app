@@ -23,7 +23,7 @@ export default async function Landing() {
           <div className="md:w-1/2">
             {session?.user ? (
               <h1 className="font-medium text-gray-200 text-3xl">
-                Hi <span className="text-purple-700">{session.user.name}</span>, Welcome to
+                Hi <span className="text-purple-400">{session.user.name}</span>, Welcome to
               </h1>
             ) : (
               <h1 className="font-medium  text-gray-200 text-2xl">Hi there! Welcome to</h1>
@@ -31,7 +31,7 @@ export default async function Landing() {
             <h2 className="font-extrabold text-purple-200 text-[60px] md:text-[80px]">
               Bellz Studio
             </h2>
-            <p className="text-purple-400 text-lg">
+            <p className="text-purple-400 text-lg font-titillium">
               Building microservices and products that make life easier.
             </p>
             

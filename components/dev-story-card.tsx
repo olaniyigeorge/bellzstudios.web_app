@@ -20,7 +20,7 @@ export default function DevStoryCard(data: iDevStory) {
 
 
     return ( 
-        <div className="w-full p-3 gap-2 flex flex-col md:p-6 rounded-lg shadow-md bg-gray-900">
+        <div className="w-full p-3 gap-2 flex flex-col md:p-6 rounded-lg shadow-md bg-black bg-opacity-20 hover:bg-opacity-30">
             
             <div className="flex items-center justify-between ">
                 <h2 className="text-bold text-2xl">

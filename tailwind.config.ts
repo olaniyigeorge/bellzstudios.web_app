@@ -33,6 +33,7 @@ const config: Config = {
         opensans: ["var(--opensans)", ...fontFamily.sans],
         satoshi: ['Satoshi', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        kanit: ['Kanit', 'sans-serif'],
       },
       screens: {
           xs: "375px",
