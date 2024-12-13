@@ -18,10 +18,10 @@ const opensans = localFont({
 
 export const metadata: Metadata = {
   title: "Bellz Studio",
-  description: "Proferring solutions one product at a time",
+  description: "Building products and services we believe should exist to make life simpler.",
   openGraph: {
     title: "Bellz Studio",
-    description: "Proferring solutions one product at a time",
+    description: "Building products and services we believe should exist to make life simpler.",
     url: "https://Bellz Studio.vercel.app/",
     siteName: "Bellz Studio",
     images: [

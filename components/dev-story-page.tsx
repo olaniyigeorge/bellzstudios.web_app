@@ -54,17 +54,28 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
 
     return (
         <div className="flex flex-col gap-2 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">
-            <span className="flex justify-between items-center">
-
+            <span className="flex flex-col gap-3 bg-black bg-white/10 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg p-5 rounded-lg p-2 bg-opacity-20">
+                <span className="flex justify-between items-center ">     
                 <h1 className="text-3xl md:text-5xl font-bold">{story.title}</h1>
-                <p className="text-[8px] w-fit rounded-full p-1 border border-purple-500">{story.tag}</p>                
+                
+                
+                <span className="flex items-center gap-2">
+                <p className="text-[10px] w-fit rounded-full p-1 border border-purple-500">{story.tag}</p>                
+                <Link 
+                    target="_blank" 
+                    href={story.product_url} className="hover:bg-orange-500 border-2 border-orange-500 p-2 font-medium text-[12px]
+                rounded-full">
+                    Get Started
+                </Link> 
+                </span>
+                
+                </span>
+
+
+                <p className="text-md md:text-xl lg:text-3xl text-pretty">{story.description}</p>
             </span>
-            <p className="text-md md:text-lg text-pretty">{story.description}</p>
-            <span className="flex justify-center ">
-            <Link href={`/i/${story.id}`} className="bg-green-500 p-2 rounded-full">
-                Get Started
-            </Link>
-            </span>
+            
+            
             <form onSubmit={joinWaitlist} className="my-3 flex flex-col items-center gap-3 md:gap-6 justify-center">
                 <input
                     type="email"
@@ -85,7 +96,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                                 How did you hear about us?
                             </option>
                             {DISCOVERY_LOCATION.map((location: string) => (
-                                <option key={location} className="bg-transparent   text-slate-900" value={location}>
+                                <option key={location} className="bg-transparent text-slate-900" value={location}>
                                     {location.toUpperCase().replace("_", " ")}
                                 </option>
                             ))}
@@ -97,7 +108,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                 </span>
             </form>
             
-            <section className="flex flex-col mt-4 items-center">
+            <section className="flex flex-col mt-4 items-center bg-black bg-white/10 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg rounded-xl ">
                 <h1 className="text-3xl font-medium py-2">
                     Join the conversion on 
                     <span className="text-purple-600">{" "}{story.title}</span> 

@@ -27,7 +27,7 @@ export const DEV_STORIES: iDevStory[] = [
         description: "ReSpace aims to eliminate the challenges of house hunting by providing a smooth, personalized real estate experience. We want to empower users to effortlessly search for and rent apartments or spaces online while managing their utilities—such as cleaning, waste disposal, and internet bills—through our app",
         open_source_url: "https://github.com/olaniyigeorge/raspa-client",
         product_url: "https://github.com/olaniyigeorge/raspa-client",
-        status: "dev",
+        status: "old",
         inspirations: []
     },        
     {
@@ -56,7 +56,7 @@ export const DEV_STORIES: iDevStory[] = [
         tag: "tasks-scheduler",
         description: " Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
         open_source_url: "https://github.com/olaniyigeorge/",
-        product_url: "/home/",
+        product_url: "/ischeduler on aws/",
         status: "dev",
         inspirations: []
     },   

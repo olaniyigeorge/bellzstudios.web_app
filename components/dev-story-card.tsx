@@ -11,7 +11,7 @@ export interface iDevStory{
     description: string;
     open_source_url: string;
     product_url: string;
-    status: "live" | "dev" | "dropped";
+    status: "live" | "dev" | "dropped" | "old";
     inspirations: Inspiration[]
 }
 
@@ -29,7 +29,7 @@ export default function DevStoryCard(data: iDevStory) {
                 <Link href={data.product_url} target="_blank" className={`w-3 h-3 animate-pulse ${
                         data.status === 'live' ? 'bg-green-500' :
                         data.status === 'dev' ? 'bg-orange-500' :
-                        data.status === 'dropped' ? 'bg-red-700' : ''
+                        data.status === 'dropped' ? 'bg-red-600' : 'bg-gray-700'
                         } rounded-full`}>
                 </Link>
             </div>

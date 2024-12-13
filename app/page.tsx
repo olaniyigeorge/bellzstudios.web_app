@@ -16,8 +16,12 @@ export default async function Landing() {
     { name: "Notes", id: "notes" },
   ];
 
+  // Mabi 
+  // Products: physical, digital, service, food .
+
+
   return (
-    <div className="w-full">
+    <div className="w-full font-titillium">
       <div className="w-full  gap-3 text-gray-800 md:h-screen  flex flex-col md:flex-row justify-between items-center px-6 px-20 lg:px-40 py-3 space-y-4 md:space-y-0">
           {/* Text Section */}
           <div className="md:w-1/2">
@@ -28,11 +32,11 @@ export default async function Landing() {
             ) : (
               <h1 className="font-medium  text-gray-200 text-2xl">Hi there! Welcome to</h1>
             )}
-            <h2 className="font-extrabold text-purple-200 text-[60px] md:text-[80px]">
+            <h2 className="font-extrabold leading-tighter text-purple-200 text-[60px] lg:text-[80px]">
               Bellz Studio
             </h2>
-            <p className="text-purple-400 text-lg font-titillium">
-              Building microservices and products that make life easier.
+            <p className="text-purple-400 text-lg ">
+                Building products and services we believe should exist to make life simpler.
             </p>
             
             <div className="flex justify-between text-gray-800 gap-2 mt-3">
