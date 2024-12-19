@@ -28,7 +28,7 @@ export default async function Auth() {
         type="submit">
           <>
             <Image 
-              src="assets/images/socials/google.svg" 
+              src="/assets/images/socials/google.svg" 
               className="w-5 h-5"
               width={5}
               height={5}

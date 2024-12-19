@@ -4,7 +4,20 @@ import { connectToDB } from "@/utils/database";
 
 export const GET = async (request: Request) => {
   try {
+    const url = new URL(request.url);
     await connectToDB();
+
+    const owner = url.searchParams.get("userId"); // Extract the owner from query parameters
+    const id = url.searchParams.get("id"); // Extract the owner from query parameters
+
+    if (owner) {
+        console.log("Getting life domains from this user")
+        await connectToDB();
+        const my_products = await Product.find({ owner}); // Use the extracted ID
+        return new Response(JSON.stringify(my_products), { status: 200 })
+    }
+
+
 
     const products = await Product.find({}).populate("owner");
     if (!products) return new Response("Products Not Found", { status: 404 });

@@ -1,5 +1,6 @@
 import ProductCard from '@/components/product-card'
 import { iProduct } from '../page';
+import HeroSection from '@/components/hero-section';
 
 export default async function ShopPage() {
 
@@ -7,12 +8,18 @@ export default async function ShopPage() {
 
 
     return (
-  
-          <div className="w-full px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <div className="w-full my-3 flex flex-col items-center gap-5 p-2 md:p-4">
+            <HeroSection 
+                message={"Shop your favorites products and services."} 
+                image={"/assets/images/buy-sell.png"}
+            />
+            <div className="w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-5">
             {products.map((product) => (
-              <ProductCard key={product.name} product={product} />
+                <ProductCard key={product.name} product={product} />
             ))}
-          </div>
+            </div>
+
+        </div>
 
     )
 }
