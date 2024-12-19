@@ -58,6 +58,8 @@ export default async function RootLayout({
           <main className="font-titillium max-w-9xl">{children}</main>
           
           <Footer />
+
+          
           <ToastContainer />
         </Provider>
       </body>

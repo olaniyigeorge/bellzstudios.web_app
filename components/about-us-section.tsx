@@ -1,4 +1,5 @@
   import Image from "next/image"
+import Link from "next/link"
 
 
   export default function AboutUsSection() {
@@ -8,24 +9,24 @@
           id="about-us"
           className="w-full flex items-center gap-3"
       >
-        <section className="w-full flex flex-col  gap-4 md:gap-8 lg:gap-12">
+        <section className="w-full flex flex-col  gap-4">
           <div className="flex flex-col gap-3">
-            <h1 id="hero-title" className="dark:text-purple-300 font-bold text-5xl"> About Us</h1>
-            <p className="text-lg md:text-xl dark:text-purple-100">
+            <h1 id="hero-title" className="orange-gradient font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
+            <p className="text-lg md:text-xl dark:text-purple-100 text-right">
               Bellz Studio was birthed from the idea that there is a lot of good that 
               could be done from a small place when tech is applied 
               to doing what it does best; making life easier.
-            </p>
-          </div>
-          <div className="flex flex-col gap-3">
-            <h1 id="hero-title" className="dark:text-purple-300 font-bold text-5xl"> Our Mission</h1>
-            <p className="text-lg md:text-xl dark:text-purple-100">
+              <br/>
               Our mission is to build solutions to as many problems as we can 
               in our immediate locale and document the journey while at it. 
               We would consider ourselves successful when we can get at least a thousand 
               people to actually use this products to deal with the issues they address. 
             </p>
           </div>
+
+          <Link href="/about-me" className="w-fit font-medium p-2 rounded-full border text-purple-900 light_btn">
+             Meet me
+          </Link>        
         </section>
         
         <section className="w-full hidden px-4 py-5  font-medium  md:flex">

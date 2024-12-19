@@ -3,7 +3,7 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 
 const config: Config = {
-  //  darkMode: ["class"],
+  //  darkMode: ["className"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -106,6 +106,11 @@ const config: Config = {
             from: { transform: "translateY(35%)" },
             to: { transform: "translateY(0%)" },
         },
+        zoom: {
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.2)" },
+          "100%": { transform: "scale(1)" },
+        }
       },
       animation: {
           "accordion-down": "accordion-down 0.2s ease-out",
@@ -114,12 +119,13 @@ const config: Config = {
           wiggle: "wiggle 1s ease-in infinite",
           swivvleV: "swivvleV 1.5s ease-in-out infinite",
           swivvle: "swivvle 1.5s ease-in-out infinite",
-          slideRtL: "slideRtL 1s ease-in-out ",
-          slideLtR: "slideLtR 1s ease-in-out ",
-          slideTtB: "slideTtB 1s ease-in-out ",
-          slideBtT: "slideBtT 1s ease-in-out ",
-          scaleUp: "scaleUp 1s ease-in-out ",
-          rollIn: "rollIn 1.5s ease-in-out "
+          slideRtL: "slideRtL 1s ease-in-out",
+          slideLtR: "slideLtR 1s ease-in-out",
+          slideTtB: "slideTtB 1s ease-in-out",
+          slideBtT: "slideBtT 1s ease-in-out",
+          scaleUp: "scaleUp 1s ease-in-out",
+          rollIn: "rollIn 1.5s ease-in-out",
+          zoom: "zoom 1s ease-in-out",
       },
     },
   },

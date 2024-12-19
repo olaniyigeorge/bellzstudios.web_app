@@ -51,7 +51,7 @@ export default function LifeDomainPage({ params }: { params: { id: string } }) {
             <h1 className="text-2xl font-semibold">{lifeDomain.name}</h1>
             <p className="mt-2 text-gray-700">{lifeDomain.description}</p>
             <div className="mt-4 text-sm text-gray-500">
-                <span>Life Domain ID: {lifeDomain._id}</span>
+                <span className='hidden'>Life Domain ID: {lifeDomain._id}</span>
             </div>
         </div>
     );

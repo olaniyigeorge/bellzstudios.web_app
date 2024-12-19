@@ -16,9 +16,6 @@ export default async function Landing() {
     { name: "Notes", id: "notes" },
   ];
 
-  // Mabi 
-  // Products: physical, digital, service, food .
-
 
   return (
     <div className="w-full font-titillium">
@@ -32,7 +29,7 @@ export default async function Landing() {
             ) : (
               <h1 className="font-medium  text-gray-200 text-2xl">Hi there! Welcome to</h1>
             )}
-            <h2 className="font-extrabold leading-tighter text-purple-200 text-[60px] lg:text-[80px]">
+            <h2 className="font-extrabold orange-gradient leading-tighter tex-200 text-[60px] lg:text-[80px]">
               Bellz Studio
             </h2>
             <p className="text-purple-400 text-lg ">

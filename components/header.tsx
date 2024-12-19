@@ -34,7 +34,7 @@
                         }
                         <a
                         href="mailto:olaniyigeorge77@gmail.com"
-                        className="bg-white text-black px-6 py-2 rounded-full hover:bg-purple-700 hover:text-white transition-all duration-300"
+                        className="orange-gradient-bg  text-white px-6 py-2 rounded-full hover:bg-purple-700 hover:text-white transition-all duration-300"
                         >
                         Hire Me
                         </a>
