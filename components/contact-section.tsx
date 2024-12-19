@@ -20,13 +20,13 @@ import Link from "next/link";
                 },
                 {
                     "name": "Email",
-                    "url": "olaniyigeorge77@gmail",
+                    "url": "mailto:olaniyigeorge77@gmail",
                     "msg": "Email Me",
                     'social_logo': "/assets/images/socials/memoji.png"
                 },
                 {
                     "name": "LinkedIn",
-                    "url": "https://linkedin.com/abelejolaniyi",
+                    "url": "https://linkedin.com/in/abeleje-olaniyi",
                     "msg": "Connect with me",
                     'social_logo': "https://avatars.githubusercontent.com/u/27226623?v=4"
                 },
@@ -56,7 +56,7 @@ import Link from "next/link";
                                 {contact.msg}
                                 </span>
                                 <hr className=""/>
-                                <Link href={contact.url} className="underline"> 
+                                <Link href={contact.url} target="_blank" className="underline"> 
                                     {contact.name}
                                 </Link>
                             </div>

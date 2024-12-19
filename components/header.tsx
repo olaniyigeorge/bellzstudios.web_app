@@ -15,14 +15,14 @@
                         href="/"
                         className="font-extrabold  flex gap-2 items-center text-purple-600 text-3xl">
                         <Image
-                            src="/assets/images/memoji.png"
+                            src="/assets/images/bellzstudio.png"
                             className="object-contain rounded-full"
                             height={40}
                             width={40}
                             priority={true}
                             alt="product-link"
                         /> 
-                        <h1 className="text-2xl text-white font-bold">B-Stdio</h1>
+                        <h1 className="text-xl text-white font-bold">Bellz Studio</h1>
                     </Link>
                     <span className="font-medium flex justify-end items-center gap-2">
                         {

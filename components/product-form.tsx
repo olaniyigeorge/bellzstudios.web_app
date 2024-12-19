@@ -24,7 +24,7 @@ export default function ProductForm(props: ProductFormProps) {
     const product = {
       name,
       description,
-      owner: user.id,
+      owner: user.id || owner,
       price,
       image,
       type,

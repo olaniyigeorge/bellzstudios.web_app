@@ -36,7 +36,7 @@ export default async function Landing() {
                 Building products and services we believe should exist to make life simpler.
             </p>
             
-            <div className="flex justify-between text-gray-800 gap-2 mt-3">
+            <div className="flex flex-col md:flex-row justify-between text-gray-800 gap-2 mt-3">
               {links.map((link) => (
                 <ScrollDownAnimation
                   key={link.id}
