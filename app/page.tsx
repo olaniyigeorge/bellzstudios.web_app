@@ -32,8 +32,8 @@ export default async function Landing() {
             <h2 className="font-extrabold orange-gradient leading-tighter tex-200 text-[60px] lg:text-[80px]">
               Bellz Studio
             </h2>
-            <p className="text-purple-400 text-lg ">
-                Building products and services we believe should exist to make life simpler.
+            <p className="text-purple-400 text-lg">
+                Building products and services we believe should exist.
             </p>
             
             <div className="flex flex-col md:flex-row justify-between text-gray-800 gap-2 mt-3">

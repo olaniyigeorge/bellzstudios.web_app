@@ -13,12 +13,12 @@ export default function MarketLayout({ children }: { children: React.ReactNode }
     <div className="w-full h-full bg-slate-50 flex flex-col items-center text-slate-900">
       <main className="relative max-w-[1440px] w-full h-full border flex flex-col items-center">
         {/* Navigation */}
-        <nav className="w-full md:w-2/3 flex sticky top-3 bg-purple-400 bg-opacity-50 p-3 rounded-lg w-full  justify-center z-10 shadow">
+        <nav className="w-full md:w-2/3 flex sticky top-3 bg-purple-400 bg-opacity-50 p-3 rounded-lg w-full  justify-between z-10 shadow">
           {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="w-full flex items-center gap-2 px-3 py-1 hover:text-purple-600 font-medium"
+              className="w-full flex justify-center items-center gap-2 px-3 py-1 hover:text-purple-600 font-medium"
             >
               <item.icon className="h-5 w-5" />
               <span className="text-xs md:text-sm">{item.name}</span>

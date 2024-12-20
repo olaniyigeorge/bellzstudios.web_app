@@ -21,6 +21,18 @@ export const DEV_STORIES: iDevStory[] = [
         ]
     },
     {
+        id: "marketplace",
+        title: "MarketPlace",
+        tag: "e-commerce",
+        description: "An e-commerce market for products ranging from physical products, food, digital products and services. Sellers and service providers track their orders and receive payments.",
+        open_source_url: "/i/market", 
+        product_url: "/i/market", 
+        status: "dev",
+        inspirations: [
+
+        ]
+    },
+    {
         id: "respace",
         title: "ReSpace",
         tag: "real-estate",
@@ -37,7 +49,7 @@ export const DEV_STORIES: iDevStory[] = [
         description: "Bellz Mini is all about creating mini apps within the Telegram ecosystem. With this initiative, I’m looking to explore the upsides and downsides of super apps while evaluating the best platforms for building these mini applications on existing frameworks.",
         open_source_url: "https://github.com/olaniyigeorge/bellz-tg-mini",
         product_url: "https://github.com/olaniyigeorge/bellz-tg-mini",
-        status: "dev",
+        status: "old",
         inspirations: []
     },
     {

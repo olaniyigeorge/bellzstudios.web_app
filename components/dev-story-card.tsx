@@ -28,7 +28,7 @@ export default function DevStoryCard(data: iDevStory) {
                 </h2>
                 <Link href={data.product_url} target="_blank" className={`w-3 h-3 animate-pulse ${
                         data.status === 'live' ? 'bg-green-500' :
-                        data.status === 'dev' ? 'bg-orange-500' :
+                        data.status === 'dev' ? 'bg-blue-500' :
                         data.status === 'dropped' ? 'bg-red-600' : 'bg-gray-700'
                         } rounded-full`}>
                 </Link>

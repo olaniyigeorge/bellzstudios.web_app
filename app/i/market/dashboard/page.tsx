@@ -8,7 +8,7 @@ export default async function Dashboard() {
 const session = await auth();
 
 if (!session?.user?.id) {
-    redirect("/auth")
+    redirect("/i/market#get-started")
     return <div>Loading...</div>;
 }
 
@@ -35,9 +35,9 @@ const navItems = [
 ];
 
 return (
-    <div className="w-full p-4 my-3 h-full  flex bg-opacity-50 border bg-white flex justify-between items-start bg-slate-50 text-gray-900">
+    <div className="w-full p-4 my-3 h-full  flex flex-col md:flex-row bg-opacity-50 flex justify-between items-start bg-slate-50 text-gray-900">
     {/* Navigation */}
-    <nav className="flex min-h-[80%] md:flex-col border-2 h-full p-2 bg-gray-100 justify-between rounded-lg shadow-md w-fit">
+    <nav className="w-full bg-white md:w-fit flex min-h-[80%] md:flex-col border h-full p-2 bg-gray-100 justify-between rounded-lg shadow-md">
         {navItems.map((item) => (
         <a
             key={item.name}
@@ -45,29 +45,29 @@ return (
             className="flex items-center gap-2 px-3 py-2 hover:text-purple-600 font-medium"
         >
             <item.icon className="h-6 w-6" />
-            <span className="text-sm md:text-base">{item.name}</span>
+            <span className="text-sm hidden md:flex md:text-base">{item.name}</span>
         </a>
         ))}
-        <div id="profile" className="mt-4 flex items-center gap-3">
+        <div id="profile" className="md:mt-4 bg-slate-50 border p-2 rounded-xl flex flex-col items-center gap-3">
         <img
             src={session?.user?.image || "https://via.placeholder.com/300x200"}
             alt={session?.user?.name || "User"}
             className="w-12 h-12 rounded-full object-cover"
         />
-        <span className="text-sm font-medium">{session?.user?.name}</span>
+        <span className="text-sm hidden md:flex font-medium">{session?.user?.name}</span>
         </div>
     </nav>
 
     {/* Welcome Section */}
     <div className="w-full  flex items-center  flex-col gap-3">
         {/* Dashboard Metrics */}
-        <div className="w-full max-w-4xl p-4 bg-gray-100 rounded-lg shadow-md">
+        <div className="w-full max-w-4xl p-4 bg-slate-100 rounded-lg shadow-md">
             <h2 className="text-lg font-medium mb-4">
                 Welcome, <span className="font-bold">{session?.user?.name}! </span>
                 <br/>
                 <span className="text-sm font-light">Dashboard Metrics</span>    
             </h2>
-            <div className="grid grid-cols-4 md:grid-cols-1 gap-3">
+            <div className="grid grid-cols-1 gap-3">
             {[
                 { name: "Sells", id: "sells", count: metrics.sells, icon: CubeIcon },
                 { name: "Buys", id: "buys", count: metrics.buys, icon: ShoppingCartIcon },

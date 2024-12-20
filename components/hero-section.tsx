@@ -9,7 +9,7 @@ import Auth from "./sign-in";
   export default function HeroSection(props: HeroSectionProps) {
       const { message, image } = props;
     return (
-      <div className="relative w-full h-[350px] bg-purple-400 overflow-hidden rounded-lg md:rounded-xl shadow-lg flex items-center justify-center text-white px-2 md:px-4 lg:px-6">
+      <div className="relative w-full h-[350px] bg-purple-600 overflow-hidden rounded-lg md:rounded-xl shadow-lg flex items-center justify-center text-white px-2 md:px-4 lg:px-6">
         {/* Hero Image */}
         <img
           src={image || "https://via.placeholder.com/1500x400"} // Fallback image
@@ -21,7 +21,7 @@ import Auth from "./sign-in";
           <p className="text-lg sm:text-xl">
             Explore the best products and services curated just for you. 
           </p>
-          <span className="w-fit my-3 p-2 flex gap-3 items-center border rounded-full">
+          <span id="get-started" className="w-fit my-3 p-2 flex gap-3 items-center border rounded-full">
             <>Get Started</>
             <Auth />
           </span>

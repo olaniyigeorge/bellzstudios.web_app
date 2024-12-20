@@ -11,7 +11,7 @@ import Link from "next/link"
       >
         <section className="w-full flex flex-col  gap-4">
           <div className="flex flex-col gap-3">
-            <h1 id="hero-title" className="orange-gradient font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
+            <h1 id="hero-title" className="orange-gradient bebas-neue-regular font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
             <p className="text-lg md:text-xl dark:text-purple-100 text-right">
               Bellz Studio was birthed from the idea that there is a lot of good that 
               could be done from a small place when tech is applied 

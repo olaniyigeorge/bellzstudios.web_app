@@ -34,6 +34,7 @@ const config: Config = {
         satoshi: ['Satoshi', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         kanit: ['Kanit', 'sans-serif'],
+        bebas: ['Bebas', 'sans-serif'],
       },
       screens: {
           xs: "375px",
