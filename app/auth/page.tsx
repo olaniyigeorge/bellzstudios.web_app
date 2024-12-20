@@ -1,5 +1,5 @@
 import Auth from "@/components/sign-in";
-import { signIn } from "@/utils/auth";
+import { signIn } from "@/services/auth";
 
 
 export default async function AuthPage() {

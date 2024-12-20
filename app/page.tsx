@@ -4,7 +4,7 @@ import ContactSection from "../components/contact-section";
 import AboutUsSection from "../components/about-us-section";
 import DevStoriesSection from "../components/dev-stories-section";
 import NotesSection from "../components/notes-section";
-import { auth } from "@/utils/auth";
+import { auth } from "@/services/auth";
 
 export default async function Landing() {
   const session = await auth();

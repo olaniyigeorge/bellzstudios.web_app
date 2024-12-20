@@ -1,5 +1,5 @@
 import Product from "@/models/market.product";
-import { connectToDB } from "@/utils/database";
+import { connectToDB } from "@/services/database";
 
 // GET handler to retrieve a single product by ID
 export const GET = async (request: Request, { params }: { params: { id: string } }) => {

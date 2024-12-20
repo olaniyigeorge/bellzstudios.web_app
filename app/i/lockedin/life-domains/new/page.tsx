@@ -1,5 +1,5 @@
 import LifeDomainForm from "@/components/lockedin/forms/life-domain-form";
-import { auth } from "@/utils/auth";
+import { auth } from "@/services/auth";
 import { redirect } from "next/navigation";
 
 export default async function NewLifeDomain() {

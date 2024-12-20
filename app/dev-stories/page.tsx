@@ -1,4 +1,4 @@
-import { DEV_STORIES } from "@/utils/dev-stories"
+import { DEV_STORIES } from "@/services/dev-stories"
 import DevStoryCard, { iDevStory } from "../../components/dev-story-card"
 
 

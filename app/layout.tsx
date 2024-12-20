@@ -5,7 +5,7 @@ import "@/styles/globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Provider from "@/components/Provider";
-import { auth } from "@/utils/auth";
+import { auth } from "@/services/auth";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 

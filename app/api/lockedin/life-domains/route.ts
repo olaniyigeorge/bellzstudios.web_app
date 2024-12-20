@@ -1,5 +1,5 @@
 import LifeDomain from "@/models/lockedin.life-domains";
-import { connectToDB } from "@/utils/database";
+import { connectToDB } from "@/services/database";
 
 export async function GET(request: Request) {
 

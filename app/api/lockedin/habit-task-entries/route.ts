@@ -1,5 +1,5 @@
 import HabitTaskEntry from "@/models/lockedin.task-entry"; // Import the model
-import { connectToDB } from "@/utils/database";
+import { connectToDB } from "@/services/database";
 
 export async function POST(request: Request) {
     try {

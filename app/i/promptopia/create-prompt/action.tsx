@@ -1,5 +1,5 @@
 "use server";
-import { auth } from "@/utils/auth"
+import { auth } from "@/services/auth"
 
 
 

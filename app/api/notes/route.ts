@@ -1,5 +1,5 @@
 import NoteEntry from "@/models/notes.note-entry";
-import { connectToDB } from "@/utils/database";
+import { connectToDB } from "@/services/database";
 
 export const GET = async (req: Request) => {
   console.log("Request: ", req.url)

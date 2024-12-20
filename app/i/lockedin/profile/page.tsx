@@ -1,6 +1,6 @@
 import { iLifeDomain } from "@/components/lockedin/forms/life-domain-form"
 import { iHabitTask } from "@/components/lockedin/habit-task-card"
-import { auth, signIn } from "@/utils/auth"
+import { auth, signIn } from "@/services/auth"
 
 
 export default async function ProfilePage() {

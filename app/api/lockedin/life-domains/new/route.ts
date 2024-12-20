@@ -1,4 +1,4 @@
-import { connectToDB } from "@/utils/database"
+import { connectToDB } from "@/services/database"
 import LifeDomain from "@/models/lockedin.life-domains"
 
 

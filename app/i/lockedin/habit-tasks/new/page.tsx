@@ -1,5 +1,5 @@
 import HabitTaskForm from "@/components/lockedin/forms/habit-task-form";
-import { auth } from "@/utils/auth";
+import { auth } from "@/services/auth";
 import { redirect } from "next/navigation";
 import { getLifeDomains } from "../../life-domains/action";
 import { iLifeDomain } from "@/components/lockedin/forms/life-domain-form";

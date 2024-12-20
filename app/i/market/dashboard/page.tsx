@@ -1,4 +1,4 @@
-import { auth } from "@/utils/auth";
+import { auth } from "@/services/auth";
 import { HomeIcon, ShoppingCartIcon, CubeIcon, TruckIcon, UserCircleIcon } from "@heroicons/react/24/outline";
 import { iProduct } from "../page";
 import { redirect } from "next/navigation";

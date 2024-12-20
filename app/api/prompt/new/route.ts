@@ -1,4 +1,4 @@
-import { connectToDB } from "@/utils/database"
+import { connectToDB } from "@/services/database"
 import Prompt from "@/models/prompt"
 
 

@@ -1,4 +1,4 @@
-import { auth, } from "@/utils/auth"
+import { auth, } from "@/services/auth"
 import { getLifeDomains } from "./action"
 import Link from "next/link"
 import Auth from "@/components/sign-in"

@@ -1,5 +1,5 @@
 import ProductForm from "@/components/product-form";    
-import { auth } from "@/utils/auth";
+import { auth } from "@/services/auth";
 import { redirect } from "next/navigation";
 
 export interface iUser{

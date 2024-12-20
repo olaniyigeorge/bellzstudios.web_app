@@ -1,6 +1,6 @@
 "use client";
 import { Inspiration } from "@/components/dev-story-card";
-import { DEV_STORIES, DISCOVERY_LOCATION } from "@/utils/dev-stories";
+import { DEV_STORIES, DISCOVERY_LOCATION } from "@/services/dev-stories";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { toast } from "react-toastify";

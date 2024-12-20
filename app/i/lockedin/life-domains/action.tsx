@@ -1,4 +1,4 @@
-import { auth } from "@/utils/auth"
+import { auth } from "@/services/auth"
 import { redirect } from "next/navigation";
 
 

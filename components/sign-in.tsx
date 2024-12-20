@@ -1,4 +1,4 @@
-import { auth, signIn, signOut } from "@/utils/auth"
+import { auth, signIn, signOut } from "@/services/auth"
 import Image from "next/image"
 export default async function Auth() {
   const session = await auth() 

@@ -1,5 +1,5 @@
 import HabitTaskChartCard, { eHabitTask } from "@/components/lockedin/habit-task-chart-card";
-import { auth, signIn } from "@/utils/auth";
+import { auth, signIn } from "@/services/auth";
 
 export default async function ScoreboardPage() {
     const session = await auth()
