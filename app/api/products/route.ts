@@ -8,7 +8,7 @@ export const GET = async (request: Request) => {
     await connectToDB();
 
     const owner = url.searchParams.get("userId"); // Extract the owner from query parameters
-    const id = url.searchParams.get("id"); // Extract the owner from query parameters
+    // const id = url.searchParams.get("id"); // Extract the owner from query parameters
 
     if (owner) {
         console.log("Getting life domains from this user")
