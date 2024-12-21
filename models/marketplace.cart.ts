@@ -16,10 +16,14 @@ const CartSchema = new Schema({
         enum: Product,
         required: [false, "products might be empty"]
     },
+    type: {
+        type: String,
+        enum: ["physical", "service", "digital", "food"],
+        default: "private",
+    },
     status: {
         type: String,
-        enum: ["pending", "cleared", ""],
-        default: "pending"
+        enum: ["pending", "cleared",  ]
     },
     created_at: {
         type: Date,
