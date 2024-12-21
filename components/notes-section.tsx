@@ -13,7 +13,7 @@ export default function NotesSection() {
         >
         <section className="w-full flex flex-col justify-center items-center gap-3">
             <section className="w-full flex text-center justify-center items-center flex-col  gap-4">
-                    <span className="text-xl text-center w-full md:w-2/3  md:text-2xl text-slate-200 text-center font-medium w-full ">
+                    <span className="text-xl text-center leading-loose w-full md:w-2/3  md:text-2xl text-slate-200 text-center font-medium w-full ">
                         This is a journal for me where I think out loud. Write about my thought 
                         process when I&apos;m brainstorming, leave notes about what I would build next 
                         and how I would go about it.

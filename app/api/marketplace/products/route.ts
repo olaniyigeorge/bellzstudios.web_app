@@ -1,5 +1,5 @@
-import Product from "@/models/market.product";
-import { connectToDB } from "@/services/database";
+import Product from "@/models/marketplace.product";
+import { connectToDB } from "@/services/mongo_db";
 
 
 export const GET = async (request: Request) => {

@@ -1,4 +1,5 @@
 import { auth, signIn, signOut } from "@/services/auth"
+import { redirect } from "next/navigation"
 import Image from "next/image"
 export default async function Auth() {
   const session = await auth() 
@@ -22,6 +23,7 @@ export default async function Auth() {
         action={async () => {
           "use server"
           await signIn("google")
+          return redirect("/")
         }}
       >
         <button className="black_btn flex gap-2" 

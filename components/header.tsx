@@ -22,7 +22,7 @@
                             priority={true}
                             alt="product-link"
                         /> 
-                        <h1 className="text-xl text-white font-bold">Bellz Studio</h1>
+                        <h1 className="text-xl hidden tracking-tighter font-bebas-neue-bold font-extrabold uppercase md:flex text-white">Bellz Studio</h1>
                     </Link>
                     <span className="font-medium flex justify-end items-center gap-2">
                         {

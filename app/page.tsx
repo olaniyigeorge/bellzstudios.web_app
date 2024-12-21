@@ -19,7 +19,7 @@ export default async function Landing() {
 
   return (
     <div className="w-full font-titillium">
-      <div className="w-full  gap-3 text-gray-800 md:h-screen  flex flex-col md:flex-row justify-between items-center px-6 px-20 lg:px-40 py-3 space-y-4 md:space-y-0">
+      <div className="w-full gap-3 text-gray-800 md:h-screen  flex flex-col md:flex-row justify-between items-center px-6 px-20 lg:px-40 py-1 gap-4">
           {/* Text Section */}
           <div className="md:w-1/2">
             {session?.user ? (

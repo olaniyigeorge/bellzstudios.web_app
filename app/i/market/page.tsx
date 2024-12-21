@@ -13,7 +13,7 @@ export interface iProduct {
     created_at: string;
     updated_at: string;
   }
-  const PRODUCTS: iProduct[] = [
+export const PRODUCTS: iProduct[] = [
     {
       _id: "1",
       owner: "63fbc2df8b82f12345678901",
@@ -85,7 +85,8 @@ export interface iProduct {
 
 
 
-export default function MarketLanding() {
+export default async function MarketLanding() {
+  const products = await getProducts()
   return (
   <div className="w-full my-3 flex flex-col items-center gap-5">
         <HeroSection 
@@ -93,7 +94,7 @@ export default function MarketLanding() {
             image={"/assets/images/bellzstudio.png"}
           />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-          {PRODUCTS.map((product) => (
+          {products.map((product) => (
             <ProductCard key={product.name} product={product} />
           ))}
         </div>
@@ -108,8 +109,8 @@ export default function MarketLanding() {
             If you have any questions or suggestions on how to make the app better, feel free to reach out to us:
           </p>
           <ul className="mt-4 space-y-2">
-            <li>Email: <a href="mailto:olaniyigeorge77@gmail.com" className="text-purple-500 hover:underline">Olaniyigeorge77@gmail.com</a></li>
-            <li>Phone: <a href="tel:+2349037018310" className="text-purple-500 hover:underline">+234 903 7018 310</a></li>
+            <li>Email: <a href="mailto:olaniyigeorge77@gmail.com" className="text-purple-700 hover:underline">olaniyigeorge77@gmail.com</a></li>
+            <li>Phone: <a href="tel:+2349037018310" className="text-purple-700 hover:underline">+234 903 7018 310</a></li>
             <li>Address: Akure, Ondo State, Nigeria</li>
           </ul>
         </div>
@@ -119,3 +120,17 @@ export default function MarketLanding() {
 }
 
 
+
+async function getProducts(): Promise<iProduct[]> {
+  const res = await fetch(`${process.env.DOMAIN}/api/marketplace/products`, {
+      method: "GET",
+  });
+
+  if (res.ok) {
+      const data = await res.json();
+      return data;
+  } else {
+      console.error(`Error: ${res.status}`);
+      return []
+  }
+}

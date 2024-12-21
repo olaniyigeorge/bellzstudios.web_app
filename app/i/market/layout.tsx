@@ -1,4 +1,4 @@
-import { HomeIcon, ChartBarIcon, ShoppingBagIcon, ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
+import { HomeIcon, ChartBarIcon, ShoppingBagIcon, ChatBubbleLeftIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 export default function MarketLayout({ children }: { children: React.ReactNode }) {
@@ -6,7 +6,7 @@ export default function MarketLayout({ children }: { children: React.ReactNode }
     { name: "Home", icon: HomeIcon, href: "/i/market#" },
     { name: "Dashboard", icon: ChartBarIcon, href: "/i/market/dashboard" },
     { name: "Shop", icon: ShoppingBagIcon, href: "/i/market/shop" },
-    { name: "Reach Us", icon: ChatBubbleLeftIcon, href: "/i/market#contact-us" },
+    { name: "Cart", icon: ShoppingCartIcon, href: "/i/market/cart" },
   ];
 
   return (

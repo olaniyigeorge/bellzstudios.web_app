@@ -9,10 +9,10 @@ import Link from "next/link"
           id="about-us"
           className="w-full flex items-center gap-3"
       >
-        <section className="w-full flex flex-col  gap-4">
-          <div className="flex flex-col gap-3">
-            <h1 id="hero-title" className="orange-gradient bebas-neue-regular font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
-            <p className="text-lg md:text-xl dark:text-purple-100 text-right">
+        <section className="w-full flex flex-col items-center md:items-start   gap-4">
+          <div className="flex flex-col items-center md:items-start  gap-3">
+            <h1 id="hero-title" className="orange_gradient font-bebas-neue-bold font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
+            <p className="text-xl md:text-2xl font-medium font-titillium dark:text-purple-100 text-center md:text-right">
               Bellz Studio was birthed from the idea that there is a lot of good that 
               could be done from a small place when tech is applied 
               to doing what it does best; making life easier.
@@ -24,7 +24,7 @@ import Link from "next/link"
             </p>
           </div>
 
-          <Link href="/about-me" className="w-fit font-medium p-2 rounded-full border text-purple-900 light_btn">
+          <Link href="/about-me" className="w-fit font-medium p-4 rounded-full border text-purple-900 light_btn">
              Meet me
           </Link>        
         </section>

@@ -28,7 +28,7 @@ export default async function ShopPage() {
 
 
 async function getProducts(): Promise<iProduct[]> {
-    const res = await fetch(`${process.env.DOMAIN}/api/products`, {
+    const res = await fetch(`${process.env.DOMAIN}/api/marketplace/products`, {
         method: "GET",
     });
 

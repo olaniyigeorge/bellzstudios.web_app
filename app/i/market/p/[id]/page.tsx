@@ -14,7 +14,7 @@ export default async function Product({ params }: { params: { id: string } }) {
                 <p className="font-medium">{product.description}</p>
                 <p> {currency}{product.price}</p>
                 <p>Type: {product.type}</p>
-                <span className="flex gap-2">
+                <span className="flex gap-2 my-4">
                     <button className="outline_btn">Add to cart</button>
                     <button className="outline_btn">Buy Now</button>
                 </span>

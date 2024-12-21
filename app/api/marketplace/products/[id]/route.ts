@@ -1,5 +1,5 @@
-import Product from "@/models/market.product";
-import { connectToDB } from "@/services/database";
+import Product from "@/models/marketplace.cart";
+import { connectToDB } from "@/services/mongo_db";
 
 // GET handler to retrieve a single product by ID
 export const GET = async (request: Request, { params }: { params: { id: string } }) => {

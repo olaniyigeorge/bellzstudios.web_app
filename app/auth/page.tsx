@@ -23,8 +23,8 @@ export default async function AuthPage() {
                     
                     className="flex  w-full items-center flex-col gap-3"
                 >
-                    <input disabled={true} className="p-2 w-full rounded-md" type="email" name="email" placeholder="your-email@gmail.com" required />
-                    <input disabled={true} className="p-2 w-full rounded-md" type="password" required />
+                    <input className="p-2 w-full rounded-md" type="email" name="email" placeholder="your-email@gmail.com" required />
+                    <input className="p-2 w-full rounded-md" type="password" required />
                     <button className="p-2 hidden mt-2 rounded-md min-w-[60%] text-white bg-purple-600" 
                     type="submit">Sign In </button>
                     <Auth />
