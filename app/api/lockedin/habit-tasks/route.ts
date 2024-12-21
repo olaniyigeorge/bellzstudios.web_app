@@ -1,6 +1,6 @@
 import HabitTask from "@/models/lockedin.habit-task";
 import HabitTaskEntry from "@/models/lockedin.task-entry";
-import { connectToDB } from "@/services/database";
+import { connectToDB } from "@/services/mongo_db";
 
 export async function GET(request: Request) {
 

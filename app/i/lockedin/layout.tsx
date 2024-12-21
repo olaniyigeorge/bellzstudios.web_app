@@ -8,11 +8,11 @@ import Image from "next/image"
 export default async function LockedInLayout({children}: {children: React.ReactNode}) {
     const session = await auth()
     return (
-        <div className="text-gray-800  relative bg-[url('/assets/images/gridd.png')] backdrop-blur bg-slate-50 w-full min-h-screen h-full flex flex-col items-center justify-between">
+        <div className="text-gray-800  relative bg-[url('/assets/images/gridd.png')] backdrop-blur bg-opacity-90 bg-slate-50 w-full min-h-screen h-full flex flex-col items-center justify-between">
             <div className="lockedin_bg_gradient " />
             <nav className="flex sticky z-10 top-0 right-0 w-full items-center justify-between p-2 md:p-6 lg:p-8">
                 <Link href="/i/lockedin">
-                <h1 className="text-3xl font-extrabold">Locked<span className="text-white px-1 rounded-md bg-purple-500  border-gray-800">In</span></h1>
+                <h1 className="text-3xl text-green-600 font-extrabold">Locked<span className="text-white px-1 rounded-md bg-orange-500  border-gray-800">In</span></h1>
                 </Link>
                 <span className="hidden sm:flex gap-2 items-center">
                     {!session ?

@@ -11,10 +11,9 @@ export const GET = async (request: Request) => {
     // const id = url.searchParams.get("id"); // Extract the owner from query parameters
 
     if (owner) {
-        console.log("Getting products from this user")
-        await connectToDB();
-        const my_products = await Product.find({ owner}); // Use the extracted ID
-        return new Response(JSON.stringify(my_products), { status: 200 })
+      console.log("Getting products from this user")
+      const my_products = await Product.find({ owner}); // Use the extracted ID
+      return new Response(JSON.stringify(my_products), { status: 200 })
     }
 
 

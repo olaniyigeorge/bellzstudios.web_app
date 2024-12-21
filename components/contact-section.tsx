@@ -37,8 +37,7 @@
                         id="contact"
                         className="w-full flex flex-col gap-3 md:gap-6 my-5 md:my-10 lg:my-12"
                     >
-                        <h1 className="w-full flex orange_gradient font-bebas-neue-bold uppercase font-extrabold justify-center text-5xl tracking-tighter
-                        ">
+                        <h1 className="w-full flex orange_gradient font-bebas-neue-bold uppercase font-extrabold justify-center text-5xl tracking-tighter text-center">
                             Reach out to me
                         </h1>
                     <section className="w-full  flex flex-col md:flex-row justify-between items-center gap-3 md:gap-5">

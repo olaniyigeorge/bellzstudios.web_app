@@ -1,4 +1,4 @@
-import { connectToDB } from "@/services/database";
+import { connectToDB } from "@/services/mongo_db";
 import HabitTask from "@/models/lockedin.habit-task";
 
 export const POST = async (req: Request) => {
