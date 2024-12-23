@@ -37,7 +37,9 @@ export default async function Cart() {
             <ul className="w-full flex flex-col gap-2">
                 {cart.products.map((item: iProduct) => (
 
-                    <span className="w-full flex justify-between border-y items-start  p-2">
+                    <span 
+                        key={item._id}
+                        className="w-full flex justify-between border-y items-start  p-2">
                         <span className="w-full">
                             <li className="flex gap-1 items-center "> {item.name} <p className="text-gray-600 text-xs">({item.type})</p></li>
                             <li className=""> {item.price}</li>
