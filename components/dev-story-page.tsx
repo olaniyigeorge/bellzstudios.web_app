@@ -54,26 +54,24 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
 
     return (
         <div className="flex flex-col gap-2 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">
-            <span className="flex flex-col gap-3 bg-black bg-white/10 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg p-5 rounded-lg p-2 bg-opacity-20">
-                <span className="flex justify-between items-center ">     
-                <h1 className="text-3xl md:text-5xl font-bold">{story.title}</h1>
+            <section className="flex flex-col gap-3 bg-black bg-white/5 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg p-5 rounded-lg p-2 bg-opacity-10">
+                <span className="flex justify-between items-start">     
+                    <span className="items-start">
+                        <h1 className="text-3xl md:text-5xl font-bold">{story.title}</h1>
+                        <p className="text-[10px] w-fit rounded-full p-1 border border-purple-500">{story.tag}</p>                
+                    </span>
+                    <Link 
+                        target="_blank" 
+                        href={story.product_url} className="font-bold hover:bg-orange-600 border-2 border-orange-500 p-2 font-medium transition-all duration-500 ease-in-out text-[12px] rounded-full">
+                        Try {story.title}
+                    </Link> 
                 
-                
-                <span className="flex items-center gap-2">
-                <p className="text-[10px] w-fit rounded-full p-1 border border-purple-500">{story.tag}</p>                
-                <Link 
-                    target="_blank" 
-                    href={story.product_url} className="hover:bg-orange-500 border-2 border-orange-500 p-2 font-medium text-[12px]
-                rounded-full">
-                    Get Started
-                </Link> 
-                </span>
                 
                 </span>
 
 
                 <p className="text-md md:text-xl lg:text-3xl text-pretty">{story.description}</p>
-            </span>
+            </section>
             
             
             <form onSubmit={joinWaitlist} className="my-3 flex flex-col items-center gap-3 md:gap-6 justify-center">
@@ -86,7 +84,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                     placeholder="your@email.com"
                     className="w-[90%] md:w-[70%] lg:w-[60] shadow shadow-purple-500 border-purple-500 text-white bg-transparent border outline-none px-4 py-2 rounded-full"
                 />
-                <span className="flex items-center gap-3">
+                <span className="w-full flex items-center gap-3">
                     <span className="p-2 gap-2 flex items-center  rounded-md italics">
                         <select
                             className="flex gap-2 border-none ring-0 outline-none bg-transparent justify-center text-purple-600"
@@ -102,16 +100,16 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                             ))}
                         </select>
                     </span>
-                    <button className="p-2 border transition-all duration-500 ease-in-out hover:text-purple-200 hover:bg-purple-950 hover:animate-out rounded-md">
+                    <button className="w-full p-2 border text-sm transition-all duration-500 ease-in-out hover:text-purple-200 hover:bg-purple-950 hover:animate-out rounded-md">
                         Join Waitlist
                     </button>
                 </span>
             </form>
             
             <section className="flex flex-col mt-4 items-center bg-black bg-white/10 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg rounded-xl ">
-                <h1 className="text-3xl font-medium py-2">
+                <h1 className="text-3xl text-center font-medium py-2">
                     Join the conversion on 
-                    <span className="text-purple-600">{" "}{story.title}</span> 
+                    <span className="orange-gradient">{" "}{story.title}</span> 
                 </h1>
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8 p-2">
                     {story.inspirations.map((tweet: Inspiration) => (
