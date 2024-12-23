@@ -1,6 +1,7 @@
 import { auth } from "@/services/auth"
-import { iProduct, PRODUCTS } from "../page"
+import { iProduct } from "../page"
 import { MinusCircleIcon, PlusCircleIcon, ShoppingCartIcon, TrashIcon } from "@heroicons/react/24/outline";
+import { PRODUCTS } from "../mockdata";
 
 interface iCart{
     owner: string;
