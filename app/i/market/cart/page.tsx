@@ -1,6 +1,6 @@
 import { auth } from "@/services/auth"
 import { iProduct, PRODUCTS } from "../page"
-import { BuildingOffice2Icon, MinusCircleIcon, MinusIcon, PlusCircleIcon, PlusIcon, ShoppingCartIcon, TrashIcon } from "@heroicons/react/24/outline";
+import { MinusCircleIcon, PlusCircleIcon, ShoppingCartIcon, TrashIcon } from "@heroicons/react/24/outline";
 
 interface iCart{
     owner: string;
@@ -101,11 +101,11 @@ async function getUserCart(id: string): Promise<iCart>  {
 
 
 
-async function createOrder() : Promise<any>{
+// async function createOrder() : Promise<any>{
 
 
-    return {}
-}
+//     return {}
+// }
 
 
 

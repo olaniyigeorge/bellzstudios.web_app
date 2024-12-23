@@ -1,4 +1,4 @@
-import { HomeIcon, ChartBarIcon, ShoppingBagIcon, ChatBubbleLeftIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
+import { HomeIcon, ChartBarIcon, ShoppingBagIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 export default function MarketLayout({ children }: { children: React.ReactNode }) {
