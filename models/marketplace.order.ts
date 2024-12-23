@@ -1,39 +1,41 @@
 import { Schema, model, models } from "mongoose";
-import Product from "./marketplace.product";
-
 
 const OrderSchema = new Schema({
     buyer: {
         type: Schema.Types.ObjectId,
-        ref: "User",
+        ref: "User", // References the User model
+        required: true, // Ensure an order always has a buyer
     },
     orderId: {
         type: String,
-        required: [true, "An id is required for this order"]
+        required: [true, "An ID is required for this order"], // Improved error message
+        unique: true, // Ensures order IDs are unique
     },
-    products: {
-        type: Product,
-        enum: Product,
-        required: [true, "products field can't be empty or order"]
-    },
+    products: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Product", // References the Product model
+            required: true, // Ensure each order has products
+        },
+    ],
     status: {
         type: String,
-        enum: ["pending", "paid", "escrow"],
-        default: "pending"
+        enum: ["pending", "paid", "escrow", "shipped", "completed"], // Added more possible statuses
+        default: "pending", // Default status
     },
     created_at: {
         type: Date,
         default: Date.now,
-        index: true,
+        index: true, // Index to optimize queries
     },
     updated_at: {
         type: Date,
-        index: true
-    }
-})
+        default: Date.now, // Ensures `updated_at` is initialized
+        index: true,
+    },
+});
 
-const Order = models.Product || model("Order", OrderSchema)
+// Create the Order model if it doesn't already exist
+const Order = models.Order || model("Order", OrderSchema);
 
-
-export default Order
-
+export default Order;

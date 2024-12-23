@@ -1,29 +1,30 @@
 import { Schema, model, models } from "mongoose";
-import Product from "./marketplace.product";
-
 
 const CartSchema = new Schema({
     owner: {
         type: Schema.Types.ObjectId,
         ref: "User",
+        required: true, // Ensures a cart is always tied to an owner
     },
     name: {
         type: String,
-        required: [false, "Some text not required"]
+        required: false, // This can simply be false without an array
     },
-    products: {
-        type: Product,
-        enum: Product,
-        required: [false, "products might be empty"]
-    },
+    products: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Product", // Reference to the Product model
+        },
+    ],
     type: {
         type: String,
         enum: ["physical", "service", "digital", "food"],
-        default: "private",
+        default: "private", // Default type if not provided
     },
     status: {
         type: String,
-        enum: ["pending", "cleared",  ]
+        enum: ["pending", "cleared"],
+        default: "pending", // Default status
     },
     created_at: {
         type: Date,
@@ -32,12 +33,11 @@ const CartSchema = new Schema({
     },
     updated_at: {
         type: Date,
-        index: true
-    }
-})
+        default: Date.now, // Ensures updated_at is initialized
+        index: true,
+    },
+});
 
-const Cart = models.Product || model("Cart", CartSchema)
+const Cart = models.Cart || model("Cart", CartSchema);
 
-
-export default Cart
-
+export default Cart;

@@ -1,31 +1,31 @@
 import { Schema, model, models } from "mongoose";
 
-
 const ProductSchema = new Schema({
     owner: {
         type: Schema.Types.ObjectId,
         ref: "User",
+        required: true, // Ensures the product has an owner
     },
     name: {
         type: String,
-        required: [true, "Some text is required"]
+        required: [true, "Product name is required"], // Updated error message
     },
     image: {
         type: String,
-        required: [true, "url to product image"]
+        required: [true, "A URL to the product image is required"], // Updated error message
     },
     price: {
-        type: String,
-        required: [false, "Title is not required"]
+        type: Number, // Changed to `Number` for consistency
+        required: false, // Price is optional
     },
     type: {
         type: String,
         enum: ["physical", "service", "digital", "food"],
-        default: "private",
+        default: "private", // Default type if not provided
     },
     description: {
         type: String,
-        required: [false, "Description is required"]
+        required: false, // Optional description
     },
     created_at: {
         type: Date,
@@ -34,12 +34,11 @@ const ProductSchema = new Schema({
     },
     updated_at: {
         type: Date,
-        index: true
-    }
-})
+        default: Date.now, // Ensures `updated_at` is initialized
+        index: true,
+    },
+});
 
-const Product = models.Product || model("Product", ProductSchema)
+const Product = models.Product || model("Product", ProductSchema);
 
-
-export default Product
-
+export default Product;
