@@ -1,4 +1,4 @@
-import { connectToDB } from "@/services/database"
+import { connectToDB } from "@/services/mongo_db"
 import Prompt from "@/models/prompt"
 
 

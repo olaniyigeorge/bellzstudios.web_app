@@ -1,7 +1,5 @@
-
-
 import Prompt from "@/models/prompt";
-import { connectToDB } from "@/services/database";
+import { connectToDB } from "@/services/mongo_db";
 
 export const GET = async () => {
     try {
