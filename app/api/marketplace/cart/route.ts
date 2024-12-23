@@ -12,7 +12,6 @@ export const GET = async (request: Request) => {
 
     if (id) {
         console.log("Getting cart from this user")
-        await connectToDB();
         const my_cart = await Cart.findById({ id}); // Use the extracted ID
         return new Response(JSON.stringify(my_cart), { status: 200 })
     }
