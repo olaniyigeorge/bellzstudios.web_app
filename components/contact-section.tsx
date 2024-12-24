@@ -1,5 +1,6 @@
             "use client";
 
+import ArrowDownIcon from "@heroicons/react/24/outline/ArrowDownIcon";
             // import { useState } from "react";
             import Image from "next/image"
     import Link from "next/link";
@@ -63,7 +64,14 @@
                             </div>
                         ))}
                     </section>
-                                
+
+                <span className="flex gap-2 w-full justify-center item-center">
+                    <Link href={"#dev-stories"} className="w-fit flex gap-2 light-btn font-medium items-center rounded-full  border px-4 py-2 ">
+                        <>Products</>
+                        <ArrowDownIcon className="w-4 h-5 text-white font-medium" />
+                    </Link>
+                </span>
+       
                     
                     
                 </section>

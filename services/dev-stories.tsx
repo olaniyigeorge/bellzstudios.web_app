@@ -18,19 +18,19 @@ export const DEV_STORIES: iDevStory[] = [
             { tweetId: "1844763363533820066" },
             { tweetId: "1844778183024889857" },
             { tweetId: "1845054193783984432" },
-        ]
+        ],
+        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
     },
     {
         id: "marketplace",
         title: "MarketPlace",
         tag: "e-commerce",
         description: "An e-commerce market for products ranging from physical products, food, digital products and services. Sellers and service providers track their orders and receive payments.",
-        open_source_url: "/i/market", 
-        product_url: "/i/market", 
+        open_source_url: "/i/market",
+        product_url: "/i/market",
         status: "dev",
-        inspirations: [
-
-        ]
+        inspirations: [],
+        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
     },
     {
         id: "respace",
@@ -40,7 +40,8 @@ export const DEV_STORIES: iDevStory[] = [
         open_source_url: "https://github.com/olaniyigeorge/raspa-client",
         product_url: "https://github.com/olaniyigeorge/raspa-client",
         status: "old",
-        inspirations: []
+        inspirations: [],
+        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
     },        
     {
         id: "bellz-mini",
@@ -50,7 +51,8 @@ export const DEV_STORIES: iDevStory[] = [
         open_source_url: "https://github.com/olaniyigeorge/bellz-tg-mini",
         product_url: "https://github.com/olaniyigeorge/bellz-tg-mini",
         status: "old",
-        inspirations: []
+        inspirations: [],
+        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
     },
     {
         id: "promptopia",
@@ -60,7 +62,8 @@ export const DEV_STORIES: iDevStory[] = [
         open_source_url: "https://github.com/olaniyigeorge/",
         product_url: "/home/",
         status: "live",
-        inspirations: []
+        inspirations: [],
+        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
     },   
     {
         id: "i-scheduler",
@@ -70,7 +73,8 @@ export const DEV_STORIES: iDevStory[] = [
         open_source_url: "https://github.com/olaniyigeorge/",
         product_url: "/ischeduler on aws/",
         status: "dev",
-        inspirations: []
+        inspirations: [],
+        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
     },   
     {
         id: "i-hr-manager",
@@ -80,6 +84,7 @@ export const DEV_STORIES: iDevStory[] = [
         open_source_url: "https://github.com/olaniyigeorge/iHR",
         product_url: "https://ihr-mfh9.onrender.com/",
         status: "live",
-        inspirations: []
+        inspirations: [],
+        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
     },   
 ]
