@@ -46,8 +46,8 @@ export default function Note() {
       <section className="w-full justify-center  border-y h-full border-purple-800 grid gap-3 md:gap-4 grid-cols-2 p-2 md:p-4 md:w-2/3">
         {notes.map((letter) => (
           <div key={letter._id} className="border p-2 rounded-xl">
-            <p className="font-medium">{letter.body}</p>
-            <span className="w-full text-sm flex justify-end">
+            <p className="font-medium ">{letter.body}</p>
+            <span className="w-full text-[6px] flex justify-end">
               {letter.written_at.toDateString()}
             </span>
           </div>
