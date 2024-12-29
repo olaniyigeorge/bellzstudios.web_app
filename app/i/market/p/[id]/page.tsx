@@ -8,9 +8,9 @@ export default async function Product({ params }: { params: { id: string } }) {
   return (
     <div className="p-4 w-full flex justify-center items-center">
       {product ? (
-        <div className="border w-10/12 md:flex rounded-xl gap-4 p-4">
+        <div className="border border-purple-500 w-10/12 md:flex rounded-xl gap-4 p-4">
             <img src={product.image} alt={product.name} className="w-full rounded-xl max-w-[500px] h-auto" />
-            <div className="w-full">
+            <div className="w-full gap-3">
                 <p className="font-medium">{product.description}</p>
                 <p> {currency}{product.price}</p>
                 <p>Type: {product.type}</p>

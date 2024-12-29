@@ -23,7 +23,7 @@ export default async function Navbar() {
             {/* Modile Nav */}
             <span className="flex sm:hidden gap-2 items-center">
                 {session?.user ?
-                    <Link href='/home/profile'>
+                    <Link href='/i/promtopia/profile'>
                     <Image
                       src={session!.user.image || '/assets/images/logo.svg'}
                       width={37}
@@ -39,7 +39,7 @@ export default async function Navbar() {
 
             {/* Desktop */}
             <span className="hidden sm:flex gap-2 items-center">
-                <Link href='/home/create-prompt' className='black_btn'>
+                <Link href='/i/promptopia/create-prompt' className='black_btn'>
                 Create Post
                 </Link>
                 <Auth />  

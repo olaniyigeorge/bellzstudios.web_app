@@ -19,7 +19,7 @@ export const DEV_STORIES: iDevStory[] = [
             { tweetId: "1844778183024889857" },
             { tweetId: "1845054193783984432" },
         ],
-        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
+        image: "/assets/images/lockedin.png"
     },
     {
         id: "marketplace",
@@ -38,10 +38,10 @@ export const DEV_STORIES: iDevStory[] = [
         tag: "real-estate",
         description: "ReSpace aims to eliminate the challenges of house hunting by providing a smooth, personalized real estate experience. We want to empower users to effortlessly search for and rent apartments or spaces online while managing their utilities—such as cleaning, waste disposal, and internet bills—through our app",
         open_source_url: "https://github.com/olaniyigeorge/raspa-client",
-        product_url: "https://github.com/olaniyigeorge/raspa-client",
+        product_url: "https://raspa-client.onrender.com/",
         status: "old",
         inspirations: [],
-        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
+        image: "/assets/images/respace.png"
     },        
     {
         id: "bellz-mini",
@@ -52,7 +52,7 @@ export const DEV_STORIES: iDevStory[] = [
         product_url: "https://github.com/olaniyigeorge/bellz-tg-mini",
         status: "old",
         inspirations: [],
-        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
+        image: "/assets/images/bellz-mini.png"
     },
     {
         id: "promptopia",
@@ -60,10 +60,10 @@ export const DEV_STORIES: iDevStory[] = [
         tag: "llm-prompts",
         description: " Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
         open_source_url: "https://github.com/olaniyigeorge/",
-        product_url: "/home/",
+        product_url: "/i/promptopia",
         status: "live",
         inspirations: [],
-        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
+        image: "/assets/images/promptopia.png"
     },   
     {
         id: "i-scheduler",
@@ -85,6 +85,6 @@ export const DEV_STORIES: iDevStory[] = [
         product_url: "https://ihr-mfh9.onrender.com/",
         status: "live",
         inspirations: [],
-        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
+        image: "/assets/images/ihr.png"
     },   
 ]

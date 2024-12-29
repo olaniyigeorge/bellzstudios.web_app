@@ -28,7 +28,7 @@ export default function ProductHome() {
       <h1 className="text-3xl font-bold mb-5">Product Home</h1>
       <button
         id="buy-now"
-        className="bg-blue-500 text-white px-6 py-2 rounded-md transition-transform"
+        className="bg-green-500 text-white px-6 py-2 rounded-md transition-transform"
       >
         Buy Now
       </button>

@@ -6,7 +6,7 @@ import { getUser } from "./action";
 import { useRouter } from "next/navigation";
 import { User } from "next-auth";
 
-const CreatePromptPage = () => {
+const CreateNewNotePage = () => {
     const router = useRouter();
     const [user, setUser] = useState<User>()
     const [submitting, setSubmitting] = useState(false)
@@ -36,7 +36,7 @@ const CreatePromptPage = () => {
                 userId: user?.id,
                 tag: post.tag
             })
-            const response = await fetch("/api/prompt/new", {
+            const response = await fetch("/api/notes/new", {
                 method: "POST",
                 body: JSON.stringify({
                     prompt: post.prompt,
@@ -46,8 +46,8 @@ const CreatePromptPage = () => {
             })
 
             if (response.ok) {
-               toast.success("Prompt created")
-               router.push('/i/promtopia')
+               toast.success("Entry added")
+               router.push('/notes')
             } else {
                 toast.error(`Error ${response.status} while creating prompt`)
             }
@@ -71,4 +71,4 @@ const CreatePromptPage = () => {
     )
 }
 
-export default CreatePromptPage
+export default CreateNewNotePage

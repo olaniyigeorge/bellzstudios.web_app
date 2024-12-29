@@ -20,7 +20,7 @@ export interface iProduct {
 export default async function MarketLanding() {
   const products = await getProducts()
   return (
-  <div className="w-full my-3 flex flex-col items-center gap-5">
+  <div className="w-full my-5 flex flex-col items-center px-1 md:px-6 gap-5">
         <HeroSection 
             message={"Join a community of creators and entrepreneurs."} 
             image={"/assets/images/bellzstudio.png"}
@@ -34,7 +34,7 @@ export default async function MarketLanding() {
         {/* Contact Section */}
         <div
           id="contact-us"
-          className="w-full  max-w-4xl my-5 p-6 bg-purple-500 glassmorphism shadow-lg rounded-lg border"
+          className="w-full  max-w-4xl my-5 p-6 bg-purple-600 glassmorphism shadow-lg rounded-lg border"
         >
           <h2 className="text-xl font-medium text-purple-600">Contact Us</h2>
           <p className="mt-2 text-gray-600">

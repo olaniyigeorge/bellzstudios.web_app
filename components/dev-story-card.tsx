@@ -41,7 +41,7 @@ export default function DevStoryCard(data: iDevStory) {
                 {data.description}
             </p>
 
-            <img src={data.image} className="rounded-xl min-w[30px] min-h-[30px] w-full h-auto" />
+            <img src={data.image} className="rounded-xl min-w[30px] min-h-[30px] w-full h-full" />
 
     </div>
     )

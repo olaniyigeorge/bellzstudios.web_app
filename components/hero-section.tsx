@@ -21,7 +21,7 @@ import Auth from "./sign-in";
           <p className="text-lg sm:text-xl">
             Explore the best products and services curated just for you. 
           </p>
-          <span id="get-started" className="w-fit my-3 p-2 flex gap-3 items-center border rounded-full">
+          <span id="get-started" className="w-fit hidden my-3 p-2 flex gap-3 items-center border rounded-full">
             <>Get Started</>
             <Auth />
           </span>

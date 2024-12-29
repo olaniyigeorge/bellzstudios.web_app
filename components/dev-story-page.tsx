@@ -1,6 +1,7 @@
 "use client";
 import { Inspiration } from "@/components/dev-story-card";
 import { DEV_STORIES, DISCOVERY_LOCATION } from "@/services/dev-stories";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { toast } from "react-toastify";
@@ -62,8 +63,9 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                     </span>
                     <Link 
                         target="_blank" 
-                        href={story.product_url} className="font-bold hover:bg-orange-600 border-2 border-orange-500 p-2 font-medium transition-all duration-500 ease-in-out text-[12px] rounded-full">
+                        href={story.product_url} className="font-bold items-center flex gap-2 hover:bg-orange-600 border-2 border-orange-500 p-2 font-medium transition-all duration-500 ease-in-out text-[12px] rounded-full">
                         Try {story.title}
+                        <ArrowLongRightIcon className="w-6 h-6" /> 
                     </Link> 
                 
                 
@@ -84,7 +86,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                     placeholder="your@email.com"
                     className="w-[90%] md:w-[70%] lg:w-[60] shadow shadow-purple-500 border-purple-500 text-white bg-transparent border outline-none px-4 py-2 rounded-full"
                 />
-                <span className="w-full flex items-center gap-3">
+                <span className="w-full flex items-center justify-center gap-3">
                     <span className="p-2 gap-2 flex items-center  rounded-md italics">
                         <select
                             className="flex gap-2 border-none ring-0 outline-none bg-transparent justify-center text-purple-600"
@@ -100,7 +102,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                             ))}
                         </select>
                     </span>
-                    <button className="w-full p-2 border text-sm transition-all duration-500 ease-in-out hover:text-purple-200 hover:bg-purple-950 hover:animate-out rounded-md">
+                    <button className="w-full  md:w-fit p-2 border text-sm transition-all duration-500 ease-in-out hover:text-purple-200 hover:bg-purple-950 hover:animate-out rounded-full">
                         Join Waitlist
                     </button>
                 </span>
