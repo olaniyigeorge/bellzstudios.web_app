@@ -30,7 +30,7 @@ export const DEV_STORIES: iDevStory[] = [
         product_url: "/i/market",
         status: "dev",
         inspirations: [],
-        image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
+        image: "/assets/images/marketplace.png"
     },
     {
         id: "respace",

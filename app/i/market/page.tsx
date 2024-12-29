@@ -23,7 +23,7 @@ export default async function MarketLanding() {
   <div className="w-full my-5 flex flex-col items-center px-1 md:px-6 gap-5">
         <HeroSection 
             message={"Join a community of creators and entrepreneurs."} 
-            image={"/assets/images/bellzstudio.png"}
+            image={"/assets/images/pngtree-business-mobile-based-marketplace-png-image_4704356.png"}
           />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {products.map((product) => (

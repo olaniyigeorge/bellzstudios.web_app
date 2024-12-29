@@ -23,7 +23,7 @@ export default function ProductForm(props: ProductFormProps) {
     const description = form.get("description") as string;
     const owner = form.get("owner") as string;
     const price = form.get("price") as string;
-    const image = fileUrl // form.get("image") as string;
+    // const image = fileUrl // form.get("image") as string;
     const type = form.get("type") as string;
 
     await handleImageUpload(event)
