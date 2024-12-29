@@ -1,4 +1,3 @@
-
 import cloudinary from '@/services/cloudinary';
 import type { UploadApiResponse } from 'cloudinary';
 

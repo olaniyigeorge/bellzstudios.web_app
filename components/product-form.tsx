@@ -2,6 +2,7 @@
 
 import { User } from "next-auth";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 interface ProductFormProps {
   user: User;
@@ -13,10 +14,6 @@ export default function ProductForm(props: ProductFormProps) {
 
   const [file, setFile] = useState<File | null>(null);
   const [fileUrl, setFileUrl] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-
-
   // Define the onsubmit function properly
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -26,10 +23,10 @@ export default function ProductForm(props: ProductFormProps) {
     const description = form.get("description") as string;
     const owner = form.get("owner") as string;
     const price = form.get("price") as string;
-    const image = form.get("image") as string;
+    const image = fileUrl // form.get("image") as string;
     const type = form.get("type") as string;
 
-    const uploadr = await handleImageUpload(event)
+    await handleImageUpload(event)
 
     const product = {
       name,
@@ -53,6 +50,7 @@ export default function ProductForm(props: ProductFormProps) {
 
       if (response.ok) {
         console.log("Product created successfully");
+        toast.success(`${product.name} added`)
       } else {
         console.error("Failed to create product");
       }
@@ -78,7 +76,6 @@ export default function ProductForm(props: ProductFormProps) {
     try {
       console.log("file: ", file)
       if (!file) throw new Error('No file selected');
-      setIsLoading(true);
       const formData = new FormData();
       formData.append('file', file);
       const response = await fetch('/api/cloudinary-upload', {
@@ -91,20 +88,13 @@ export default function ProductForm(props: ProductFormProps) {
     } catch (error) {
       console.error(error);
     } finally {
-      setIsLoading(false);
     }
   }
 
 
-  async function create(formdata: FormData) {
-    const file =  formdata.get('image')
-
-
-
-  }
 
   return (
-    <form action={create} className="space-y-4" onSubmit={onSubmit}>
+    <form className="space-y-4" onSubmit={onSubmit}>
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700">
           Name
