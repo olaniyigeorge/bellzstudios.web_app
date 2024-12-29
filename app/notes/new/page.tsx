@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react"
 import Form from "@/components/Form"
 import { toast } from "react-toastify";
-import { getUser } from "./action";
 import { useRouter } from "next/navigation";
 import { User } from "next-auth";
+import { getUser } from "@/app/i/promptopia/create-prompt/action";
 
 const CreateNewNotePage = () => {
     const router = useRouter();
