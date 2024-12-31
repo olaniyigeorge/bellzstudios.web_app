@@ -53,7 +53,7 @@ export default async function Landing() {
             </div>
           </div>
           {/* Image Section */}
-          <a href="/auth" className="w-full md:w-1/2 slideRtL flex justify-center">
+          <a href="" className="w-full md:w-1/2 slideRtL flex justify-center">
               <Image
                 src="/assets/images/memoji.png"
                 className="border-4 hover:animate-spin  border-purple-600 w-full h-auto rounded-full "
