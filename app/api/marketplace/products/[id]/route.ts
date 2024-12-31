@@ -1,6 +1,5 @@
 import Product from "@/models/marketplace.cart";
 import { connectToDB } from "@/services/mongo_db";
-import mongoose from "mongoose";
 
 // GET handler to retrieve a single product by ID
 export const GET = async (request: Request, { params }: { params: { id: string } }) => {
@@ -24,6 +23,9 @@ export const PATCH = async (request: Request, { params }: { params: { id: string
 
   try {
     await connectToDB();
+
+    // Log the ID being searched for
+    console.log(`Searching for product with ID: ${params.id}`);
 
     // Find the existing product by ID
     const existingProduct = await Product.findById(params.id);
@@ -49,7 +51,6 @@ export const PATCH = async (request: Request, { params }: { params: { id: string
     return new Response("Error updating product", { status: 500 });
   }
 };
-
 // DELETE handler to delete a product by ID
 export const DELETE = async (request: Request, { params }: { params: { id: string } }) => {
   try {
