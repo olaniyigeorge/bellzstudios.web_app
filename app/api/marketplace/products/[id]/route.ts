@@ -1,13 +1,15 @@
 import Product from "@/models/marketplace.cart";
 import { connectToDB } from "@/services/mongo_db";
+import mongoose from "mongoose";
 
 // GET handler to retrieve a single product by ID
 export const GET = async (request: Request, { params }: { params: { id: string } }) => {
   try {
     await connectToDB();
 
-    const product = await Product.findById(params.id).populate("owner");
-    if (!product) return new Response("Product Not Found", { status: 404 });
+ 
+    const product = await Product.findOne({ _id: params.id }).populate("owner");
+    if (!product) return new Response(`Product Not Found with ${params.id}`, { status: 404 });
 
     return new Response(JSON.stringify(product), { status: 200 });
   } catch (error) {

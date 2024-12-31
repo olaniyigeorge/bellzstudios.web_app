@@ -3,7 +3,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 
-
 export default function AboutUsSection() {
 
     return (
@@ -14,7 +13,7 @@ export default function AboutUsSection() {
       <section className="w-full flex flex-col items-center md:items-start   gap-4">
         <div className="flex flex-col items-center md:items-start  gap-3">
           <h1 id="hero-title" className="orange_gradient font-bebas-neue-bold font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
-          <p className="text-xl md:text-2xl font-medium font-titillium dark:text-purple-100 text-center md:text-right">
+          <p className="text-xl md:text-2xl font-medium font-poppins dark:text-purple-100 text-center md:text-right">
             Bellz Studio was birthed from the idea that there is a lot of good that 
             could be done from a small place when tech is applied 
             to doing what it does best; making life easier.
@@ -26,13 +25,12 @@ export default function AboutUsSection() {
           </p>
         </div>
 
-        <span className="flex gap-2 item-center">
+        <span className="flex gap-4 item-center">
           <Link href="/about-me" className="w-fit font-medium p-4 rounded-full border text-purple-900 light_btn">
               Resume
             </Link>        
-          <span className="">
-              
-              <Link href={"#contact"} className="w-fit flex gap-2 light-btn font-medium items-center rounded-full  border px-4 py-2 ">
+            <span className="">
+              <Link href={"#contact"} className="w-fit flex gap-2 font-medium items-center px-4 py-2 ">
                 <>Contact</>
                 <ArrowDownIcon className="w-4 h-5 text-white font-medium" />
               </Link>

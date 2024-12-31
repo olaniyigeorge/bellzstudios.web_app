@@ -35,6 +35,7 @@ const config: Config = {
         inter: ['Inter', 'sans-serif'],
         kanit: ['Kanit', 'sans-serif'],
         bebas: ['Bebas', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       screens: {
           xs: "375px",

@@ -20,11 +20,11 @@ export default function DevStoriesSection() {
                         develop a solution to a common problem and try to validate my approach by 
                         putting it out there(blogging about it) and accepting feedback from you.
                     </span>
-                    <section className="w-full flex gap-2 justify-center md:justify-start">
+                    <section className="w-full flex gap-2 justify-center md:justify-start md:gap-8">
                         <Link href="/dev-stories" className="hover:scale-[102%] ease-in-out border-purple-500 transition-all duration-800 shadow shadow-purple-500 p-3 md:p-4 dark:text-slate-200 border rounded-full font-titillium">
                             Explore Stories
                         </Link>
-                        <Link href={"#notes"} className="w-fit flex gap-2 light-btn font-medium items-center rounded-full  border px-4 py-2 ">
+                        <Link href={"#notes"} className="w-fit flex gap-2 font-medium items-center px-4 py-2 ">
                         <>Notes</>
                         <ArrowDownIcon className="w-4 h-5 text-white font-medium" />
                     </Link>
