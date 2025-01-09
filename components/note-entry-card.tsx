@@ -104,6 +104,7 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
       <span className="flex items-wrap gap-1"> 
         {post.tags.map((tag) => (
         <p
+          key={tag}
           className="font-inter text-xs text-slate-700 cursor-pointer"
           onClick={() => handleTagClick && handleTagClick(tag)}
         >

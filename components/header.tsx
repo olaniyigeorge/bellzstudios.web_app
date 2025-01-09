@@ -48,9 +48,14 @@ export default function Header() {
                     }
                     {
                         pathname.includes("/notes") && 
-                            <h1 className="font-medium">
-                                <Link href="/#notes">...notes</Link>
-                            </h1>
+                            <span className="flex items-center "> 
+                                {user&&
+                                    <Link href="/"> Write </Link>
+                                }
+                                <h1 className="font-medium">
+                                    <Link href="/#notes">...notes</Link>
+                                </h1>
+                            </span>
                     
                     }
                     <a
