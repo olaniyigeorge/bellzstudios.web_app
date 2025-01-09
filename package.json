@@ -14,14 +14,15 @@
     "clsx": "^2.1.1",
     "heroicons": "^2.2.0",
     "mongoose": "^8.7.3",
-    "next": "14.2.13",
+    "next": "^14.2.23",
     "next-auth": "^5.0.0-beta.25",
     "react": "^18",
     "react-dom": "^18",
     "react-toastify": "^10.0.6",
     "react-twitter-embed": "^4.0.4",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/node": "^20",

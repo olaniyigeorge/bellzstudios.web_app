@@ -5,6 +5,9 @@ import DevStoriesSection from "../components/dev-stories-section";
 import NotesSection from "../components/notes-section";
 import { auth } from "@/services/auth";
 import { BookOpenIcon, EnvelopeIcon, PencilIcon, UserGroupIcon } from "@heroicons/react/24/outline";
+import Typer from "@/components/typer";
+
+
 
 export default async function Landing() {
   const session = await auth();
@@ -17,15 +20,30 @@ export default async function Landing() {
   ];
 
 
+
+
   return (
-    <div className="w-full font-poppins flex flex-col gap-5 justify-center">
+    <div className="w-full font-poppins flex flex-col gap-8 justify-center">
       
       <PageSection id="hero" className="bg-black">
           <section className="w-full flex flex-col items-center gap-2 py-4 md:py-6">
-            <h1 className="font-irishgrover text-[60px] md:text-[160px] text-white font-extrabold font-titillium">bellzstudio</h1>
-            <h2 className="font-irishgrover text-3xl px-4 md:px-20 text-white orange_gradient text-center ">
-              Building products and services we believe should exist.
-            </h2>
+            <Typer 
+              id='hero' 
+              delay={3000}
+              loop={false}
+              className="font-irishgrover text-[60px] md:text-[160px] text-white font-extrabold " 
+              words={["bellzstudio"]}
+            /> 
+            <Typer 
+              id='hero-mini' 
+              delay={3000}
+              loop={false} // Set loop to false to animate once and stop
+              className="font-irishgrover text-3xl px-4 md:px-20 text-white orange_gradient text-center " 
+              words={[
+                "Building products and services",
+                "we believe should exist."
+              ]}
+            /> 
 
             <div className="w-full flex mt-8 lg:mt-10 gap-3 justify-between items-center" >
               {links.map((link) => (

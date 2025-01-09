@@ -16,14 +16,14 @@ export default function AboutUsSection() {
           <p className="text-xl md:text-2xl font-medium font-irishgrover dark:text-black text-center md:text-right">
           Born out of a love for open-source and making a real impact, 
           BellzStudio is all about teaming up to bring cool ideas to 
-          life—whether it's tweaking what's already out there or starting 
+          life—whether it&apos;s tweaking what&apos;s already out there or starting 
           something totally fresh.
           
           Our mission? To help at least a thousand people solve real-world 
           problems with practical, game-changing solutions.
           <br />
-          Got an idea or a problem to tackle? Whether it's brainstorming, 
-          building, or testing the market, let's make it happen together!
+          Got an idea or a problem to tackle? Whether it&apos;s brainstorming, 
+          building, or testing the market, let&apos;s make it happen together!
         </p>
 
         </div>
