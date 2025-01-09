@@ -38,7 +38,7 @@ export default async function Landing() {
             id='hero-mini' 
             className="font-irishgrover text-3xl px-4 md:px-20 text-white orange_gradient text-center" 
             >
-                Building products and services we believe should exist."
+                Building products and services we believe should exist.
               
             </span> 
 
