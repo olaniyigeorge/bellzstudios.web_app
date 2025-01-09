@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ScrollDownAnimation from "../components/scroll";
 import ContactSection from "../components/contact-section";
 import AboutUsSection from "../components/about-us-section";
@@ -9,7 +8,7 @@ import { BookOpenIcon, EnvelopeIcon, PencilIcon, UserGroupIcon } from "@heroicon
 
 export default async function Landing() {
   const session = await auth();
-
+  console.log(session)
   const links = [
     { name: "About Us", id: "about-us", icon: UserGroupIcon },
     { name: "Contact", id: "contact", icon: EnvelopeIcon  },
@@ -69,7 +68,7 @@ export default async function Landing() {
 
 
 
-export function PageSection({ id, children, className, bg }: { children: React.ReactNode; className?: string; id: string, bg?: string }) {
+export function PageSection({ id, children, className }: { children: React.ReactNode; className?: string; id: string, }) {
   return (
     <div
       id={id}
