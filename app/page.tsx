@@ -61,7 +61,7 @@ export default async function Landing() {
           </section> 
       </PageSection>
 
-      <PageSection id="about-us" className="bg-orange-500">
+      <PageSection id="about-us" className="orange-gradient-bg">
         <AboutUsSection />
       </PageSection>
 
@@ -73,7 +73,7 @@ export default async function Landing() {
         <DevStoriesSection />
       </PageSection>
 
-      <PageSection id="notes" className="bg-orange-500">
+      <PageSection id="notes" className="orange-gradient-bg">
         <NotesSection />  
       </PageSection>
     </div>
