@@ -5,7 +5,7 @@ interface TyperProps {
     words: string[];  
     id: string;
     className?: string;
-    delay: number
+    delay?: number
     loop: boolean
 }
 

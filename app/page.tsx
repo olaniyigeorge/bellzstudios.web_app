@@ -29,21 +29,18 @@ export default async function Landing() {
           <section className="w-full flex flex-col items-center gap-2 py-4 md:py-6">
             <Typer 
               id='hero' 
-              delay={3000}
-              loop={false}
+              delay={50}
+              loop={true}
               className="font-irishgrover text-[60px] md:text-[160px] text-white font-extrabold " 
-              words={["bellzstudio"]}
+              words={["bellzstudio", "bellzstudio"]}
             /> 
-            <Typer 
-              id='hero-mini' 
-              delay={3000}
-              loop={false} // Set loop to false to animate once and stop
-              className="font-irishgrover text-3xl px-4 md:px-20 text-white orange_gradient text-center " 
-              words={[
-                "Building", "products", "and", "services",
-                "we", "believe", "should", "exist."
-              ]}
-            /> 
+            <span
+            id='hero-mini' 
+            className="font-irishgrover text-3xl px-4 md:px-20 text-white orange_gradient text-center" 
+            >
+                Building products and services we believe should exist."
+              
+            </span> 
 
             <div className="w-full flex mt-8 lg:mt-10 gap-3 justify-between items-center" >
               {links.map((link) => (
