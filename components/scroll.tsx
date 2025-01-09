@@ -6,11 +6,12 @@ import React, { useEffect, useRef } from "react";
 interface ScrollDownAnimationProps {
   scrollTopValue?: number;
   targetId?: string;
+  className: string;
   child: React.ReactNode;
 }
 
 export default function ScrollDownAnimation(props: ScrollDownAnimationProps) {
-  const { scrollTopValue, targetId, child }= props
+  const { scrollTopValue, targetId, className, child }= props
   const scrollTargetRef = useRef<HTMLElement | null>(null);
 
   const scrollDown = () => {
@@ -28,14 +29,13 @@ export default function ScrollDownAnimation(props: ScrollDownAnimationProps) {
   }, [scrollTopValue, targetId]);
 
   return (
-    <> 
-        <button 
+    <button 
           onClick={scrollDown} 
-          className=""
+          className={className}
           >
           {child}
         </button>
-    </>
+
 
   );
 };

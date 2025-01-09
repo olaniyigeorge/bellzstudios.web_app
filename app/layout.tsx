@@ -50,7 +50,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`min-h-screen relative bg-gradient-to-br from-purple-700 via-purple-950 to-black text-white font-opensans antialiased max-w-[1440px] mx-auto ${opensans.className}`}
+        className={`min-h-screen relative bg-black  text-white font-opensans antialiased max-w-[1440px] mx-auto ${opensans.className}`}
       >
         <Provider session={session}>
           <Header />

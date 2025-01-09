@@ -35,14 +35,14 @@ export default function ContactSection() {
     return (
         <section 
             id="contact"
-            className="w-full flex flex-col gap-3 md:gap-6 my-5 md:my-10 lg:my-12"
+            className="w-full flex flex-col gap-3 md:gap-6 my-5 md:my-16 lg:my-20"
         >
             <h1 className="w-full flex orange_gradient font-bebas-neue-bold uppercase font-extrabold justify-center text-5xl tracking-tighter text-center">
                 Reach out to me
             </h1>
         <section className="w-full  flex flex-col md:flex-row justify-between items-center gap-3 md:gap-5 lg:gap-8">
             {contacts.map((contact)=> (
-                <div key={contact.name} className="shadow-md hover:border-purple-600 w-full bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 dark:text-slate-200 rounded-xl items-center gap-5 p-3 md:p-5 flex flex-col">
+                <div key={contact.name} className="shadow-md hover:border-orange-600 w-full bg-opacity-10 bg-orange-900 dark:text-slate-200 rounded-xl items-center gap-5 p-3 md:p-5 flex flex-col">
                     <Image 
                         src={contact.social_logo} 
                         alt="contact"
@@ -52,7 +52,7 @@ export default function ContactSection() {
                     />
                     
                     <div className="mt-2 flex flex-col items-center">
-                        <span className="text-purple-500"> 
+                        <span className="orange-gradient"> 
                         {contact.msg}
                         </span>
                         <hr className=""/>

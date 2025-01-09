@@ -36,6 +36,7 @@ const config: Config = {
         kanit: ['Kanit', 'sans-serif'],
         bebas: ['Bebas', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
+        irishgrover:["Irish Grover", 'serif'],
       },
       screens: {
           xs: "375px",
