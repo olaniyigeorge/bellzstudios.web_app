@@ -38,12 +38,12 @@ export default function Note() {
   ];
 
   return (
-    <div className="max-w-[1440px] h-full flex flex-col justify-center items-center text-slate-200">
+    <div className="max-w-[1440px] h-full flex flex-col justify-center items-center text-white font-irishgrover">
       <h1 className="w-3/4 md:w-1/2 p-2 md:p-4 text-[45px] md:text-7xl tracking-tighter font-extrabold items-center text-center">
         Look into my mind and <span className="orange_gradient">read my thoughts...</span>
       </h1>
 
-      <section className="w-full justify-center  border-y h-full border-purple-800 grid gap-3 md:gap-4 grid-cols-2 p-2 md:p-4 md:w-2/3">
+      <section className="w-full justify-center  border-y h-full border-orange-900 grid gap-3 md:gap-4 grid-cols-2 p-2 md:p-4 md:w-2/3">
         {notes.map((letter) => (
           <div key={letter._id} className="border p-2 rounded-xl">
             <p className="font-medium ">{letter.body}</p>

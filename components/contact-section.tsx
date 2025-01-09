@@ -35,11 +35,11 @@ export default function ContactSection() {
     return (
         <section 
             id="contact"
-            className="w-full flex flex-col gap-3 md:gap-6 my-5 md:my-16 lg:my-20"
+            className="w-full flex flex-col gap-6 md:gap-8 lg:gap-10 my-5 md:my-16 lg:my-20"
         >
-            <h1 className="w-full flex orange_gradient font-bebas-neue-bold uppercase font-extrabold justify-center text-5xl tracking-tighter text-center">
-                Reach out to me
-            </h1>
+        <h1 className="w-full flex orange-gradient font-bebas-neue-bold uppercase font-extrabold justify-center text-5xl tracking-tighter text-center">
+            Reach out to me
+        </h1>
         <section className="w-full  flex flex-col md:flex-row justify-between items-center gap-3 md:gap-5 lg:gap-8">
             {contacts.map((contact)=> (
                 <div key={contact.name} className="shadow-md hover:border-orange-600 w-full bg-opacity-10 bg-orange-900 dark:text-slate-200 rounded-xl items-center gap-5 p-3 md:p-5 flex flex-col">
@@ -52,7 +52,7 @@ export default function ContactSection() {
                     />
                     
                     <div className="mt-2 flex flex-col items-center">
-                        <span className="orange-gradient"> 
+                        <span className="orange-gradient font-irishgrover"> 
                         {contact.msg}
                         </span>
                         <hr className=""/>
@@ -64,12 +64,12 @@ export default function ContactSection() {
             ))}
         </section>
 
-    <span className="flex gap-2 w-full justify-center item-center my-4">
-        <Link href={"#dev-stories"} className="w-fit flex gap-2 font-medium items-center  px-4 py-2 ">
-            <>Products</>
-            <ArrowDownIcon className="w-4 h-5 text-white font-medium" />
-        </Link>
-    </span>
+        <span className="flex gap-2 w-full irishgrover justify-center item-center my-4">
+            <Link href={"#dev-stories"} className="shadow-lg text-orange-100 border border-orange-800 rounded-full w-fit flex gap-2 font-medium items-center px-4 py-2 ">
+                <>Projects & Dev Stories</>
+                <ArrowDownIcon className="w-4 h-8 hover:animate-swivvleV text-white font-medium" />
+            </Link>
+        </span>
 
         
         

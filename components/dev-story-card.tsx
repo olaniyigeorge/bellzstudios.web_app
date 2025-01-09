@@ -21,7 +21,7 @@ export default function DevStoryCard(data: iDevStory) {
 
 
     return ( 
-    <div className="w-full p-3 gap-2 flex flex-col items-start md:p-6 rounded-lg shadow-md bg-black bg-opacity-20 hover:bg-opacity-30">
+    <div className="w-full p-3 gap-2 flex flex-col items-start md:p-6 bg-orange-900 bg-opacity-10 border border-black rounded-lg shadow shadow-orange-900">
 
             <span className="w-full flex justify-between items-center">
             <h2 className="text-bold text-2xl">
@@ -33,7 +33,7 @@ export default function DevStoryCard(data: iDevStory) {
             </Link>
             </span>    
             <span 
-                className="text-[8px] w-fit border font-medium border-purple-600 p-1 rounded-full"> 
+                className="text-[8px] w-fit border font-medium border-orange-600 p-1 rounded-full"> 
                 {data.tag}
             </span>
 

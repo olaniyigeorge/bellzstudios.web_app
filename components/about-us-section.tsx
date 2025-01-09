@@ -1,4 +1,4 @@
-import { ArrowDownIcon } from "@heroicons/react/24/outline"
+import { ArrowDownCircleIcon, ArrowDownIcon, ArrowDownOnSquareStackIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -8,31 +8,35 @@ export default function AboutUsSection() {
     return (
         <section 
         id="about-us"
-        className="w-full flex items-center gap-3"
+        className="w-full flex items-center gap-3 py-5 md:py-10"
     >
-      <section className="w-full flex flex-col items-center md:items-start   gap-4">
+      <section className="w-full flex flex-col items-center md:items-start gap-3">
         <div className="flex flex-col items-center md:items-start  gap-3">
-          <h1 id="hero-title" className="orange_gradient font-bebas-neue-bold font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
-          <p className="text-xl md:text-2xl font-medium font-poppins dark:text-purple-100 text-center md:text-right">
-            Bellz Studio was birthed from the idea that there is a lot of good that 
-            could be done from a small place when tech is applied 
-            to doing what it does best; making life easier.
-            <br/>
-            Our mission is to build solutions to as many problems as we can 
-            in our immediate locale and document the journey while at it. 
-            We would consider ourselves successful when we can get at least a thousand 
-            people to actually use this products to deal with the issues they address. 
-          </p>
+          <h1 id="hero-title" className="text-black font-irishgrover font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
+          <p className="text-xl md:text-xl font-medium font-irishgrover dark:text-black text-center md:text-right">
+          At BellzStudio, we create and contribute to open-source projects 
+          that make a real difference. 
+          We team up to bring fresh ideas to life, whether refining existing 
+          projects or shaping new ones. 
+          Our goal? To impact at least a thousand people with solutions that 
+          tackle real-world challenges. 
+
+          <br />
+          Got a problem to solve? Whether it's custom software, breaking down 
+          an issue, or testing an idea's market fit, let's build something that
+           helps.
+        </p>
+
         </div>
 
-        <span className="flex gap-4 item-center">
-          <Link href="/about-me" className="w-fit font-medium p-4 rounded-full border text-purple-900 light_btn">
+        <span className="w-full justify-between flex gap-4 item-center">
+          <Link href="/about-me" className="w-fit font-medium p-4 rounded-full border text- black_btn">
               Resume
             </Link>        
             <span className="">
-              <Link href={"#contact"} className="w-fit flex gap-2 font-medium items-center px-4 py-2 ">
+              <Link href={"#contact"} className="shadow-lg border border-orange-800 rounded-full w-fit flex gap-2 font-medium items-center px-4 py-2 ">
                 <>Contact</>
-                <ArrowDownIcon className="w-4 h-5 text-white font-medium" />
+                <ArrowDownIcon className="w-4 h-8 hover:animate-swivvleV text-white font-medium" />
               </Link>
             </span>  
         </span>

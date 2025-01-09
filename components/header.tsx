@@ -9,7 +9,7 @@
         console.log("pathname: ", pathname)
 
         if (pathname == "/" || pathname == "/notes" || pathname.startsWith("/dev-stories")) return (
-            <header className="px-6 py-2 w-full max-w-[1440px] bg-transparent shadow sticky top-0 right-0 z-3000 ">
+            <header className="font-irishgrover px-6 py-2 w-full bg-black max-w-[1440px] bg-opacity-50 shadow sticky top-0 right-0 z-3000 ">
                 <nav className="flex justify-between items-center px-3 md:px-5 container mx-auto">
                     <Link 
                         href="/"
@@ -22,7 +22,7 @@
                             priority={true}
                             alt="product-link"
                         /> 
-                        <h1 className="text-sm hidden tracking-tighter font-bebas-neue-bold font-extrabold uppercase md:flex text-white font-irishgrover">Bellz Studio</h1>
+                        <h1 className="text-sm hidden tracking-tighter font-irishgrover font-extrabold uppercase md:flex text-white ">Bellz Studio</h1>
                     </Link>
                     <span className="font-medium flex justify-end items-center gap-2">
                         {
@@ -32,9 +32,16 @@
                                 </h1>
                         
                         }
+                        {
+                            pathname.includes("/notes") && 
+                                <h1 className="font-medium">
+                                    <Link href="/#notes">...notes</Link>
+                                </h1>
+                        
+                        }
                         <a
                         href="mailto:olaniyigeorge77@gmail.com"
-                        className="orange-gradient-bg  text-white px-6 py-2 rounded-full hover:bg-purple-700 hover:text-white transition-all duration-300"
+                        className="orange-gradient-bg font-kanit text-sm text-white px-6 py-2 rounded-full text-white  font-medium transition-all duration-300"
                         >
                         Hire Me
                         </a>
