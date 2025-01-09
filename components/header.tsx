@@ -1,24 +1,25 @@
 'use client'
-import { auth } from "@/services/auth"
-import { User } from "next-auth"
+import { getSession } from "@/app/auth/action"
+
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 
+
+
 export default function Header() {
     const pathname = usePathname()
-    const [ user, setUser ] = useState<User | undefined>(undefined)
+    const [ user, setUser ] = useState<{} | undefined>(undefined)
 
     useEffect(() => {
         const fetchSession = async () => {
-            const session = await auth();
+            const session = await getSession();
             console.log(session);
-            setUser(session?.user)
+            setUser(session?.user);
         };
         fetchSession();
     }, []);
-
     console.log("pathname: ", pathname)
 
     if (pathname == "/" || pathname == "/notes" || pathname.startsWith("/dev-stories")) return (
@@ -42,13 +43,6 @@ export default function Header() {
                         pathname.includes("/dev-stories") && 
                             <h1 className="font-medium">
                                 <Link href="/dev-stories">...dev stories</Link>
-                            </h1>
-                    
-                    }
-                    {
-                        pathname.includes("/notes") && 
-                            <h1 className="font-medium">
-                                <Link href="/#notes">...notes</Link>
                             </h1>
                     
                     }
