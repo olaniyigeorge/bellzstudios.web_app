@@ -13,18 +13,17 @@ export default function AboutUsSection() {
       <section className="w-full flex flex-col items-center md:items-start gap-3">
         <div className="flex flex-col items-center md:items-start  gap-3">
           <h1 id="hero-title" className="text-black font-irishgrover font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
-          <p className="text-xl md:text-xl font-medium font-irishgrover dark:text-black text-center md:text-right">
-          At BellzStudio, we create and contribute to open-source projects 
-          that make a real difference. 
-          We team up to bring fresh ideas to life, whether refining existing 
-          projects or shaping new ones. 
-          Our goal? To impact at least a thousand people with solutions that 
-          tackle real-world challenges. 
-
+          <p className="text-xl md:text-2xl font-medium font-irishgrover dark:text-black text-center md:text-right">
+          Born out of a love for open-source and making a real impact, 
+          BellzStudio is all about teaming up to bring cool ideas to 
+          life—whether it's tweaking what's already out there or starting 
+          something totally fresh.
+          
+          Our mission? To help at least a thousand people solve real-world 
+          problems with practical, game-changing solutions.
           <br />
-          Got a problem to solve? Whether it's custom software, breaking down 
-          an issue, or testing an idea's market fit, let's build something that
-           helps.
+          Got an idea or a problem to tackle? Whether it's brainstorming, 
+          building, or testing the market, let's make it happen together!
         </p>
 
         </div>
@@ -34,7 +33,7 @@ export default function AboutUsSection() {
               Resume
             </Link>        
             <span className="">
-              <Link href={"#contact"} className="shadow-lg border border-orange-800 rounded-full w-fit flex gap-2 font-medium items-center px-4 py-2 ">
+              <Link href={"#contact"} className=" text-black shadow-lg border border-black rounded-full w-fit flex gap-2 font-medium items-center px-4 py-2 ">
                 <>Contact</>
                 <ArrowDownIcon className="w-4 h-8 hover:animate-swivvleV text-white font-medium" />
               </Link>
