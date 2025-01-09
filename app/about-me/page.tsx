@@ -24,7 +24,17 @@ return (
                 Software Engineer
             </h1>
             <p className="text-gray-800 font-medium text-lg mt-2">
-            An enthusiastic and highly motivated self-taught developer, adept at leveraging cutting-edge technologies with a strong focus on the Python programming language and its associated frameworks. Proficient in crafting testable and efficient solutions for real-life scenarios, consistently delivering within reasonably timed and highly productive development cycles.
+            I&rsquo;m a developer passionate about learning, problem-solving,
+             and collaboration. Skilled in Python and its frameworks, I 
+             specialize in crafting practical, efficient solutions for 
+             real-world challenges. My focus is on writing clean, testable 
+             code and delivering high-quality results on time.
+
+            With a strong technical foundation and a proactive approach, I thrive in 
+            team environments that value clear communication, adaptability, and 
+            innovation. Always eager to explore new technologies, I&rsquo;m driven by the 
+            opportunity to create impactful solutions. Looking forward to working with 
+            you!
             </p>
             <div className="flex gap-2 w-full p-2 shadow rounded-lg justify-between items-center mt-4">
                 {[

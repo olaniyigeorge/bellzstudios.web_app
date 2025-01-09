@@ -16,9 +16,10 @@ export default function DevStoriesSection() {
             <div className="w-full flex flex-col-reverse md:flex-row gap-4 justify-center items-center">
                 <section className="w-full flex flex-col  gap-4 font-irishgrover">
                     <span className="text-xl md:text-2xl text-slate-200 font-irishgrover text-center md:text-start font-medium w-full my-3 ">
-                        Dev Stories is a series where I walk you through my thought process as I 
-                        develop a solution to a common problem and try to validate my approach by 
-                        putting it out there(blogging about it) and accepting feedback from you.
+                    Dev Stories is a series where I share my thought process as I develop 
+                    products to tackle well-documented problems. I invite feedback and aim 
+                    to validate both my approach and yours by openly discussing and blogging 
+                    about the journey.
                     </span>
                     <section className="w-full flex gap-2  justify-center md:justify-start md:gap-8">
                         <Link href="/dev-stories" className="hover:scale-[102%] ease-in-out border-orange-500 shadow shadow-orange-500  transition-all duration-800 shadow shadow-orange-500 p-3 md:p-4 dark:text-slate-200 border rounded-full">
