@@ -11,15 +11,18 @@ interface TyperProps {
 
 export default function Typer(props: TyperProps) {
     const {words, className, id, delay, loop} = props;
+    
     return (
-        <Typewriter
-            options={{
-                strings: words,
-                autoStart: true,
-                loop: loop,
-                delay: delay,
-                wrapperClassName: className,
-            }}
-        />
+        <div id={id}>
+            <Typewriter
+                options={{
+                    strings: words,
+                    autoStart: true,
+                    loop: loop,
+                    delay: delay,
+                    wrapperClassName: className,
+                }}
+            />
+        </div>
     );
 }
