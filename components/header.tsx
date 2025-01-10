@@ -1,5 +1,6 @@
 'use client'
 import { getSession } from "@/app/auth/action"
+import { iUser } from "@/app/i/market/p/add/page"
 
 import Image from "next/image"
 import Link from "next/link"
@@ -10,17 +11,23 @@ import { useEffect, useState } from "react"
 
 export default function Header() {
     const pathname = usePathname()
-    const [ user, setUser ] = useState<{} | undefined>(undefined)
+    const [ user, setUser ] = useState<iUser | undefined>(undefined)
 
     useEffect(() => {
         const fetchSession = async () => {
             const session = await getSession();
             console.log(session);
-            setUser(session?.user);
+            if (session && session.user) {
+                setUser({ 
+                    id: session.user.id, 
+                    name: session.user.name,
+                    email: session.user.email,
+                    image: session.user.image
+                });
+            }
         };
         fetchSession();
     }, []);
-    console.log("pathname: ", pathname)
 
     if (pathname == "/" || pathname == "/notes" || pathname.startsWith("/dev-stories")) return (
         <header className="font-irishgrover px-6 py-2 w-full bg-black max-w-[1440px] bg-opacity-50 shadow sticky top-0 right-0 z-3000 ">
