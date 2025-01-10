@@ -11,7 +11,7 @@ export const DEV_STORIES: iDevStory[] = [
         title: "LockedIn",
         tag: "habit-tracking",
         description: "LockedIn is a habit-tracking app that enables users to set habit-forming tasks and track their progress in real-time as they strive to build lasting habits. It allows them to invite accountability partners for support, fostering a community-driven approach to personal growth and habit development.",
-        open_source_url: "/i/lockedin", // "https://github/olaniyigeorge77/lockedin.com",
+        open_source_url: "https://lockedin-app.vercel.app/", // "https://github/olaniyigeorge77/lockedin.com",
         product_url: "/i/lockedin", // "https://lockedin_api.com https://lockedin-api.onrender.com",
         status: "live",
         inspirations: [
@@ -70,8 +70,8 @@ export const DEV_STORIES: iDevStory[] = [
         title: "iScheduler",
         tag: "tasks-scheduler",
         description: " Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts",
-        open_source_url: "https://github.com/olaniyigeorge/",
-        product_url: "/ischeduler on aws/",
+        open_source_url: "https://github.com/olaniyigeorge/iScheduler",
+        product_url: "/ischeduler",
         status: "dev",
         inspirations: [],
         image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
