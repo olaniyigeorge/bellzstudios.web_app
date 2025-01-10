@@ -35,11 +35,10 @@ export default async function Landing() {
               words={["bellzstudio", "bellzstudio"]}
             /> 
             <span
-            id='hero-mini' 
-            className="font-irishgrover text-3xl px-4 md:px-20 text-white orange_gradient text-center" 
+              id='hero-mini' 
+              className="font-irishgrover text-3xl px-4 md:px-20 text-white orange_gradient text-center" 
             >
-                Building products and services we believe should exist.
-              
+                Building and contributing to open-source products we believe should exist.
             </span> 
 
             <div className="w-full flex mt-8 lg:mt-10 gap-3 justify-between items-center" >

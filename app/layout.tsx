@@ -18,25 +18,25 @@ const opensans = localFont({
 
 export const metadata: Metadata = {
   title: "Bellz Studio",
-  description: "Building products and services we believe should exist to make life simpler.",
+  description: "Building products we believe should exist to make life simpler.",
   openGraph: {
     title: "Bellz Studio",
     description: "Building products and services we believe should exist to make life simpler.",
-    url: "https://Bellz Studio.vercel.app/",
+    url: "https://bellzstudios.vercel.app/",
     siteName: "Bellz Studio",
     images: [
       {
-        url: "/assets/images/bellzstudio.png",
+        url: "/assets/images/bellzstudios_banner.png",
         width: 1200,
         height: 630,
-        alt: "Bellz Studio Logo",
+        alt: "BellzStudio Logo",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    images: "/assets/images/bellzstudio.png",
+    images: "/assets/images/bellzstudios_banner.png",
   },
 };
 
