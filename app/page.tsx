@@ -23,7 +23,7 @@ export default async function Landing() {
 
 
   return (
-    <div className="w-full font-poppins flex flex-col gap-8 justify-center">
+    <div className="w-full font-poppins flex flex-col  justify-center">
       
       <PageSection id="hero-section" className="bg-black">
           <section className="w-full flex flex-col items-center gap-2 py-4 md:py-6">
