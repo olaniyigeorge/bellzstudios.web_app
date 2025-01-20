@@ -34,14 +34,14 @@ export default function DevStoriesSection() {
                     </section>
                 </section>
 
-                <div className="w-full flex justify-center transform duration-900">
+                <div className="w-full flex justify-center ">
                     <Image
                         src={`/assets/images/81178b47a8598f0c81c4799f2cdd4057.gif`}
                         alt={`Dev Stories`}
                         unoptimized 
                         className="w-auto min-h-[500px] z-0 rounded-xl"
-                        height={200}
-                        width={200}
+                        height={400}
+                        width={400}
                         priority={true}
                     />
                 </div>                
