@@ -1,8 +1,8 @@
 import ScrollDownAnimation from "../components/scroll";
-import ContactSection from "../components/contact-section";
-import AboutUsSection from "../components/about-us-section";
-import DevStoriesSection from "../components/dev-stories-section";
-import NotesSection from "../components/notes-section";
+import ContactSection from "@/sections/contact-section";
+import AboutUsSection from "@/sections/about-us-section";
+import DevStoriesSection from "@/sections/dev-stories-section";
+import NotesSection from "@/sections/notes-section";
 import { auth } from "@/services/auth";
 import { BookOpenIcon, EnvelopeIcon, PencilIcon, UserGroupIcon } from "@heroicons/react/24/outline";
 import Typer from "@/components/typer";
@@ -46,7 +46,7 @@ export default async function Landing() {
                 <ScrollDownAnimation 
                     key={link.id} 
                     targetId={link.id} 
-                    className="w-full p-3 md:p-4 flex hover:animate-swivvleV  flex-col border rounded-xl border-orange-500 gap-3 shadow shadow-orange-500  items-center"
+                    className="w-full p-3 md:p-4 flex hover:animate-swivvleV  flex-col border rounded-2xl md:rounded-[50px] border-orange-500 gap-3 shadow shadow-orange-500  items-center"
                     child={
                   <>
                     <span className="text-white text-xs md:text-lg font-irishgrover">{link.name}</span>
@@ -60,21 +60,11 @@ export default async function Landing() {
           </section> 
       </PageSection>
 
-      <PageSection id="about-us" className="orange-gradient-bg">
-        <AboutUsSection />
-      </PageSection>
+      <AboutUsSection />
+      <ContactSection />
+      <DevStoriesSection />
+      <NotesSection />  
 
-      <PageSection id="contact" className="bg-black">
-        <ContactSection />
-      </PageSection> 
-     
-      <PageSection id="dev-stories" className="bg-black">
-        <DevStoriesSection />
-      </PageSection>
-
-      <PageSection id="notes" className="orange-gradient-bg">
-        <NotesSection />  
-      </PageSection>
     </div>
   );
 }

@@ -8,23 +8,24 @@ export default function AboutUsSection() {
     return (
         <section 
         id="about-us"
-        className="w-full flex items-center gap-3 py-5 md:py-10"
+        className="page-section orange-gradient-bg w-full flex items-center gap-3 py-5 md:py-10"
     >
       <section className="w-full flex flex-col items-center md:items-start gap-3">
         <div className="flex flex-col items-center md:items-start  gap-3">
           <h1 id="hero-title" className="text-black font-irishgrover font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
-          <p className="text-xl md:text-2xl font-medium font-irishgrover dark:text-black text-center md:text-right">
-          Born out of a love for open-source and making a real impact, 
-          BellzStudio is all about teaming up to bring cool ideas to 
-          life—whether it&apos;s tweaking what&apos;s already out there or starting 
-          something totally fresh.
-          
-          Our mission? To help at least a thousand people solve real-world 
-          problems with practical, game-changing solutions.
-          <br />
-          Got an idea or a problem to tackle? Whether it&apos;s brainstorming, 
-          building, or testing the market, let&apos;s make it happen together!
-        </p>
+          <p className="text-xl md:text-2xl font-medium font-irishgrover text-black text-center md:text-right">
+              BellzStudio was born from an aprreciation for what open-source can achieve and a desire to make a real impact. 
+              At its core, it&apos;s about teaming up to turn ideas into meaningful, impactful software. Whether refining 
+              existing solutions or building something new.
+
+              <br />
+              As a developer passionate about solving real problems, I&apos;m open to collaborating 
+              at any stage—brainstorming, building, or testing. I also love sharing my journey, 
+              documenting my learning process to grow and create better products.
+
+              <br />
+              Got an idea or a challenge? Let&apos;s bring it to life together!
+          </p>
 
         </div>
 

@@ -35,7 +35,7 @@ export default function ContactSection() {
     return (
         <section 
             id="contact"
-            className="w-full flex flex-col gap-6 md:gap-8 lg:gap-10 my-5 md:my-16 lg:my-20"
+            className="page-section w-full flex flex-col gap-6 md:gap-8 lg:gap-10 my-5 md:my-16 lg:my-20"
         >
         <h1 className="w-full flex orange-gradient font-bebas-neue-bold uppercase font-extrabold justify-center text-5xl tracking-tighter text-center">
             Reach out to me

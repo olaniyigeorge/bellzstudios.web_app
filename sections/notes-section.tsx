@@ -9,7 +9,7 @@ export default function NotesSection() {
     return (
         <section 
             id="notes"
-            className="w-full flex pb-10 md:pb-0  flex-col gap-2 my-5 md:my-10 lg:my-16"
+            className="page-section orange-gradient-bg w-full flex pb-10 md:pb-0  flex-col gap-2 my-5 md:my-10 lg:my-16"
         >
         <section className="w-full flex flex-col font-irishgrover justify-center items-center gap-3">
             <section className="w-full flex text-center justify-center items-center flex-col  gap-4">
