@@ -25,8 +25,7 @@ export default async function Landing() {
   return (
     <div className="w-full font-poppins flex flex-col  justify-center">
       
-      <PageSection id="hero-section" className="bg-black">
-          <section className="w-full flex flex-col items-center gap-2 py-4 md:py-6">
+      <section className="page-section w-full flex flex-col items-center gap-2 py-4 md:py-6">
             <Typer 
               id='hero' 
               delay={50}
@@ -56,9 +55,8 @@ export default async function Landing() {
                 } />
               ))}
             </div>
-
           </section> 
-      </PageSection>
+
 
       <AboutUsSection />
       <ContactSection />

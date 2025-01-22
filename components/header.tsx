@@ -15,7 +15,7 @@ export default function Header() {
     console.log("User: ", user)
 
     if (pathname == "/" || pathname == "/notes" || pathname.startsWith("/dev-stories")) return (
-        <header className="font-irishgrover px-6 py-2 w-full bg-black max-w-[1440px] bg-opacity-50 shadow sticky top-0 right-0 z-3000 ">
+        <header className="font-irishgrover px-6 py-2 w-full bg-black max-w-[1440px] bg-opacity-70 shadow sticky top-0 right-0 z-3000 ">
             <nav className="flex justify-between items-center px-3 md:px-5 container mx-auto">
                 <Link 
                     href="/"

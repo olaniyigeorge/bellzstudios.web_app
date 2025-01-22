@@ -77,7 +77,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                 <section className="">
                     <p className="text-md md:text-xl lg:text-3xl text-pretty">{story.description}</p>
 
-                    <section className="w-full  flex flex-wrap gap-2 mt-4">
+                    <section className="w-full flex flex-wrap gap-2 mt-4">
                         {story.tech_stack.map((comp) => (
                             <span key={comp.name} className="w-fit px-3 py-2 border border-slate-800 text-white flex gap-2 items-center justify-center">
                                 <Image src={comp.icon} alt={comp.name} width={100} height={100} className="object-fill rounded-full bg-white flex items-center w-8 h-8 "/>

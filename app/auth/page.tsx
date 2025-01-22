@@ -1,15 +1,15 @@
 "use client"
-import Auth from "@/components/sign-in";
-import { signIn } from "@/services/auth";
+// import Auth from "@/components/sign-in";
+// import { signIn } from "@/services/auth";
 
 
 export default async function AuthPage() {
 
     return (
-        <main className="w-full flex justify-center items-center">
+        <main className="w-full flex justify-center items-center min-h-[500px]">
 
 
-            <div className="min-w-[250px] text-gray-900 md:min-w-[400px] flex flex-col justify-center items-center w-fit h-full p-3 rounded-xl border">
+            <div className="min-w-[250px] text-gray-900 md:min-w-[400px] flex flex-col justify-center items-center w-fit h-full p-3 rounded-xl">
                 <form className="flex  w-full items-center flex-col gap-3">
                     <input className="p-2 w-full rounded-md" type="email" name="email" placeholder="email@example.com" required />
                     <input className="p-2 w-full rounded-md" type="password" required />
