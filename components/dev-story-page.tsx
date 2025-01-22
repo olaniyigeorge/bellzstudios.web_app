@@ -18,10 +18,10 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
     const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
     const story = DEV_STORIES.find((story) => story.id === id);
+    const [product, setProduct] = useState<string>(story ? story.title.toLocaleLowerCase() : "");
     if (!story) {
         return <div className="w-full">Story not found</div>;
     }
-    const [product, setProduct] = useState<string>(story!.title.toLocaleLowerCase());
 
     console.log(setProduct)
     async function joinWaitlist(e: FormEvent<HTMLFormElement>) {
