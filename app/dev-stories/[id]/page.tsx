@@ -1,6 +1,6 @@
 import { iDevStory } from "@/components/dev-story-card";
 import DevStoryPage from "@/components/dev-story-page";
-import { DEV_STORIES } from "@/services/dev-stories";
+import { DEV_STORIES } from "@/components/mock_data"
 import { Metadata } from "next";
 
 

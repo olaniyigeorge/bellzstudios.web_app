@@ -89,6 +89,10 @@ body {
   box-sizing: border-box;
 }
 
+.hero_title {
+  @apply w-3/4 md:w-1/2 p-2 md:p-4 text-[45px] md:text-7xl tracking-tighter font-extrabold items-center text-center w-full text-center text-5xl font-irishgrover font-extrabold
+}
+
 .bg-gradient-to-br {
   background: linear-gradient(to bottom right, #6a0dad, #340457);
 }

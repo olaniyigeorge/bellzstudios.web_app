@@ -17,7 +17,7 @@ export const connectToDB = async (): Promise<void> => {
     }
 
     await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: "share_prompt", // bellzstudio
+      dbName: "bellzstudio", //  share_prompt
       // useNewUrlParser: true,
       // useUnifiedTopology: true,
     });

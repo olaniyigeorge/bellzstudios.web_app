@@ -36,16 +36,16 @@
         return (
             <section
                 id="contact"
-                className="page-section bg-white w-full flex flex-col gap-6 md:gap-8 lg:gap-10"
+                className="page-section bg-white w-full flex flex-col gap-10 md:gap-16 lg:gap-20"
             >
                 <h1 className=" w-full flex orange-gradient font-bebas-neue-bold uppercase font-extrabold justify-center text-5xl tracking-tighter text-center">
-                    Reach out to me
+                    Reach Out To Me
                 </h1>
                 <section className="w-full flex flex-col md:flex-row justify-between items-center gap-3 md:gap-5 lg:gap-8">
                     {contacts.map((contact) => (
                         <div
                             key={contact.name}
-                            className="shadow-md hover:border-orange-600 w-full bg-black dark:text-slate-200 rounded-xl items-center gap-5 p-3 md:p-5 flex flex-col"
+                            className="shadow shadow-slate-600 border-2 border-white w-full bg-black text-white rounded-2xl items-center gap-5 p-3 md:p-5 flex flex-col"
                         >
                             <Image
                                 src={contact.social_logo}
@@ -63,7 +63,7 @@
                                 <Link
                                     href={contact.url}
                                     target="_blank"
-                                    className="font-semibold text-white font-bebas-neue-bold"
+                                    className="font-semibold underline text-white font-bebas-neue-bold"
                                 >
                                     {contact.name}
                                 </Link>
@@ -72,7 +72,7 @@
                     ))}
                 </section>
 
-                <span className="flex gap-2 w-full irishgrover justify-center item-center my-8">
+                <span className="flex gap-2 w-full irishgrover justify-center item-center mt-12">
                     <Link
                         href={"#dev-stories"}
                         className="shadow-lg text-white bg-black border-2 border-orange-500 rounded-full w-fit flex gap-2 font-medium items-center px-4 py-2"

@@ -1,7 +1,7 @@
 import Link from "next/link";
-// import Image from "next/image"
+import { iNoteEntry } from "./note-entry-card";
 
-export type Inspiration = {
+export type TweetEmbeds = {
     tweetId: string;
 };
 export interface iDevStory{
@@ -10,10 +10,15 @@ export interface iDevStory{
     image: string;
     tag: string;
     description: string;
+    tech_stack: [{
+        icon: SVGSVGElement;
+        name: string
+    }],
     open_source_url: string;
     product_url: string;
     status: "live" | "dev" | "dropped" | "old";
-    inspirations: Inspiration[]
+    validatingTweets: TweetEmbeds[]
+    notes: iNoteEntry[]
 }
 
 

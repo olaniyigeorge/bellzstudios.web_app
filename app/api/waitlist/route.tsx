@@ -1,9 +1,10 @@
+import ProductTester from "@/models/waitlist";
+import { connectToDB } from "@/services/mongo_db";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-    // Parse the body once
     const body = await req.json();
-    const { email, discovery_location } = body;
+    const { email, product, discovery_location } = body;
 
     if (!email) {
         return NextResponse.json(
@@ -12,30 +13,22 @@ export async function POST(req: Request) {
         );
     }
 
-    const url = `${process.env.API_DOMAIN}/accounts/waitlist`;
-    console.log(JSON.stringify({
-        email,
-        telegram_id: null,
-        discovery_location,
-    }))
+    console.log({ email, product, discovery_location })
     try {
-        const response = await fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                email: email,
-                telegram_id: null,
-                discovery_location: discovery_location,
-            }),
+        await connectToDB();
+
+        const newTester = new ProductTester({
+            email,
+            telegram_id: null,
+            product,
+            discovery_location,
         });
 
-        const jsonResponse = await response.json();
-        
+        await newTester.save();
+
         return NextResponse.json(
-            { body: jsonResponse },
-            { status: response.status }
+            { body: newTester },
+            { status: 201 }
         );
     } catch (error) {
         console.error(error);

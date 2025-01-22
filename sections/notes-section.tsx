@@ -9,7 +9,7 @@ export default function NotesSection() {
     return (
         <section 
             id="notes"
-            className="page-section orange-gradient-bg w-full flex    flex-col gap-2 p-10 md:my-12 lg:p-16"
+            className="page-section orange-gradient-bg w-full flex  flex-col gap-2 p-10 md:my-12 lg:p-16"
         >
         <section className="w-full flex flex-col font-irishgrover justify-center items-center gap-3">
             <section className="w-full flex text-center justify-center items-center flex-col  gap-4">
@@ -19,7 +19,7 @@ export default function NotesSection() {
                         and how I would go about it.
 
                     </span>
-                    <Link href="/notes" className="flex items-center gap-2 hover:scale-[110%] hover:animate-swivvleH transition-all duration-800 ease-in-out shadow shadow-orange-900 p-3 md:p-4 dark:text-black  rounded-full">
+                    <Link href="/notes" className="flex items-center text-white mt-8 gap-2 hover:scale-[110%] hover:animate-swivvleH transition-all duration-800 ease-in-out shadow shadow-orange-900 p-3 md:p-4 dark:text-black  rounded-full">
                             <Image 
                                 src="/assets/images/b91e1131ca20f6369aa68d21cb3a8960.gif" 
                                 className="object-full rounded-full w-10 h-10" 

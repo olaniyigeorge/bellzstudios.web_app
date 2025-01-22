@@ -1,4 +1,4 @@
-import { DEV_STORIES } from "@/services/dev-stories"
+import { DEV_STORIES } from "@/components/mock_data"
 import DevStoryCard, { iDevStory } from "../../components/dev-story-card"
 
 
@@ -8,7 +8,7 @@ export default function Note() {
     const STORIES = DEV_STORIES
     return (
         <div className="flex flex-col justify-center gap-5">
-            <h1 className="w-full text-center text-5xl font-irishgrover font-extrabold">
+            <h1 className="hero_title">
                 Dev Stories
             </h1>
 
