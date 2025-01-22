@@ -40,7 +40,7 @@ export default async function DevStoryyy({ params }: { params: { id: string } })
 
   // Check if the story exists to handle any potential errors
   if (!STORY) {
-      return <div className="w-full">Story not found</div>;
+      return <div className="w-full hero_title text-red-500">Story not found!!!</div>;
   }
 
   return (

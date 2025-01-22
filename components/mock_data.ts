@@ -66,7 +66,7 @@ export const DEV_STORIES: iDevStory[] = [
     image: "/assets/images/lockedin.png"
   },
   {
-    id: "i-hr-manager",
+    id: "ihr",
     title: "iHR",
     tag: "interviews",
     description: "Intelligent HR Manager, an AI-powered platform designed to revolutionize interview preparation and feedback. This project leverages modern technologies to simulate realistic interview experiences, provide actionable insights, and empower users to excel in their career pursuits.",

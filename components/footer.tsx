@@ -8,7 +8,7 @@ export default function Footer() {
 
     if (pathname == "/" || pathname == "/notes" || pathname.startsWith("/dev-stories"))   return (
         <footer className="p-6 w-full text-center blur-backdrop-sm  bg-black  text-white">
-            © {new Date().getFullYear()} <Link className="orange-gradient font-medium" href="/" > Bellz Studio</Link>. All Rights Reserved.
+            © {new Date().getFullYear()} <Link className="orange-gradient font-medium" href="/" > Bellz Studio</Link>. All Rights <Link href="/auth">Reserved.</Link>
         </footer>
     )
 
