@@ -8,6 +8,7 @@ import { TwitterTweetEmbed } from "react-twitter-embed";
 import { DEV_STORIES, DISCOVERY_LOCATION } from "./mock_data";
 import NoteEntryCard, { iNoteEntry } from "./note-entry-card";
 import { TweetEmbeds } from "./dev-story-card";
+import { motion } from "framer-motion";
 
 interface DevStoryPageProps {
     id: string;
@@ -15,17 +16,18 @@ interface DevStoryPageProps {
 
 export default function DevStoryPage({ id }: DevStoryPageProps) {
     const [email, setEmail] = useState<string>("");
-    
+    const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
     const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
     const story = DEV_STORIES.find((story) => story.id === id);
     if (!story) {
         return <div className="w-full">Story not found</div>;
     }
     const [product, setProduct] = useState<string>(story!.title.toLocaleLowerCase());
-    // console.log(setProduct)
+
     async function joinWaitlist(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        
+        setIsSubmitting(true);
+
         const location = selectedLocation || "friends_family";
 
         const response = await fetch("/api/waitlist", {
@@ -33,7 +35,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
             headers: {
                 "Content-Type": "application/json",
             },
-                body: JSON.stringify({
+            body: JSON.stringify({
                 email,
                 product,
                 discovery_location: location,
@@ -44,23 +46,23 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
         if (response.ok) {
             console.log(res);
             toast.success("Thanks for joining our waitlist");
-        } else if (response.status == 401) {
+        } else if (response.status == 409) {
             console.error(res);
-            toast.success("You've added this email to our list.");
+            toast.success("You've joined the waitlist for this product.");
         } else {
             console.error(res);
             toast.error("An error occurred while attempting to join our waitlist");
         }
+        setIsSubmitting(false);
     }
 
-   
     return (
         <div className="font-irishgrover flex flex-col gap-2 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">
             <section className="flex flex-col gap-3 bg-orange-500 bg-white/5 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg p-5 rounded-lg p-2 bg-opacity-10">
                 <span className="flex justify-between items-start">
                     <span className="items-start">
                         <h1 className="text-3xl md:text-5xl font-bold">{story.title}</h1>
-                        <p className="text-[10px] w-fit rounded-full p-1 border border-orange-500">{story.tag}</p>
+                        <p className="text-[8px] w-fit rounded-full p-1 border border-orange-900">{story.tag}</p>
                     </span>
                     <Link
                         target="_blank"
@@ -75,17 +77,15 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                 <section className="">
                     <p className="text-md md:text-xl lg:text-3xl text-pretty">{story.description}</p>
 
-
                     <section className="w-full flex gap-3 mt-4">
                         {story.tech_stack.map((comp) => (
-                        <span className="w-full p-2 border border-gray-800 text-white flex gap-2 items-center justify-center">
-                            <Image src={comp.icon} alt={comp.name} width={100} height={100} className="object-contain rounded-full bg-white flex items-stretch w-8 h-8 "/>
-                            <p className="text-sm font-inter">{comp.name}</p>
-                        </span>
-                         ))}
+                            <span className="w-full p-2 border border-slate-800 text-white flex gap-2 items-center justify-center">
+                                <Image src={comp.icon} alt={comp.name} width={100} height={100} className="object-fill rounded-full bg-white flex items-center w-8 h-8 "/>
+                                <p className="text-sm font-inter">{comp.name}</p>
+                            </span>
+                        ))}
                     </section>
                 </section>
-                
             </section>
 
             <form onSubmit={joinWaitlist} className="my-3 flex flex-col items-center gap-3 md:gap-6 justify-center">
@@ -123,27 +123,29 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                         </select>
                     </span>
                     <button type="submit" className="w-full md:w-fit orange-gradient-bg font-kanit text-sm text-white px-6 py-2 rounded-full text-white font-medium transition-all duration-300">
-                        Join Waitlist
+                        {isSubmitting ? "Joining..." : "Join Waitlist"}
                     </button>
                 </span>
             </form>
 
-            <section className="w-full flex flex-col mt-4 items-center bg-black bg-white/10 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg rounded-xl p-2">
+            <section className="w-full flex object-contain flex-col mt-4 items-center bg-black bg-white/10 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg rounded-xl p-2">
                 <h1 className="text-3xl text-center font-medium py-2">
                     Join the conversation on
                     <span className="orange-gradient">{" "}{story.title}</span>
                 </h1>
                 {/* <SliderAd /> */}
 
-                
-                <section className="grid grid-cols-1 md:grid-cols-2 w-full">
-                    {story.notes.map((note: iNoteEntry) => (
+                <div className="grid md:grid-cols-2 gap-6 pb-6 overflow-auto w-full">
+                     {story.notes.map((note: iNoteEntry) => (
                         <NoteEntryCard key={note._id} post={note} handleEdit={function (): void {
                             throw new Error("Function not implemented.");
                         } } handleDelete={function (): void {
                             throw new Error("Function not implemented.");
                         } } />
                     ))}
+                    </div>
+                <section className="grid grid-cols-1 md:grid-cols-2 w-full">
+                   
                 </section>
                 <section className="grid grid-cols-1 md:grid-cols-2 w-full">
                     {story.validatingTweets.map((inspo: TweetEmbeds) => (

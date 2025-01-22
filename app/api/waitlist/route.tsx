@@ -12,18 +12,21 @@ export async function POST(req: Request) {
             { status: 400 }
         );
     }
-
-    console.log({ email, product, discovery_location })
     try {
         await connectToDB();
-
+        const existingTester = await ProductTester.findOne({ email, product });
+        if (existingTester) {
+            return NextResponse.json(
+            { error: "Tester already exists", body: existingTester },
+            { status: 409 }
+            );
+        }
         const newTester = new ProductTester({
             email,
             telegram_id: null,
             product,
             discovery_location,
-        });
-
+        })
         await newTester.save();
 
         return NextResponse.json(

@@ -39,8 +39,8 @@ export const DEV_STORIES: iDevStory[] = [
       name: "Vercel"
       }
     ],
-    open_source_url: "https://lockedin-app.vercel.app/", // "https://github/olaniyigeorge77/lockedin.com",
-    product_url: "/i/lockedin", // "https://lockedin_api.com https://lockedin-api.onrender.com",
+    open_source_url: "https://github/olaniyigeorge/lockedin",
+    product_url: "https://lockedin-seven.vercel.app/", // "https://lockedin_api.com https://lockedin-api.onrender.com",
     status: "live",
     validatingTweets: [
       { tweetId: "1844763363533820066" },
@@ -66,6 +66,99 @@ export const DEV_STORIES: iDevStory[] = [
     ],
     image: "/assets/images/lockedin.png"
   },
+  {
+    id: "i-hr-manager",
+    title: "iHR",
+    tag: "interviews",
+    description: "Intelligent HR Manager, an AI-powered platform designed to revolutionize interview preparation and feedback. This project leverages modern technologies to simulate realistic interview experiences, provide actionable insights, and empower users to excel in their career pursuits.",
+    tech_stack: [
+      {
+      icon: "/assets/images/tech_stack/python.png",
+      name: "Python"
+      },
+      {
+      icon: "/assets/images/tech_stack/fastapi.png",
+      name: "FastAPI"
+      },
+
+      {
+      icon: "/assets/images/tech_stack/postgres.png",
+      name: "PostGres"
+      },
+      {
+      icon: "/assets/images/tech_stack/langchain.png",
+      name: "LangChain"
+      },
+      {
+      icon: "/assets/images/tech_stack/websockets.png",
+      name: "WebSockets"
+      },
+    ],
+    open_source_url: "https://github.com/olaniyigeorge/iHR",
+    product_url: "https://ihr-mfh9.onrender.com/",
+    status: "live",
+    validatingTweets: [],
+    notes: [
+      {
+        _id: "6",
+        author: {
+          _id: "user5",
+          username: "olaniyi_george",
+          email: "olaniyigeorge77@gmail.com",
+          image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+        },
+        title: "Challenge on LockedIn",
+        body: "Set up a challenge on building a habit and invite friends to lock in or hold you accountable.",
+        tags: ["challenge", "accountability-partnership"],
+        privacy_level: "public",
+        written_at: new Date("2025-01-20T14:48:00Z")
+        },
+        {
+          _id: "7",
+          author: {
+            _id: "user5",
+            username: "olaniyi_george",
+            email: "olaniyigeorge77@gmail.com",
+            image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+          },
+          title: "Challenge on LockedIn",
+          body: "Set up a challenge on building a habit and invite friends to lock in or hold you accountable.",
+          tags: ["challenge", "accountability-partnership"],
+          privacy_level: "public",
+          written_at: new Date("2025-01-20T14:48:00Z")
+          },
+          {
+            _id: "8",
+            author: {
+              _id: "user5",
+              username: "olaniyi_george",
+              email: "olaniyigeorge77@gmail.com",
+              image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+            },
+            title: "Challenge on LockedIn",
+            body: "Set up a challenge on building a habit and invite friends to lock in or hold you accountable.",
+            tags: ["challenge", "accountability-partnership"],
+            privacy_level: "public",
+            written_at: new Date("2025-01-20T14:48:00Z")
+            },
+            {
+              _id: "9",
+              author: {
+                _id: "user5",
+                username: "olaniyi_george",
+                email: "olaniyigeorge77@gmail.com",
+                image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+              },
+              title: "Challenge on LockedIn",
+              body: "Set up a challenge on building a habit and invite friends to lock in or hold you accountable.",
+              tags: ["challenge", "accountability-partnership"],
+              privacy_level: "public",
+              written_at: new Date("2025-01-20T14:48:00Z")
+              },
+
+    ],
+    image: "/assets/images/ihr.png"
+  }, 
   {
     id: "marketplace",
     title: "MarketPlace",
@@ -156,24 +249,7 @@ export const DEV_STORIES: iDevStory[] = [
     notes: [],
     image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
   },   
-  {
-    id: "i-hr-manager",
-    title: "iHR",
-    tag: "interviews",
-    description: "An AI-powered platform designed to revolutionize interview preparation and feedback",
-    tech_stack: [
-      {
-      icon: "/assets/images/tech_stack/typescript.png",
-      name: "TypeScript"
-      }
-    ],
-    open_source_url: "https://github.com/olaniyigeorge/iHR",
-    product_url: "https://ihr-mfh9.onrender.com/",
-    status: "live",
-    validatingTweets: [],
-    notes: [],
-    image: "/assets/images/ihr.png"
-  },   
+  
 ]
 export const noteEntries: iNoteEntry[] = [
   {

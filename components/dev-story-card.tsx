@@ -10,10 +10,10 @@ export interface iDevStory{
     image: string;
     tag: string;
     description: string;
-    tech_stack: [{
-        icon: SVGSVGElement;
-        name: string
-    }],
+    tech_stack: {
+        icon: string;
+        name: string;
+    }[],
     open_source_url: string;
     product_url: string;
     status: "live" | "dev" | "dropped" | "old";

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
 
-interface User {
+export interface User {
   _id: string;
   username: string;
   email: string;
@@ -61,7 +61,7 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
   };
 
   return (
-    <div className="orange-gradient-bg  rounded-lg p-3">
+    <div className="orange-gradient-bg  rounded-lg p-3 ">
       <div className="flex justify-between items-start gap-5">
         <div
           className="flex-1 flex justify-start items-center gap-3 cursor-pointer"
