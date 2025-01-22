@@ -1,4 +1,3 @@
-import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 import { iNoteEntry } from "./note-entry-card";
 import { iDevStory } from "@/components/dev-story-card"
 
@@ -113,48 +112,7 @@ export const DEV_STORIES: iDevStory[] = [
         privacy_level: "public",
         written_at: new Date("2025-01-20T14:48:00Z")
         },
-        {
-          _id: "7",
-          author: {
-            _id: "user5",
-            username: "olaniyi_george",
-            email: "olaniyigeorge77@gmail.com",
-            image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
-          },
-          title: "Challenge on LockedIn",
-          body: "Set up a challenge on building a habit and invite friends to lock in or hold you accountable.",
-          tags: ["challenge", "accountability-partnership"],
-          privacy_level: "public",
-          written_at: new Date("2025-01-20T14:48:00Z")
-          },
-          {
-            _id: "8",
-            author: {
-              _id: "user5",
-              username: "olaniyi_george",
-              email: "olaniyigeorge77@gmail.com",
-              image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
-            },
-            title: "Challenge on LockedIn",
-            body: "Set up a challenge on building a habit and invite friends to lock in or hold you accountable.",
-            tags: ["challenge", "accountability-partnership"],
-            privacy_level: "public",
-            written_at: new Date("2025-01-20T14:48:00Z")
-            },
-            {
-              _id: "9",
-              author: {
-                _id: "user5",
-                username: "olaniyi_george",
-                email: "olaniyigeorge77@gmail.com",
-                image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
-              },
-              title: "Challenge on LockedIn",
-              body: "Set up a challenge on building a habit and invite friends to lock in or hold you accountable.",
-              tags: ["challenge", "accountability-partnership"],
-              privacy_level: "public",
-              written_at: new Date("2025-01-20T14:48:00Z")
-              },
+      
 
     ],
     image: "/assets/images/ihr.png"

@@ -8,7 +8,6 @@ import { TwitterTweetEmbed } from "react-twitter-embed";
 import { DEV_STORIES, DISCOVERY_LOCATION } from "./mock_data";
 import NoteEntryCard, { iNoteEntry } from "./note-entry-card";
 import { TweetEmbeds } from "./dev-story-card";
-import { motion } from "framer-motion";
 
 interface DevStoryPageProps {
     id: string;
@@ -24,6 +23,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
     }
     const [product, setProduct] = useState<string>(story!.title.toLocaleLowerCase());
 
+    console.log(setProduct)
     async function joinWaitlist(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
         setIsSubmitting(true);
@@ -79,7 +79,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
 
                     <section className="w-full flex gap-3 mt-4">
                         {story.tech_stack.map((comp) => (
-                            <span className="w-full p-2 border border-slate-800 text-white flex gap-2 items-center justify-center">
+                            <span key={comp.name} className="w-full p-2 border border-slate-800 text-white flex gap-2 items-center justify-center">
                                 <Image src={comp.icon} alt={comp.name} width={100} height={100} className="object-fill rounded-full bg-white flex items-center w-8 h-8 "/>
                                 <p className="text-sm font-inter">{comp.name}</p>
                             </span>
