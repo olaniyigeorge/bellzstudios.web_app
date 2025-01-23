@@ -29,7 +29,7 @@ export default function DevStoryCard(data: iDevStory) {
     <div className="w-full p-3 gap-2 flex flex-col items-start md:p-6 bg-orange-900 bg-opacity-10 border border-black rounded-lg shadow shadow-orange-900">
 
             <span className="w-full flex justify-between items-center">
-            <h2 className="text-bold text-2xl">
+            <h2 className="font-bold text-2xl">
                 <Link href={`/dev-stories/${data.id}`}>{data.title}</Link>
             </h2>
             <Link href={data.product_url} target="_blank" className={`w-3 h-3 animate-pulse ${data.status === 'live' ? 'bg-green-500' :
@@ -38,12 +38,12 @@ export default function DevStoryCard(data: iDevStory) {
             </Link>
             </span>    
             <span 
-                className="text-[8px] w-fit border font-medium border-orange-600 p-1 rounded-full"> 
+                className="text-[7px] w-fit border font-medium border-orange-600 p-1 rounded-full"> 
                 {data.tag}
             </span>
 
-            <p className="line-clamp-3">
-                {data.description}
+            <p className="">
+                {data.description.slice(0, 120)} {" "}....
             </p>
 
             <img src={data.image} className="rounded-xl min-w[30px] min-h-[30px] w-full h-full" />

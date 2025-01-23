@@ -8,14 +8,14 @@ export const metadata: Metadata = {
     openGraph: {
       title: "Dev Stories",
       description: "Stories behind all the solutions we build",
-      url: "https://Bellz Studio.vercel.app/", // "https://www.bellzstudio.com",  // Replace with your actual site URL
+      url: "https://Bellz Studio.vercel.app/", 
       siteName: "Bellz Studios",
       images: [
         {
-          url: "/assets/images/bellzstudio.png",  // Replace with the correct image path
+          url: "/assets/images/bellzstudio.png",  
           width: 1200,
           height: 630,
-          alt: "ibellzstudio",  // Image description for accessibility
+          alt: "ibellzstudio",  
         },
       ],
       type: "website",
@@ -32,10 +32,7 @@ export default function Note() {
     const STORIES = DEV_STORIES
     return (
         <div className="flex flex-col justify-center gap-5">
-            <h1 className="hero_title">
-                Dev Stories
-            </h1>
-
+            <h1 className="hero_title orange_gradient">Dev Stories</h1>
 
             <div className="grid grid-cols-1 pb-24 md:grid-cols-2 gap-3 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">   
                 {STORIES.map((story: iDevStory) => (

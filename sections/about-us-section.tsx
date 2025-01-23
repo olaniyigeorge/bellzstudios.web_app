@@ -8,12 +8,12 @@ export default function AboutUsSection() {
     return (
         <section 
         id="about-us"
-        className="page-section orange-gradient-bg w-full flex items-center gap-3 py-5 md:py-10"
+        className="page-section font-irishgrover  orange-gradient-bg w-full flex items-center gap-3 py-5 md:py-10"
     >
       <section className="w-full flex flex-col items-center md:items-start gap-3">
         <div className="flex flex-col items-center md:items-start  gap-3">
-          <h1 id="hero-title" className="text-black font-irishgrover font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
-          <p className="text-xl md:text-2xl font-medium font-irishgrover text-black text-center md:text-right">
+          <h1 id="hero-title" className="text-black font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
+          <p className="text-xl md:text-2xl font-medium  text-black text-center md:text-right">
               BellzStudio was born from an aprreciation for what open-source can achieve and a desire to make a real impact. 
               At its core, it&apos;s about teaming up to turn ideas into meaningful, impactful software. Whether refining 
               existing solutions or building something new.
