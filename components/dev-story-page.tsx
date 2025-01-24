@@ -112,12 +112,12 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                             className="flex gap-2 border-none ring-0 outline-none bg-transparent justify-center text-orange-500"
                             onChange={(e) => setSelectedLocation(e.target.value)}
                         >
-                            <option className="bg-transparent text-slate-900" value="friends_family">
-                                How did you hear about us?
+                            <option className="bg-transparent text-slate-900" value="friends_&_family">
+                                How did you hear about {story.title.toLocaleLowerCase()}?
                             </option>
                             {DISCOVERY_LOCATION.map((location: string) => (
                                 <option key={location} className="bg-transparent text-slate-900" value={location}>
-                                    {location.toUpperCase().replace("_", " ")}
+                                    {location.toLocaleUpperCase().replace("_", " ")}
                                 </option>
                             ))}
                         </select>
