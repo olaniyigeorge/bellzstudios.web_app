@@ -4,7 +4,9 @@ import { iDevStory } from "@/components/dev-story-card"
 export const DISCOVERY_LOCATION: string[] = [
   'telegram_bot',
   'twitter',
-  'friends_family'
+  'friends_&_family',
+  'linkedin'
+
 ]
 export const DEV_STORIES: iDevStory[] = [
   {
@@ -59,7 +61,7 @@ export const DEV_STORIES: iDevStory[] = [
       { icon: "/assets/images/tech_stack/websockets.png", name: "WebSockets" }
     ],
     open_source_url: "https://github.com/olaniyigeorge/iHR",
-    product_url: "https://github.com/olaniyigeorge/iHR", // "https://ihr-mfh9.onrender.com/",
+    product_url: "https://github.com/ola~niyigeorge/iHR", // "https://ihr-mfh9.onrender.com/",
     status: "live",
     validatingTweets: [],
     notes: [
