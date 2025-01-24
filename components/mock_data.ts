@@ -59,7 +59,7 @@ export const DEV_STORIES: iDevStory[] = [
       { icon: "/assets/images/tech_stack/websockets.png", name: "WebSockets" }
     ],
     open_source_url: "https://github.com/olaniyigeorge/iHR",
-    product_url: "https://ihr-mfh9.onrender.com/",
+    product_url: "https://github.com/olaniyigeorge/iHR", // "https://ihr-mfh9.onrender.com/",
     status: "live",
     validatingTweets: [],
     notes: [
