@@ -19,7 +19,7 @@ export async function generateMetadata( {params }: { params: { id: string } }) {
       siteName: "BellzStudio",
       images: [
         {
-          url: `${STORY.image}`,
+          url: `https://bellzstudios.vercel.app${STORY.image}`,
           width: 1200,
           height: 630,
           alt: `${STORY.title}`,  
@@ -29,7 +29,7 @@ export async function generateMetadata( {params }: { params: { id: string } }) {
     },
     twitter: {
       card: "summary_large_image",
-      images: `${STORY.image}`,
+      images: `https://bellzstudios.vercel.app${STORY.image}`,
   },
     }
 }
