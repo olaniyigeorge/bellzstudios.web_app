@@ -55,7 +55,7 @@ export default async function RootLayout({
         <Provider session={session}>
           <Header />
 
-          <main className="font-titillium max-w-9xl flex ">{children}</main>
+          <main className="max-w-9xl flex ">{children}</main>
           
           <Footer />
 

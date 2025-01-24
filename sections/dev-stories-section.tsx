@@ -10,7 +10,7 @@ export default function DevStoriesSection() {
     return (
         <section 
             id="dev-stories"
-            className="page-section w-full borde flex flex-col gap-2  "
+            className="page-section w-full flex flex-col gap-2  "
         >
         <section className="w-full flex flex-col md:flex-row items-center gap-6">
             <section className="w-full flex flex-col  gap-4 font-irishgrover">

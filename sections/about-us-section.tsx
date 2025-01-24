@@ -36,7 +36,7 @@ export default function AboutUsSection() {
             <span className="">
               <Link href={"#contact"} className=" text-black shadow-lg border border-black rounded-full w-fit flex gap-2 font-medium items-center px-4 py-2 ">
                 <>Contact</>
-                <ArrowDownIcon className="w-4 h-8 hover:animate-swivvleV font-medium" />
+                <ArrowDownIcon className="w-4 h-8 hover:animate-swivvleV text-white font-medium" />
               </Link>
             </span>  
         </span>

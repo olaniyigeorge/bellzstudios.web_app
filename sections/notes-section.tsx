@@ -9,11 +9,11 @@ export default function NotesSection() {
     return (
         <section 
             id="notes"
-            className="page-section orange-gradient-bg w-full flex  flex-col gap-2 p-10 md:my-12 lg:p-16 justify-center"
+            className="page-section orange-gradient-bg w-full flex  flex-col gap-2 p-10 lg:p-16 justify-center"
         >
         <section className="w-full flex flex-col font-irishgrover justify-center items-center gap-3">
             <section className="w-full flex text-center justify-center items-center flex-col  gap-4">
-                    <span className="text-xl text-center leading-loose w-full md:w-2/3  md:text-2xl text-white text-center font-medium w-full ">
+                    <span className="text-xl text-center leading-loose w-full md:w-2/3  md:text-2xl text-white font-medium ">
                         This is a journal for me where I think out loud. 
                         Write about my thought process when I&apos;m 
                         brainstorming, leave notes about what I would build 

@@ -45,7 +45,7 @@ export default function ContactSection() {
                 {contacts.map((contact) => (
                     <div
                         key={contact.name}
-                        className="shadow shadow-slate-600 border-2 border-white w-full bg-black text-white rounded-2xl items-center gap-5 p-3 md:p-5 flex flex-col"
+                        className="shadow shadow-slate-600  w-full bg-black text-white rounded-2xl items-center gap-5 p-3 md:p-5 flex flex-col"
                     >
                         <Image
                             src={contact.social_logo}
