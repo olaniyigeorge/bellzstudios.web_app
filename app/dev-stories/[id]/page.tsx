@@ -5,19 +5,18 @@ import { DEV_STORIES } from "@/components/mock_data"
 export async function generateMetadata( {params }: { params: { id: string } }) {
   const STORY: iDevStory | undefined = DEV_STORIES.find(story => story.id === params.id);
 
-  // Check if the story exists to handle any potential errors
   if (!STORY) {
-      return <div className="w-full">Story not found</div>;
+      return <div className="w-full hero_title text-red-500">Story not found</div>;
   }
   
   return {
-    title: `${STORY.title} | Dev Stories | Bellz Studios`,
+    title: `${STORY.title} | Dev Stories | Bellz Studio`,
     description: `${STORY.description.slice(0, 120)}`,
     openGraph: {
       title: `${STORY.title}`,
       description: `${STORY.description.slice(0, 80)}`,
-      url: `https://Bellz Studio.vercel.app/dev-stories/${STORY.title.toLowerCase()}`, // "https://www.bellzstudio.com",  // Replace with your actual site URL
-      siteName: "Bellz Studios",
+      url: `https://bellzstudios.vercel.app/dev-stories/${STORY.title.toLowerCase()}`, // "https://www.bellzstudio.com", 
+      siteName: "BellzStudio",
       images: [
         {
           url: `${STORY.image}`,
@@ -33,19 +32,14 @@ export async function generateMetadata( {params }: { params: { id: string } }) {
       images: `${STORY.image}`,
   },
     }
-  }
+}
   
 export default async function DevStoryyy({ params }: { params: { id: string } }) {
   const STORY: iDevStory | undefined = DEV_STORIES.find(story => story.id === params.id);
 
-  // Check if the story exists to handle any potential errors
   if (!STORY) {
       return <div className="w-full hero_title text-red-500">Story not found!!!</div>;
   }
 
-  return (
-      <div className="w-full">
-          <DevStoryPage id={params.id} />
-      </div>
-  );
+  return <DevStoryPage id={params.id} />;
 }

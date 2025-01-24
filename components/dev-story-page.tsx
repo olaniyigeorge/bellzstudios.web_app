@@ -58,7 +58,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
 
     return (
         <div className="font-irishgrover flex flex-col gap-2 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">
-            <section className="flex flex-col gap-3 bg-orange-500 bg-white/5 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg p-5 rounded-lg p-2 bg-opacity-10">
+            <section className="flex flex-col gap-3 bg-orange-500 bg-white/5 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg p-5 rounded-lg bg-opacity-10">
                 <span className="flex justify-between items-start">
                     <span className="items-start">
                         <h1 className="text-3xl md:text-5xl font-bold">{story.title}</h1>
@@ -67,7 +67,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                     <Link
                         target="_blank"
                         href={story.product_url}
-                        className="font-bold items-center flex gap-2 p-2 font-medium transition-all duration-500 ease-in-out text-[12px] orange-gradient border light-btn"
+                        className="font-bold items-center flex gap-2 p-2 transition-all duration-500 ease-in-out text-[12px] orange-gradient border light-btn"
                     >
                         Try {story.title}
                         <ArrowLongRightIcon className="w-6 h-6 text-orange-500" />
@@ -122,7 +122,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                             ))}
                         </select>
                     </span>
-                    <button type="submit" className="w-full md:w-fit orange-gradient-bg font-kanit text-sm text-white px-6 py-2 rounded-full text-white font-medium transition-all duration-300">
+                    <button type="submit" className="w-full md:w-fit orange-gradient-bg font-kanit text-sm text-white px-6 py-2 rounded-full font-medium transition-all duration-300">
                         {isSubmitting ? "Joining..." : "Join Waitlist"}
                     </button>
                 </span>
@@ -132,6 +132,17 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                 <h1 className="text-3xl text-center font-medium py-2">
                     Join the conversation on
                     <span className="orange-gradient">{" "}{story.title}</span>
+                </h1>
+                <h1 className="font-inter text-center font-medium pb-2">
+                    Send a DM on  {" "} 
+                    <Link 
+                        href={"https://x.com/imoctborn"} 
+                        target="_blank"
+                        className="underline">
+                           twitter 
+                    </Link> 
+                    {" "}or use the hashtag 
+                    <span className="orange-gradient">{" #"}{story.title.toLowerCase()}</span>
                 </h1>
                 {/* <SliderAd /> */}
 

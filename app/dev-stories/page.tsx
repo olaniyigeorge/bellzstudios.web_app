@@ -3,19 +3,19 @@ import DevStoryCard, { iDevStory } from "../../components/dev-story-card"
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: `Dev Stories | Bellz Studios`,
+    title: `Dev Stories`,
     description: "Stories behind all the solutions and systems we build",
     openGraph: {
       title: "Dev Stories",
       description: "Stories behind all the solutions we build",
-      url: "https://Bellz Studio.vercel.app/", 
+      url: "https://bellzstudios.vercel.app/", 
       siteName: "Bellz Studios",
       images: [
         {
           url: "/assets/images/bellzstudio.png",  
           width: 1200,
           height: 630,
-          alt: "ibellzstudio",  
+          alt: "bellzstudio",  
         },
       ],
       type: "website",

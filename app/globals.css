@@ -90,7 +90,7 @@ body {
 }
 
 .hero_title {
-  @apply w-3/4 md:w-1/2 p-2 md:p-4 text-[45px] md:text-7xl tracking-tighter font-extrabold items-center text-center w-full text-center text-5xl font-irishgrover font-extrabold
+  @apply w-3/4 md:w-1/2 p-2 md:p-4 text-[45px] md:text-7xl tracking-tighter font-extrabold items-center text-center  text-5xl font-irishgrover;
 }
 
 .bg-gradient-to-br {

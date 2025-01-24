@@ -27,7 +27,7 @@ export const NewHeroSection= () => {
           /> 
           <span
             id='hero-mini' 
-            className="font-irishgrover text-3xl px-4 md:px-20 orange_gradient text-center" 
+            className="font-irishgrover text-xl md:text-3xl px-4 md:px-20 orange_gradient text-center" 
           >
               Building and contributing to open-source products we believe should exist.
           </span> 
@@ -37,7 +37,7 @@ export const NewHeroSection= () => {
               <ScrollDownAnimation 
                   key={link.id} 
                   targetId={link.id} 
-                  className="w-full p-3 md:p-4 flex hover:animate-swivvleV  flex-col  rounded-2xl md:rounded-full border-orange-900 shadow shadow-orange-600 gap-3 shadow shadow-orange-500  items-center"
+                  className="w-full p-3 md:p-4 flex hover:animate-swivvleV  flex-col  rounded-2xl md:rounded-full border-orange-900 gap-3 shadow shadow-orange-500  items-center"
                   child={
                 <>
                   <span className="text-white text-xs md:text-lg font-irishgrover">{link.name}</span>
