@@ -52,7 +52,7 @@ export default function Header() {
                     }
                     <a
                     href="mailto:olaniyigeorge77@gmail.com"
-                    className="orange-gradient-bg font-kanit text-sm text-white px-6 py-2 rounded-full text-white  font-medium transition-all duration-300"
+                    className="orange-gradient-bg font-kanit text-sm text-white px-6 py-2 rounded-full  font-medium transition-all duration-300"
                     >
                     Hire Me
                     </a>

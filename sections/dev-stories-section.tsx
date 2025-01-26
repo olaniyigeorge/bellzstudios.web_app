@@ -21,11 +21,11 @@ export default function DevStoriesSection() {
                 about the journey.
                 </span>
                 <section className="w-full flex gap-2 text-white justify-center md:justify-start md:gap-8">
-                <Link href="/dev-stories" className="hover:scale-[102%] ease-in-out border-orange-500 shadow shadow-orange-500  transition-all duration-800 shadow shadow-orange-500 p-3 md:p-4 text-white border rounded-full">
-                Explore Stories
+                <Link href="/dev-stories" className="hover:scale-[102%] ease-in-out border-orange-500 shadow shadow-orange-500  transition-all duration-800 p-3 md:p-4 text-white border rounded-full">
+                    Explore Stories
                 </Link>
                 <Link href={"#notes"} className="rounded-full text-white w-fit flex gap-2 items-center px-4 py-2 ">
-                <>Notes</>
+                    <>Notes</>
                 <ArrowDownIcon className="w-4 h-8 hover:animate-swivvleV text-white font-medium" />
                 </Link>
 

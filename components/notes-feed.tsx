@@ -13,7 +13,7 @@ interface NoteEntryCardListProps {
 const NoteEntryCardList = (props: NoteEntryCardListProps) => {
     const {data, handleTagClick} = props
   return (
-    <div className='page-section mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    <div className='page-section mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start'>
       {data.map((entry: iNoteEntry) => (
         <NoteEntryCard
           key={entry._id}
@@ -39,8 +39,6 @@ const Feed = () => {
     const response = await fetch("/api/notes/");
 
     const data = noteEntries // await response.json();
-    console.log(data, response)
-
     setAllPosts(data);
   };
 
@@ -80,7 +78,7 @@ const Feed = () => {
 
   return (
     <section className='w-full p-4'>
-      <form className='w-full flex-center'>
+      <form className='w-full text-gray-900 flex-center'>
         <input
           type='text'
           placeholder='Enter a keyword or a tag name'

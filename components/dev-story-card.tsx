@@ -18,7 +18,7 @@ export interface iDevStory{
     product_url: string;
     status: "live" | "dev" | "dropped" | "old";
     validatingTweets: TweetEmbeds[]
-    notes: iNoteEntry[]
+    notes: string[]
 }
 
 

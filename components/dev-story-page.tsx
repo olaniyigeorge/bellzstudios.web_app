@@ -1,11 +1,11 @@
 "use client";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import Image from "next/image";
 import { toast } from "react-toastify";
 import { TwitterTweetEmbed } from "react-twitter-embed";
-import { DEV_STORIES, DISCOVERY_LOCATION } from "./mock_data";
+import { DEV_STORIES, DISCOVERY_LOCATION, noteEntries } from "./mock_data";
 import NoteEntryCard, { iNoteEntry } from "./note-entry-card";
 import { TweetEmbeds } from "./dev-story-card";
 
@@ -18,17 +18,29 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
     const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
     const story = DEV_STORIES.find((story) => story.id === id);
+    const [notes, setNotes] = useState<iNoteEntry[]>([])
+
     const [product, setProduct] = useState<string>(story ? story.title.toLocaleLowerCase() : "");
     if (!story) {
         return <div className="w-full">Story not found</div>;
     }
 
-    console.log(setProduct)
+    useEffect(() => {
+        if (story) {
+            const extractedNotes = story.notes.map((id) => noteEntries.find(note => note._id === id)).filter(Boolean) as iNoteEntry[];
+            console.log(extractedNotes)
+            setNotes(extractedNotes);
+        }
+        console.log(notes)
+    }, [story]);
+
+    
+    // console.log(setProduct)
     async function joinWaitlist(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
         setIsSubmitting(true);
 
-        const location = selectedLocation || "friends_family";
+        const location = selectedLocation || "friends_&_family";
 
         const response = await fetch("/api/waitlist", {
             method: "POST",
@@ -58,7 +70,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
 
     return (
         <div className="font-irishgrover flex flex-col gap-2 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">
-            <section className="flex flex-col gap-3 bg-orange-500 bg-white/5 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg p-5 rounded-lg bg-opacity-10">
+            <section className="flex flex-col gap-3 bg-orange-500 z-0 bg-white/5 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg p-5 rounded-lg bg-opacity-10">
                 <span className="flex justify-between items-start">
                     <span className="items-start">
                         <h1 className="text-3xl md:text-5xl font-bold">{story.title}</h1>
@@ -106,23 +118,23 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                     required
                     className="w-[90%] md:w-[70%] lg:w-[60] shadow shadow-orange-500 border-orange-500 text-white bg-transparent border outline-none px-4 py-2 rounded-full"
                 />
-                <span className="w-full flex items-center justify-center gap-3">
+                <span className="w-full flex items-center justify-center gap-1 md:gap-3">
                     <span className="p-2 gap-2 flex items-center rounded-md italics">
                         <select
                             className="flex gap-2 border-none ring-0 outline-none bg-transparent justify-center text-orange-500"
                             onChange={(e) => setSelectedLocation(e.target.value)}
                         >
-                            <option className="bg-transparent text-slate-900" value="friends_&_family">
+                            <option className="bg-transparent  text-slate-900" value="friends_&_family">
                                 How did you hear about {story.title.toLocaleLowerCase()}?
                             </option>
                             {DISCOVERY_LOCATION.map((location: string) => (
                                 <option key={location} className="bg-transparent text-slate-900" value={location}>
-                                    {location.toLocaleUpperCase().replace("_", " ")}
+                                    {location.toLocaleUpperCase().replaceAll("_", " ")}
                                 </option>
                             ))}
                         </select>
                     </span>
-                    <button type="submit" className="w-full md:w-fit orange-gradient-bg font-kanit text-sm text-white px-6 py-2 rounded-full font-medium transition-all duration-300">
+                    <button type="submit" className="w-fit orange-gradient-bg font-kanit text-sm text-white px-4 md:px-6 py-2 rounded-full font-medium transition-all duration-300">
                         {isSubmitting ? "Joining..." : "Join Waitlist"}
                     </button>
                 </span>
@@ -146,14 +158,17 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                 </h1>
                 {/* <SliderAd /> */}
 
-                <div className="grid md:grid-cols-2 gap-6 pb-6 overflow-auto w-full">
-                     {story.notes.map((note: iNoteEntry) => (
-                        <NoteEntryCard key={note._id} post={note} handleEdit={function (): void {
-                            throw new Error("Function not implemented.");
-                        } } handleDelete={function (): void {
-                            throw new Error("Function not implemented.");
-                        } } />
-                    ))}
+                    <div className="grid md:grid-cols-2 gap-6 pb-6 overflow-auto w-full">
+                        {notes.map((note: iNoteEntry) => (
+                            <NoteEntryCard 
+                                post={note} 
+                                handleEdit={function (): void {
+                                    throw new Error("Function not implemented.");} } 
+                                handleDelete={function (): void {
+                                    throw new Error("Function not implemented.");
+                                } }
+                            />                    
+                        ))}
                     </div>
                 <section className="grid grid-cols-1 md:grid-cols-2 w-full">
                    

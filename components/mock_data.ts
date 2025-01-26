@@ -30,22 +30,7 @@ export const DEV_STORIES: iDevStory[] = [
       { tweetId: "1844778183024889857" },
       { tweetId: "1845054193783984432" }
     ],
-    notes: [
-      {
-        _id: "5",
-        author: {
-          _id: "user5",
-          username: "olaniyi_george",
-          email: "olaniyigeorge77@gmail.com",
-          image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
-        },
-        title: "Challenge on LockedIn",
-        body: "Set up a challenge on building a habit and invite friends to join or hold you accountable.",
-        tags: ["challenge", "accountability-partnership"],
-        privacy_level: "public",
-        written_at: new Date("2025-01-20T14:48:00Z")
-      }
-    ],
+    notes: ["5",],
     image: "/assets/images/lockedin.png"
   },
   {
@@ -64,36 +49,7 @@ export const DEV_STORIES: iDevStory[] = [
     product_url: "https://github.com/ola~niyigeorge/iHR", // "https://ihr-mfh9.onrender.com/",
     status: "live",
     validatingTweets: [],
-    notes: [
-      {
-        _id: "6",
-        author: {
-          _id: "user5",
-          username: "olaniyi_george",
-          email: "olaniyigeorge77@gmail.com",
-          image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
-        },
-        title: "Goals with iHR",
-        body: "The goal is to bridge the gap between job seekers and career success by providing a realistic, feedback-driven interview experience.",
-        tags: ["interview-feedback"],
-        privacy_level: "public",
-        written_at: new Date("2025-01-24T09:29:00Z")
-      },
-      {
-        _id: "7",
-        author: {
-          _id: "user5",
-          username: "olaniyi_george",
-          email: "olaniyigeorge77@gmail.com",
-          image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
-        },
-        title: "iHR for Hirer",
-        body: "I aim to allow hirers to delegate most, if not all, HR-related operations to iHR by simply specifying the technical and non-technical requirements in the job description.",
-        tags: ["interview-feedback"],
-        privacy_level: "public",
-        written_at: new Date("2025-01-24T09:29:00Z")
-      }
-    ],
+    notes: ["6","7"],
     image: "/assets/images/ihr.png"
   },
   {
@@ -181,6 +137,7 @@ export const DEV_STORIES: iDevStory[] = [
     image: "/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
   }
 ];
+
 export const noteEntries: iNoteEntry[] = [
   {
     _id: "1",
@@ -256,5 +213,32 @@ export const noteEntries: iNoteEntry[] = [
     privacy_level: "public",
     written_at: new Date("2025-01-20T14:48:00Z")
     },
-    
-  ];
+    {
+      _id: "6",
+      author: {
+        _id: "user5",
+        username: "olaniyi_george",
+        email: "olaniyigeorge77@gmail.com",
+        image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+      },
+      title: "Goals with iHR",
+      body: "The goal is to bridge the gap between job seekers and career success by providing a realistic, feedback-driven interview experience.",
+      tags: ["interview-feedback"],
+      privacy_level: "public",
+      written_at: new Date("2025-01-24T09:29:00Z")
+    },
+    {
+      _id: "7",
+      author: {
+        _id: "user5",
+        username: "olaniyi_george",
+        email: "olaniyigeorge77@gmail.com",
+        image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+      },
+      title: "iHR for Hirer",
+      body: "I aim to allow hirers to delegate most, if not all, HR-related operations to iHR by simply specifying the technical and non-technical requirements in the job description.",
+      tags: ["interview-feedback"],
+      privacy_level: "public",
+      written_at: new Date("2025-01-24T09:29:00Z")
+    }
+];
