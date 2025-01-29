@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { iNoteEntry } from "./note-entry-card";
-
 export type TweetEmbeds = {
     tweetId: string;
 };
