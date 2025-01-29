@@ -23,14 +23,14 @@ export const DEV_STORIES: iDevStory[] = [
       { icon: "/assets/images/tech_stack/vercel.svg", name: "Vercel" }
     ],
     open_source_url: "https://github/olaniyigeorge/lockedin",
-    product_url: "https://lockedin-app.vercel.app/", // "https://lockedin-seven.vercel.app/",
-    status: "live",
+    product_url: "https://lockedin-seven.vercel.app/", // "https://lockedin-app.vercel.app/", // "https://lockedin-seven.vercel.app/",
+    status: "building-in-public",
     validatingTweets: [
       { tweetId: "1844763363533820066" },
       { tweetId: "1844778183024889857" },
       { tweetId: "1845054193783984432" }
     ],
-    notes: ["5",],
+    notes: ["5", "2", "1"],
     image: "/assets/images/lockedin.png"
   },
   {
@@ -49,7 +49,7 @@ export const DEV_STORIES: iDevStory[] = [
     product_url: "https://github.com/ola~niyigeorge/iHR", // "https://ihr-mfh9.onrender.com/",
     status: "live",
     validatingTweets: [],
-    notes: ["6","7"],
+    notes: ["6","7", "4"],
     image: "/assets/images/ihr.png"
   },
   {
@@ -143,15 +143,15 @@ export const noteEntries: iNoteEntry[] = [
     _id: "1",
     author: {
     _id: "user1",
-    username: "alice_01",
-    email: "alice@example.com",
+    username: "olaniyi_george",
+    email: "olaniyigeorge@example.com",
     image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    body: "This is a note about web development.",
-    title: "Web Dev Notes",
-    tags: ["web", "development", "javascript"],
+    body: "Vercel keeps throwing a 504-Timeout error when I try to authenticate users with AuthJs. Apparently, free serverless instances on vercel are capped are 10 secs per request but the whole auth flow with Google provider(my choice) isn't even up to 2.5 secs on my machine and according to vercel logs 5 secs on vercel. I've tried everything, but nothing seems to work.",
+    title: "AuthJs with Vercel",
+    tags: ["E504", "authjs", "vercel"],
     privacy_level: "public",
-    description: "Notes on the latest JavaScript trends.",
+    description: "Issues I've encountered on Vercel.",
     written_at: new Date("2025-01-09T08:30:00Z"),
     updated_at: new Date("2025-01-09T09:00:00Z")
   },
@@ -159,13 +159,13 @@ export const noteEntries: iNoteEntry[] = [
     _id: "2",
     author: {
     _id: "user2",
-    username: "bob_02",
-    email: "bob@example.com",
+    username: "olaniyi_george",
+    email: "olaniyigeorge@example.com",
     image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    body: "This is a personal note about my vacation plans.",
-    title: "Vacation Plans",
-    tags: ["vacation", "plans"],
+    body: "Invite a UI/UX designer to help with the design of my products.",
+    title: "Proper UI/UX on my products",
+    tags: ["ui", "product", "design"],
     privacy_level: "private",
     written_at: new Date("2025-01-08T10:00:00Z")
   },
@@ -177,9 +177,9 @@ export const noteEntries: iNoteEntry[] = [
     email: "charlie@example.com",
     image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    body: "Meeting notes from the project planning session.",
-    title: "Project Planning",
-    tags: ["project", "meeting", "planning"],
+    body: "Communicate with potential users about pain points, interests and how to build features around them. Starting by creating a survey form and reaching out to those who fill these forms.",
+    title: "Speak with your users",
+    tags: ["planning"],
     privacy_level: "restricted",
     description: "Important notes that need approval.",
     written_at: new Date("2025-01-07T14:00:00Z"),
@@ -189,13 +189,13 @@ export const noteEntries: iNoteEntry[] = [
     _id: "4",
     author: {
     _id: "user4",
-    username: "dana_04",
-    email: "dana@example.com",
+    username: "olaniyi_george",
+    email: "olaniyigeorge@example.com",
     image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    title: "Team building",
-    body: "This is a note about upcoming team-building activities.",
-    tags: ["team-building", "activities", "work"],
+    title: "Cheap LLM Models",
+    body: "Looking for cost-effective strategies to build and maintain iHR, including optimizing the interview simulation workflow to minimize token usage without compromising response quality and researching affordable LLM models.",
+    tags: ["llms", "cheap-models", "ihr"],
     privacy_level: "public",
     written_at: new Date("2025-01-06T16:30:00Z")
   },

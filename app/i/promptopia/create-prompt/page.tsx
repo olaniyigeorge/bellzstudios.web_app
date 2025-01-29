@@ -47,7 +47,7 @@ const CreatePromptPage = () => {
 
             if (response.ok) {
                toast.success("Prompt created")
-               router.push('/i/promtopia')
+               router.push('/i/promptopia')
             } else {
                 toast.error(`Error ${response.status} while creating prompt`)
             }

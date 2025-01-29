@@ -16,7 +16,7 @@ export interface iDevStory{
     }[],
     open_source_url: string;
     product_url: string;
-    status: "live" | "dev" | "dropped" | "old";
+    status: "live" | "building-in-public" | "dev" | "dropped" | "old";
     validatingTweets: TweetEmbeds[]
     notes: string[]
 }
@@ -32,9 +32,16 @@ export default function DevStoryCard(data: iDevStory) {
             <h2 className="font-bold text-2xl">
                 <Link href={`/dev-stories/${data.id}`}>{data.title}</Link>
             </h2>
-            <Link href={data.product_url} target="_blank" className={`w-3 h-3 animate-pulse ${data.status === 'live' ? 'bg-green-500' :
-                    data.status === 'dev' ? 'bg-blue-500' :
-                        data.status === 'dropped' ? 'bg-red-600' : 'bg-gray-700'} rounded-full`}>
+            <Link 
+                href={data.product_url} 
+                target="_blank" 
+                className={`w-3 h-3 rounded-full animate-pulse 
+                    ${
+                        data.status === 'live' ? 'bg-green-500' :
+                        data.status === 'dev' ? 'bg-blue-500' :
+                        data.status === 'dropped' ? 'bg-red-600' :
+                        data.status === 'building-in-public' ? 'bg-yellow-500' : 
+                        'bg-gray-700'} `}>
             </Link>
             </span>    
             <span 
