@@ -26,16 +26,11 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
     }
 
     useEffect(() => {
-        if (story) {
-            const extractedNotes = story.notes.map((id) => noteEntries.find(note => note._id === id)).filter(Boolean) as iNoteEntry[];
-            console.log(extractedNotes);
-            setNotes(extractedNotes);
-        }
-    }, [story]);
-
-    useEffect(() => {
+        const extractedNotes = story.notes.map((id) => noteEntries.find(note => note._id === id)).filter(Boolean) as iNoteEntry[];
+        console.log(extractedNotes);
+        setNotes(extractedNotes);
         console.log(notes);
-    }, [notes]);
+    }, [story]);
 
     
     // console.log(setProduct)
