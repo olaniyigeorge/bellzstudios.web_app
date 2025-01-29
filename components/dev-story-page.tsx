@@ -21,16 +21,19 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
     const [notes, setNotes] = useState<iNoteEntry[]>([])
 
     const product = story ? story.title.toLocaleLowerCase() : "";
+
+    useEffect(() => {
+        if (story) {
+            const extractedNotes = story.notes.map((id) => noteEntries.find(note => note._id === id)).filter(Boolean) as iNoteEntry[];
+            console.log(extractedNotes);
+            setNotes(extractedNotes);
+            console.log(notes);
+        }
+    }, [story]);
+
     if (!story) {
         return <div className="w-full">Story not found</div>;
     }
-
-    useEffect(() => {
-        const extractedNotes = story.notes.map((id) => noteEntries.find(note => note._id === id)).filter(Boolean) as iNoteEntry[];
-        console.log(extractedNotes);
-        setNotes(extractedNotes);
-        console.log(notes);
-    }, [story]);
 
     
     // console.log(setProduct)
