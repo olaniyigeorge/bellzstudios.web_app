@@ -171,6 +171,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                     <div className="grid md:grid-cols-2 gap-3 md:gap-6 pb-6 overflow-auto w-full">
                         {notes.map((note: iNoteEntry) => (
                             <NoteEntryCard 
+                                key={note._id}
                                 post={note} 
                                 handleEdit={function (): void {
                                     throw new Error("Function not implemented.");} } 

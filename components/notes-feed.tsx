@@ -37,7 +37,7 @@ const Feed = () => {
 
   const fetchPosts = async () => {
     const response = await fetch("/api/notes/");
-
+    console.log(response);
     const data = noteEntries // await response.json();
     setAllPosts(data);
   };
