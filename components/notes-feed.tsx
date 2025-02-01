@@ -4,14 +4,13 @@ import { useState, useEffect } from "react";
 import NoteEntryCard, { iNoteEntry } from "./note-entry-card";
 import { noteEntries } from "./mock_data";
 
-
 interface NoteEntryCardListProps {
-    data: iNoteEntry[];
-    handleTagClick: (tag: string) => void;
-  }
+  data: iNoteEntry[];
+  handleTagClick: (tag: string) => void;
+}
 
 const NoteEntryCardList = (props: NoteEntryCardListProps) => {
-    const {data, handleTagClick} = props
+  const { data, handleTagClick } = props;
   return (
     <div className='page-section mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 items-start'>
       {data.map((entry: iNoteEntry) => (
@@ -32,14 +31,17 @@ const Feed = () => {
 
   // Search states
   const [searchText, setSearchText] = useState("");
-  const [searchTimeout, setSearchTimeout] = useState<NodeJS.Timeout | null>(null); // const [searchTimeout, setSearchTimeout] = useState(null);
+  const [searchTimeout, setSearchTimeout] = useState<NodeJS.Timeout | null>(null);
   const [searchedResults, setSearchedResults] = useState<iNoteEntry[]>([]);
 
   const fetchPosts = async () => {
     const response = await fetch("/api/notes/");
     console.log(response);
-    const data = noteEntries // await response.json();
-    setAllPosts(data);
+    const data = noteEntries; // await response.json();
+
+    // Sort the data by updatedAt field in descending order
+    const sortedData = data.sort((a, b) => new Date(b.written_at ?? 0).getTime() - new Date(a.written_at ?? 0).getTime());
+    setAllPosts(sortedData);
   };
 
   useEffect(() => {
@@ -62,13 +64,13 @@ const Feed = () => {
 
     // debounce method
     setSearchTimeout(
-        setTimeout(() => {
-          const searchResult = filterPrompts(e.target.value);
-          setSearchedResults(searchResult);
-        }, 500)
-      );
-    };  
-    
+      setTimeout(() => {
+        const searchResult = filterPrompts(e.target.value);
+        setSearchedResults(searchResult);
+      }, 500)
+    );
+  };
+
   const handleTagClick = (tagName: string) => {
     setSearchText(tagName);
 
@@ -103,6 +105,3 @@ const Feed = () => {
 };
 
 export default Feed;
-
-
-

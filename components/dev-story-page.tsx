@@ -24,9 +24,10 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
 
     useEffect(() => {
         if (story) {
-            const extractedNotes = story.notes.map((id) => noteEntries.find(note => note._id === id)).filter(Boolean) as iNoteEntry[];
-            console.log(extractedNotes);
-            setNotes(extractedNotes);
+            const extractedNotes = story.notes.map((id) => noteEntries.find(note => note._id === id)).filter(Boolean) as iNoteEntry[];            
+            const sortedData = extractedNotes.sort((a, b) => new Date(b.written_at ?? 0).getTime() - new Date(a.written_at ?? 0).getTime());
+
+            setNotes(sortedData);
             console.log(notes);
         }
     }, [story]);

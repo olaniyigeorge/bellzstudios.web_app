@@ -104,13 +104,18 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
         </div>
       </div>
 
-      <Image 
-        src={post.image || "/assets/images/pages.png"} 
-        className="rounded-md my-2 min-w[30px] max-h-[200px] w-full h-full" 
-        alt="post_image"
-        width={400}
-        height={400}
-      />
+      {
+        !pathName.startsWith("/dev-stories") && (
+          <Image 
+            src={post.image || "/assets/images/pages.png"} 
+            className="rounded-md my-2 min-w[30px] max-h-[200px] w-full h-full" 
+            alt="post_image"
+            width={400}
+            height={400}
+          />
+        )
+      }
+      
 
       <p 
         className="my-4 font-irishgrover text-lg line-clamp-4 md:text-xl text-black font-medium"
