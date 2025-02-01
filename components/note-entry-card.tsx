@@ -108,8 +108,8 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
         src={post.image || "/assets/images/pages.png"} 
         className="rounded-md my-2 min-w[30px] max-h-[200px] w-full h-full" 
         alt="post_image"
-        width={100}
-        height={100}
+        width={400}
+        height={400}
       />
 
       <p 
