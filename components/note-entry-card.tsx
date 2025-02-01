@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 export interface User {
   _id: string;
@@ -15,6 +16,7 @@ export interface iNoteEntry {
   _id: string;
   author: User;
   body: string;
+  image?: string;
   title?: string;
   tags: string[];
   privacy_level: "public" | "private" | "restricted";
@@ -61,23 +63,26 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
   };
 
   return (
-    <div className="orange-gradient-bg w-full rounded-lg p-3 ">
+    <div className="orange-gradient-bg w-full rounded-lg p-3 h-full ">
       <div className="flex justify-between items-start gap-5">
         <div
           className="flex-1 flex justify-start items-center gap-3 cursor-pointer"
-          onClick={handleProfileClick}
+          
         >
           <Image
             src={post.author.image}
             alt="user_image"
             width={40}
             height={40}
+            onClick={handleProfileClick}
             className="rounded-full object-contain"
           />
 
           <div className="flex flex-col">
             <h3 className="font-satoshi font-semibold text-black">
-              {post.title}
+              <Link href={`/notes/${post._id}`} className="cursor-pointer">
+                {post.title}
+              </Link>
             </h3>
             <p className="font-satochi text-xs text-gray-700">
               Posted {timeAgo(post.written_at)}
@@ -99,7 +104,19 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
         </div>
       </div>
 
-      <p className="my-4 font-irishgrover text-lg md:text-xl text-black font-medium">{post.body}</p>
+      <Image 
+        src={post.image || "/assets/images/pages.png"} 
+        className="rounded-md my-2 min-w[30px] max-h-[200px] w-full h-full" 
+        alt="post_image"
+        width={100}
+        height={100}
+      />
+
+      <p 
+        className="my-4 font-irishgrover text-lg line-clamp-4 md:text-xl text-black font-medium"
+        >
+          {post.body}
+      </p>
 
       <span className="flex items-wrap gap-1"> 
         {post.tags.map((tag) => (

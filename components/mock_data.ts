@@ -147,7 +147,7 @@ export const noteEntries: iNoteEntry[] = [
     email: "olaniyigeorge@example.com",
     image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    body: "Vercel keeps throwing a 504-Timeout error when I try to authenticate users with AuthJs. Apparently, free serverless instances on vercel are capped are 10 secs per request but the whole auth flow with Google provider(my choice) isn't even up to 2.5 secs on my machine and according to vercel logs 5 secs on vercel. I've tried everything, but nothing seems to work.",
+    body: "Vercel keeps throwing a 504-Timeout error when \n\n I try to authenticate users with AuthJs. Apparently, free serverless instances on vercel are capped are 10 secs per request but the whole auth flow with Google provider(my choice) isn't even up to 2.5 secs on my machine and according to vercel logs 5 secs on vercel. I've tried everything, but nothing seems to work.",
     title: "AuthJs with Vercel",
     tags: ["E504", "authjs", "vercel"],
     privacy_level: "public",

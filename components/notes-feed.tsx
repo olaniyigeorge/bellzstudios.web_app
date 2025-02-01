@@ -13,7 +13,7 @@ interface NoteEntryCardListProps {
 const NoteEntryCardList = (props: NoteEntryCardListProps) => {
     const {data, handleTagClick} = props
   return (
-    <div className='page-section mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start'>
+    <div className='page-section mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 items-start'>
       {data.map((entry: iNoteEntry) => (
         <NoteEntryCard
           key={entry._id}
