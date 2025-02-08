@@ -14,7 +14,7 @@ export interface iDevStory{
     }[],
     open_source_url: string;
     product_url: string;
-    status: "live" | "building-in-public" | "dev" | "dropped" | "old";
+    status: "live" | "building-in-public" | "dev" | "paused" | "old";
     validatingTweets: TweetEmbeds[]
     notes: string[]
 }
@@ -37,7 +37,7 @@ export default function DevStoryCard(data: iDevStory) {
                     ${
                         data.status === 'live' ? 'bg-green-500' :
                         data.status === 'dev' ? 'bg-blue-500' :
-                        data.status === 'dropped' ? 'bg-red-600' :
+                        data.status === 'paused' ? 'bg-red-600' :
                         data.status === 'building-in-public' ? 'bg-yellow-500' : 
                         'bg-gray-700'} `}>
             </Link>
