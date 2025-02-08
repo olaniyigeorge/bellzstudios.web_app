@@ -166,11 +166,17 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                            twitter 
                     </Link> 
                     {" "}or use the hashtag 
-                    <span className="orange-gradient">{" #"}{story.title.toLowerCase()}</span>
+                    <Link 
+                        href={`https://x.com/intent/post?text=%23${story.id}%20%23bellzstudio`} 
+                        target="_blank"
+                        className="orange-gradient underline"
+                    >
+                            {" #"}{story.title.toLowerCase()}
+                    </Link>
                 </h1>
                 {/* <SliderAd /> */}
 
-                    <div className="grid md:grid-cols-2 gap-3 md:gap-6 pb-6 overflow-auto w-full">
+                    <div className="grid md:grid-cols-2 gap-3 md:gap-6 pb-6 h-full w-full">
                         {notes.map((note: iNoteEntry) => (
                             <NoteEntryCard 
                                 key={note._id}

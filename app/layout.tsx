@@ -58,8 +58,6 @@ export default async function RootLayout({
           <main className="max-w-9xl flex ">{children}</main>
           
           <Footer />
-
-          
           <ToastContainer />
         </Provider>
       </body>

@@ -43,54 +43,50 @@ export default function AboutUsSection() {
             
       </section>
       
-      <section className="w-full hidden px-4 py-5  font-medium  md:flex">
-        <div className="flex h-full w-full justify-center rounded-lg ">
-            <div className="mx-auto  flex space-x-3 space-y-6">
-                <div className="space-y-3">
-                    <div className="">
-                        <Image
-                          src="/assets/images/243465e27e2d4698d9f838d0756f23c9.jpg"
-                          className="w-full h-auto rounded-lg md:rounded-xl"
-                          height={300}
-                          width={300}
-                          priority={true}
-                          alt="Olaniyi George"
-                        />
-                    </div>
+      <section className="w-full hidden px-2 py-5  md:flex">
+        <div className="flex h-full w-full gap-2 justify-center">
+            <div className="w-full flex flex-col h-full justify-between gap-3">
+                
+                <Image
+                  src="/assets/images/vision.png"
+                  className="w-[280px] h-[200px] -skew-y-3"
+                  height={3000}
+                  width={3000}
+                  priority={true}
+                  alt="Olaniyi George"
+                />
+                
 
-                    <Image
-                        src="/assets/images/vision.png"
-                        className="w-full h-auto rounded-full"
-                        height={300}
-                        width={300}
-                        priority={true}
-                        alt="Olaniyi George"
-                      />
-                </div>
+                <Image
+                    src="/assets/images/fastapi_code.png"
+                    className="w-[280px] h-[200px] -skew-y-3"
+                    height={12000}
+                    width={12000}
+                    priority={true}
+                    alt="Olaniyi George"
+                  />
+            </div>
 
-                <div className="space-y-3">
-                    <div className="  ">
-                    <Image
-                        src="/assets/images/pngtree-network-earth-in-the-age-of-big-data-network-png-image_4484350-removebg-preview.png"
-                        className="w-full h-auto rounded-lg md:rounded-xl"
-                        height={300}
-                        width={300}
-                        priority={true}
-                        alt="Olaniyi George"
-                      />
-                    </div>
-
-                    <div className="">
-                      <Image
-                        src="/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
-                        className="w-full h-auto rounded-lg md:rounded-xl"
-                        height={300}
-                        width={300}
-                        priority={true}
-                        alt="Olaniyi George"
-                      />
-                    </div>
-                </div>
+            <div className="w-full flex flex-col h-full justify-between gap-3 ">
+                
+                <Image
+                    src="/assets/images/iHR_code.png"
+                    className="w-[280px] h-[200px]  -skew-y-3"
+                    height={3000}
+                    width={3000}
+                    priority={true}
+                    alt="Olaniyi George"
+                  />
+                
+                  <Image
+                    src="/assets/images/1c44f8914b9f20e13b6168a2c2be3586.jpg"
+                    className="w-[280px] h-[200px] -skew-y-3 "
+                    height={3000}
+                    width={3000}
+                    priority={true}
+                    alt="Olaniyi George"
+                  />
+                
             </div>
         </div>
       </section>

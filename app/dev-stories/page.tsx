@@ -38,12 +38,28 @@ export default function DevStoriesHome() {
             <h3 className="text-center mt-4">
               The color on each story shows the status of the product:             
             </h3>
-            <span className="flex justify-center items-center gap-2">
-            <span className="inline-block w-3 h-3 rounded-full bg-blue-500 ml-2"></span> In Development
-              <span className="inline-block w-3 h-3 rounded-full bg-green-500"></span> Live
-              <span className="inline-block w-3 h-3 rounded-full bg-yellow-500 ml-2"></span> Building in Public
-              <span className="inline-block w-3 h-3 rounded-full bg-red-600 ml-2"></span> Dropped
-              <span className="inline-block w-3 h-3 rounded-full bg-gray-700 ml-2"></span> Unknown
+            <span className="flex flex-col md:flex-row justify-center items-center gap-2">
+              
+              <span className="flex items-center gap-3">
+                <span className="w-3 h-3 rounded-full bg-blue-500 ml-2"></span>
+                <>In Development</>
+              </span>
+              <span className="flex items-center gap-3">
+                <span className="w-3 h-3 rounded-full bg-green-500 ml-2"></span>
+                <>Live</>
+              </span>
+              <span className="flex items-center gap-3">
+                <span className="w-3 h-3 rounded-full bg-yellow-500 ml-2"></span>
+                <>Building In Public</>
+              </span>
+              <span className="flex items-center gap-3">
+                <span className="w-3 h-3 rounded-full bg-red-500 ml-2"></span>
+                <>Dropped</>
+              </span>
+              <span className="flex items-center gap-3">
+                <span className="w-3 h-3 rounded-full bg-gray-500 ml-2"></span>
+                <>Other</>
+              </span>
             </span>
 
             <div className="mt-4 grid grid-cols-1 pb-24 md:grid-cols-2 gap-3 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">   
