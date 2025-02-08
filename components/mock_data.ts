@@ -47,7 +47,7 @@ export const DEV_STORIES: iDevStory[] = [
     ],
     open_source_url: "https://github.com/olaniyigeorge/iHR",
     product_url: "https://github.com/ola~niyigeorge/iHR", // "https://ihr-mfh9.onrender.com/",
-    status: "live",
+    status: "dev",
     validatingTweets: [],
     notes: ["6","7", "4"],
     image: "/assets/images/ihr.png"
@@ -64,7 +64,7 @@ export const DEV_STORIES: iDevStory[] = [
     ],
     open_source_url: "/i/market",
     product_url: "/i/market",
-    status: "dev",
+    status: "paused",
     validatingTweets: [],
     notes: [],
     image: "/assets/images/marketplace.png"
@@ -96,7 +96,7 @@ export const DEV_STORIES: iDevStory[] = [
     ],
     open_source_url: "https://github.com/olaniyigeorge/bellz-tg-mini",
     product_url: "https://github.com/olaniyigeorge/bellz-tg-mini",
-    status: "old",
+    status: "live",
     validatingTweets: [],
     notes: [],
     image: "/assets/images/bellz-mini.png"
