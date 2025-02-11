@@ -29,7 +29,7 @@ export default async function NotePage({params }: { params: { id: string } })  {
                 alt="note_image" 
                 width={2000} 
                 height={2000} 
-                className="rounded-md -z-1000 my-2 min-w[200px] min-h-[350px] w-full h-full" 
+                className="rounded-md -z-1000 my-2 min-w[150px] min-h-[300px] max-h-[450px] w-full" 
             />
 
 
