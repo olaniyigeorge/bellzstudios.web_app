@@ -29,13 +29,13 @@ export default async function NotePage({params }: { params: { id: string } })  {
                 alt="note_image" 
                 width={2000} 
                 height={2000} 
-                className="rounded-md my-2 min-w[200px] min-h-[350px] w-full h-full" 
+                className="rounded-md -z-1000 my-2 min-w[200px] min-h-[350px] w-full h-full" 
             />
 
 
         
 
-            <section className="w-full flex object-contain flex-col mt-2 items-center bg-gray-500 bg-opacity-80 backdrop-blur-lg rounded-xl p-4">               
+            <section className="w-full flex object-contain flex-col mt-2 items-center bg-gray-500 bg-opacity-10 backdrop-blur-lg rounded-xl p-4">               
                 <p className="text-balance p-2 tracking-loose leading-loose text-xl md:text-2xl lg:text-3xl font-sans font-light whitespace-pre-line">
                     {note.body}
                 </p>
