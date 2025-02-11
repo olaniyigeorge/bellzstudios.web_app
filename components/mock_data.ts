@@ -268,7 +268,7 @@ export const noteEntries: iNoteEntry[] = [
     body: "Exploring how AI can aid education as a teaching assistant, extending beyond text to include speech. This can help schools in Nigeria that can't afford quality teachers and assist schools with good teachers by providing AI-powered assistants to answer follow-up questions, hold teaching/class sessions based on preset curriculum/plan and test students. \n\n Users would also be able to upload books or specify topics, and the AI assistant will create a teaching plan and deliver it through audio or video. By leveraging AI, we can bridge the educational gap, ensuring that every student has access to quality education, regardless of their location or financial situation. \n\n School boards can reduce costs on hiring additional assistant teachers. This technology can revolutionize the way we approach teaching, making it more interactive, personalized, efficient and in places like rural Nigeria, help school owners spend less on hiring more teachers. \n The AI assistant can also provide real-time feedback, helping students to understand complex concepts and improve their learning outcomes. This could be a game-changer, especially for the rural Nigerian educational sector, offering a scalable solution to the shortage of qualified teachers and enhancing the overall learning experience.",
     tags: ["education", "thinking-out-loud", "ai", "teaching-assistant"],
     privacy_level: "public",
-    image: "",
+    image: "/assets/images/ai-tutor.png",
     written_at: new Date("2025-02-11T12:28:17Z")
   }
 ];
