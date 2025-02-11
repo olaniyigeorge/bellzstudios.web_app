@@ -36,7 +36,7 @@ export default async function NotePage({params }: { params: { id: string } })  {
         
 
             <section className="w-full flex object-contain flex-col mt-2 items-center bg-black bg-white/2 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg rounded-xl p-4">               
-                <p className="text-pretty p-2 tracking-loose leading-loose text-xl md:text-2xl lg:text-3xl font-sans font-light">
+                <p className="text-balance p-2 tracking-loose leading-loose text-xl md:text-2xl lg:text-3xl font-sans font-light whitespace-pre-line">
                     {note.body}
                 </p>
             </section>
