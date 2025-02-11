@@ -147,13 +147,13 @@ export const noteEntries: iNoteEntry[] = [
       email: "olaniyigeorge@example.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    body: "Vercel keeps throwing a 504-Timeout error when I try to authenticate users with AuthJs. Free serverless instances on Vercel are capped at 10 seconds per request, but the entire auth flow with Google provider takes less than 2.5 seconds on my machine and about 5 seconds according to Vercel logs. I've tried various solutions, but nothing seems to work.",
+    body: "Vercel keeps throwing a 504-Timeout error when I try to authenticate users with AuthJs. Apparently, free serverless instances on Vercel are capped at 10 secs per request but the whole auth flow with Google provider (my choice) isn't even up to 2.5 secs on my machine and according to Vercel logs 5 secs on Vercel. I've tried everything, but nothing seems to work.",
     title: "AuthJs with Vercel",
-    tags: ["timeout", "authjs", "vercel"],
+    tags: ["E504", "authjs", "vercel"],
     privacy_level: "public",
-    description: "Issues encountered with Vercel.",
-    written_at: new Date(),
-    updated_at: new Date()
+    description: "Issues I've encountered on Vercel.",
+    written_at: new Date("2025-01-09T08:30:00Z"),
+    updated_at: new Date("2025-01-09T09:00:00Z")
   },
   {
     _id: "2",
@@ -163,11 +163,11 @@ export const noteEntries: iNoteEntry[] = [
       email: "olaniyigeorge@example.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    body: "Invite a UI/UX designer to help improve the design of my products.",
-    title: "Enhancing UI/UX",
-    tags: ["ui", "ux", "design"],
+    body: "Invite a UI/UX designer to help with the design of my products.",
+    title: "Proper UI/UX on my products",
+    tags: ["ui", "product", "design"],
     privacy_level: "private",
-    written_at: new Date()
+    written_at: new Date("2025-01-08T10:00:00Z")
   },
   {
     _id: "3",
@@ -177,13 +177,13 @@ export const noteEntries: iNoteEntry[] = [
       email: "charlie@example.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    body: "Engage with potential users to understand their pain points and interests. Start by creating a survey form and reaching out to those who respond.",
-    title: "User Engagement",
-    tags: ["user-research", "survey", "feedback"],
+    body: "Communicate with potential users about pain points, interests and how to build features around them. Starting by creating a survey form and reaching out to those who fill these forms.",
+    title: "Speak with your users",
+    tags: ["planning"],
     privacy_level: "restricted",
-    description: "Important notes requiring approval.",
-    written_at: new Date(),
-    updated_at: new Date()
+    description: "Important notes that need approval.",
+    written_at: new Date("2025-01-07T14:00:00Z"),
+    updated_at: new Date("2025-01-07T15:00:00Z")
   },
   {
     _id: "4",
@@ -193,11 +193,11 @@ export const noteEntries: iNoteEntry[] = [
       email: "olaniyigeorge@example.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    title: "Cost-Effective LLM Models",
-    body: "Researching cost-effective strategies for building and maintaining iHR, including optimizing the interview simulation workflow to minimize token usage without compromising response quality and finding affordable LLM models.",
-    tags: ["llms", "cost-optimization", "ihr"],
+    title: "Cheap LLM Models",
+    body: "Looking for cost-effective strategies to build and maintain iHR, including optimizing the interview simulation workflow to minimize token usage without compromising response quality and researching affordable LLM models.",
+    tags: ["llms", "cheap-models", "ihr"],
     privacy_level: "public",
-    written_at: new Date()
+    written_at: new Date("2025-01-06T16:30:00Z")
   },
   {
     _id: "5",
@@ -207,11 +207,11 @@ export const noteEntries: iNoteEntry[] = [
       email: "olaniyigeorge77@gmail.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    title: "LockedIn Challenge",
-    body: "Set up a challenge to build a habit and invite friends to join or hold you accountable.",
-    tags: ["challenge", "habit-tracking", "accountability"],
+    title: "Challenge on LockedIn",
+    body: "Set up a challenge on building a habit and invite friends to lock in or hold you accountable.",
+    tags: ["challenge", "accountability-partnership"],
     privacy_level: "public",
-    written_at: new Date()
+    written_at: new Date("2025-01-20T14:48:00Z")
   },
   {
     _id: "6",
@@ -222,10 +222,10 @@ export const noteEntries: iNoteEntry[] = [
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
     title: "Goals with iHR",
-    body: "Bridge the gap between job seekers and career success by providing a realistic, feedback-driven interview experience.",
-    tags: ["interview", "feedback", "career"],
+    body: "The goal is to bridge the gap between job seekers and career success by providing a realistic, feedback-driven interview experience.",
+    tags: ["interview-feedback"],
     privacy_level: "public",
-    written_at: new Date()
+    written_at: new Date("2025-01-24T09:29:00Z")
   },
   {
     _id: "7",
@@ -235,11 +235,11 @@ export const noteEntries: iNoteEntry[] = [
       email: "olaniyigeorge77@gmail.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    title: "iHR for Hirers",
-    body: "Enable hirers to delegate HR-related operations to iHR by specifying technical and non-technical requirements in the job description.",
-    tags: ["hr", "automation", "interview"],
+    title: "iHR for Hirer",
+    body: "I aim to allow hirers to delegate most, if not all, HR-related operations to iHR by simply specifying the technical and non-technical requirements in the job description.",
+    tags: ["interview-feedback"],
     privacy_level: "public",
-    written_at: new Date()
+    written_at: new Date("2025-01-24T09:29:00Z")
   },
   {
     _id: "8",
@@ -250,11 +250,11 @@ export const noteEntries: iNoteEntry[] = [
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
     title: "Learning Rust",
-    body: "Note to future self: This is one of my first Rust code snippets. How can I make this snippet more efficient, cleaner, and concise? What am I doing wrong?",
-    tags: ["rust", "code-efficiency", "clean-code"],
+    body: "Note to future self. This is one of my first snippets of Rust code. What are the ways in which I can make this snippet more efficient, cleaner, more concise? What am I doing wrong?",
+    tags: ["rust", "DSA", "efficient-code", "clean-code"],
     privacy_level: "public",
     image: "/assets/images/notes/first_rust.png",
-    written_at: new Date()
+    written_at: new Date("2025-02-01T00:00:00Z")
   },
   {
     _id: "9",
@@ -269,6 +269,8 @@ export const noteEntries: iNoteEntry[] = [
     tags: ["education", "thinking-out-loud", "ai", "teaching-assistant"],
     privacy_level: "public",
     image: "",
-    written_at: new Date()
+    written_at: new Date("2025-02-11T12:28:17Z")
   }
 ];
+
+
