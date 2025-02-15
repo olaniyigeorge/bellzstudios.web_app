@@ -1,6 +1,37 @@
 import { noteEntries } from "@/components/mock_data"
 import Image from "next/image";
 
+export async function generateMetadata( {params }: { params: { id: string } }) {
+    const note = noteEntries.find((note) => note._id === params.id) 
+    if (!note) {
+        return <div className="w-full hero_title text-red-500">Note not found</div>;
+    }
+
+    return {
+        title: `${note.title} | Notes | Bellz Studio`,
+        description: `${note.body.slice(0, 120)}`,
+        openGraph: {
+        title: `${note.title}`,
+        description: `${note.body.slice(0, 80)}`,
+        url: `https://bellzstudios.vercel.app/notes/${note._id})}`, // "https://www.bellzstudio.com", 
+        siteName: "Bellz Studio",
+        images: [
+            {
+            url: `https://bellzstudios.vercel.app${note.image}`,
+            width: 1200,
+            height: 630,
+            alt: `${note.title}`,  
+            },
+        ],
+        type: "website",
+        },
+        twitter: {
+        card: "summary_large_image",
+        images: `https://bellzstudios.vercel.app${note.image}`,
+    },
+        }
+}
+  
 export default async function NotePage({params }: { params: { id: string } })  {
 
     const note = noteEntries.find((note) => note._id === params.id)
@@ -35,8 +66,8 @@ export default async function NotePage({params }: { params: { id: string } })  {
 
         
 
-            <section className="w-full flex object-contain flex-col mt-2 items-center bg-gray-800 bg-opacity-10 backdrop-blur-lg rounded-xl p-4">               
-                <p className="text-balance p-2 tracking-loose leading-loose text-xl md:text-2xl lg:text-3xl font-sans font-light whitespace-pre-line">
+            <section className="w-full flex object-contain font-poppins flex-col mt-2 items-center bg-gray-800 bg-opacity-10 backdrop-blur-lg rounded-xl p-4">               
+                <p className="text-wrap p-2 tracking-loose leading-loose text-xl md:text-2xl lg:text-3xl font-light whitespace-pre-line">
                     {note.body}
                 </p>    
             </section>

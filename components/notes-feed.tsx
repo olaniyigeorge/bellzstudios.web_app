@@ -35,8 +35,8 @@ const Feed = () => {
   const [searchedResults, setSearchedResults] = useState<iNoteEntry[]>([]);
 
   const fetchPosts = async () => {
-    const response = await fetch("/api/notes/");
-    console.log(response);
+    // const response = await fetch("/api/notes/");
+    // console.log(response);
     const data = noteEntries; // await response.json();
 
     // Sort the data by updatedAt field in descending order

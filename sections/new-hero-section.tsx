@@ -17,7 +17,7 @@ export const NewHeroSection= () => {
     
 
     return (
-        <section className="page-section w-full flex flex-col items-center py-4 md:py-6">
+        <section className="page-section w-full flex flex-col items-center py-4">
           <Typer 
             id='hero' 
             delay={90}
@@ -32,7 +32,7 @@ export const NewHeroSection= () => {
               Building and contributing to open-source products we believe should exist.
           </span> 
   
-          <div className="w-full flex my-6 lg:my-8 gap-3 justify-between items-center" >
+          <div className="w-full flex my-6 gap-3 justify-between items-center" >
             {links.map((link) => (
               <ScrollDownAnimation 
                   key={link.id} 
