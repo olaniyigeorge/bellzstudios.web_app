@@ -13,21 +13,21 @@ export async function generateMetadata( {params }: { params: { id: string } }) {
         openGraph: {
         title: `${note.title}`,
         description: `${note.body.slice(0, 80)}`,
-        url: `https://bellzstudios.vercel.app/notes/${note._id})}`, // "https://www.bellzstudio.com", 
+        url: `https://bellzstudios.vercel.app/notes/${note._id}`, // "https://www.bellzstudio.com", 
         siteName: "Bellz Studio",
         images: [
             {
-            url: `https://bellzstudios.vercel.app${note.image}`,
-            width: 1200,
-            height: 630,
-            alt: `${note.title}`,  
+                url: `https://bellzstudios.vercel.app${note.image}`,
+                width: 1200,
+                height: 630,
+                alt: `${note.title}`,  
             },
         ],
         type: "website",
         },
         twitter: {
-        card: "summary_large_image",
-        images: `https://bellzstudios.vercel.app${note.image}`,
+            card: "summary_large_image",
+            images: `https://bellzstudios.vercel.app${note.image}`,
     },
         }
 }
