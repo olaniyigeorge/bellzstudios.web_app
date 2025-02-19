@@ -19,8 +19,8 @@ const NoteEntrySchema = new Schema({
         required: [false, "Image is not required"]
     },
     tags: {
-        type: [String], // Array of strings
-        default: [], // Default to an empty array
+        type: [String],
+        default: [], 
     },
     privacy_level: {
         type: String,
