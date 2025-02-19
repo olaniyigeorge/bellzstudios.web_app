@@ -192,12 +192,12 @@ interface ProjectCardProps {
 export function ProjectCard(props: ProjectCardProps){
     const { title, description, link, image, started, status } = props
     return (
-      <div className="w-full rounded-2xl gap-2 flex justify-between shadow-sm shadow-blue-400 items-start bg-white w-full h-36 p-2">
+      <div className="w-full rounded-2xl gap-2 flex justify-between shadow-sm shadow-orange-400 items-start bg-white h-36 p-2">
         <div className="w-full flex flex-col h-full gap-1">
           <a href={link} className="text-2xl font-bold">
             {title}
           </a>
-          <p className="font-medium line-clamp-3">{description}</p>
+          <p className="font- text-gray-700 line-clamp-3">{description}</p>
           <div className="flex justify-between items-center">
             <p className="font-light">Started: {started}</p>
             <span className="flex gap-1">
