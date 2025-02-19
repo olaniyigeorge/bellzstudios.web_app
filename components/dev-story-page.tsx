@@ -176,19 +176,19 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                 </h1>
                 {/* <SliderAd /> */}
 
-                    <div className="grid md:grid-cols-2 gap-3 md:gap-6 pb-6 h-full w-full">
-                        {notes.map((note: iNoteEntry) => (
-                            <NoteEntryCard 
-                                key={note._id}
-                                post={note} 
-                                handleEdit={function (): void {
-                                    throw new Error("Function not implemented.");} } 
-                                handleDelete={function (): void {
-                                    throw new Error("Function not implemented.");
-                                } }
-                            />                    
-                        ))}
-                    </div>
+                <div className="grid md:grid-cols-2 gap-3 md:gap-6 pb-6 h-full w-full">
+                    {notes.map((note: iNoteEntry) => (
+                        <NoteEntryCard 
+                            key={note._id}
+                            post={note} 
+                            handleEdit={function (): void {
+                                throw new Error("Function not implemented.");} } 
+                            handleDelete={function (): void {
+                                throw new Error("Function not implemented.");
+                            } }
+                        />                    
+                    ))}
+                </div>
  
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 w-full">
                     {story.validatingTweets.map((inspo: TweetEmbeds) => (
