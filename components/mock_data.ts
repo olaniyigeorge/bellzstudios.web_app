@@ -22,7 +22,7 @@ export const DEV_STORIES: iDevStory[] = [
       { icon: "/assets/images/tech_stack/zustand.png", name: "Zustand" },
       { icon: "/assets/images/tech_stack/vercel.svg", name: "Vercel" }
     ],
-    open_source_url: "https://github/olaniyigeorge/lockedin",
+    open_source_url: "https://github.com/olaniyigeorge/lockedin",
     product_url: "https://lockedin-seven.vercel.app/", // "https://lockedin-app.vercel.app/", // "https://lockedin-seven.vercel.app/",
     status: "building-in-public",
     validatingTweets: [
