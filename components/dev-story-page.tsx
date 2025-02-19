@@ -152,7 +152,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                 </span>
             </form>
 
-            <section className="w-full flex object-contain flex-col mt-4 items-center bg-black bg-white/10 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg rounded-xl p-2">
+            <section className="w-full flex flex-col mt-4 items-center bg-black bg-white/10 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg rounded-xl p-2">
                 <h1 className="text-3xl text-center font-medium py-2">
                     Join the conversation on
                     <span className="orange-gradient">{" "}{story.title}</span>
@@ -176,7 +176,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                 </h1>
                 {/* <SliderAd /> */}
 
-                <div className="grid md:grid-cols-2 gap-3 md:gap-6 pb-6 h-full w-full">
+                <div className="grid md:grid-cols-2 gap-3 md:gap-6 my-3 w-full">
                     {notes.map((note: iNoteEntry) => (
                         <NoteEntryCard 
                             key={note._id}
@@ -190,7 +190,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                     ))}
                 </div>
  
-                <section className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 w-full">
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 my-3 w-full">
                     {story.validatingTweets.map((inspo: TweetEmbeds) => (
                     <TwitterTweetEmbed key={inspo.tweetId} tweetId={inspo.tweetId} />
                 ))}
