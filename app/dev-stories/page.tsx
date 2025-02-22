@@ -1,6 +1,9 @@
 import { DEV_STORIES } from "@/components/mock_data"
 import DevStoryCard, { iDevStory } from "../../components/dev-story-card"
 import { Metadata } from "next";
+import SupportUs from "@/components/support";
+import Link from "next/link";
+import { CurrencyDollarIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
     title: `Dev Stories`,
@@ -32,9 +35,15 @@ export default function DevStoriesHome() {
     const STORIES = DEV_STORIES
     return (
         <div className="flex flex-col justify-center ">
-            <h1 className="hero_title orange_gradient">Dev Stories</h1>
-            <p className="text-center font-irishgrover text-xl">Stories behind all the solutions and systems we build</p>
-            
+            <span className="w-full flex items-center justify-between px-3 md:px-16 lg:px-24 mx-auto">
+              <h1 className="text-5xl md:text-[100px] font-irishgrover font-extrabold orange_gradient">Dev Stories</h1>
+              <Link href="#support-us" className="w-auto flex gap-2 items-center">
+                <CurrencyDollarIcon className="w-5 h-5"/>
+                <p className="">Support Us</p>
+              </Link>
+            </span>
+            <p className="text-center font-irishgrover text-xl">Stories behind all the solutions and systems we are building</p>
+      
             <h3 className="text-center mt-4">
               The color on each story shows the status of the product:             
             </h3>
@@ -62,12 +71,17 @@ export default function DevStoriesHome() {
               </span>
             </span>
 
-            <div className="mt-4 grid grid-cols-1 pb-24 md:grid-cols-2 gap-3 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">   
+
+            <div className="m-4 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 container px-1 md:px-8 lg:px-16 mx-auto">   
                 {STORIES.map((story: iDevStory) => (
                     <DevStoryCard key={story.id} {...story}/>
                     ))
                 }
             </div>
+
+                  
+
+            <SupportUs />
          </div>
     )
 }
