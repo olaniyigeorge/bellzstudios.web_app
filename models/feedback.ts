@@ -5,11 +5,11 @@ import {Schema, models, model} from "mongoose";
 const feedbackSchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: false
     },
     email: {
         type: String,
-        required: true
+        required: false
     },
     message: {
         type: String,
