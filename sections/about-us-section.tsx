@@ -1,3 +1,4 @@
+import ScrollDownAnimation, { ScrollDownALittleAnimation } from "@/components/scroll"
 import { ArrowDownIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
 import Link from "next/link"
@@ -13,15 +14,26 @@ export default function AboutUsSection() {
       <section className="w-full flex flex-col items-center md:items-start gap-3">
         <div className="flex flex-col items-center md:items-start  gap-3">
           <h1 id="hero-title" className="text-black font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
-          <p className="text-xl md:text-2xl font-medium  text-black text-center md:text-right">
-              BellzStudio was born from an aprreciation for what open-source can achieve and a desire to make a real impact. 
-              At its core, it&apos;s about teaming up to turn ideas into meaningful, impactful software. Whether refining 
+          {/* <p className="text-xl md:text-2xl  font-kanit text-black text-center md:text-right">
+              BellzStudio was born from an appreciation for what open-source can achieve and a desire to make a real impact. 
+              At its core, it&apos;s about teaming up to turn ideas into impactful software. Whether refining 
               existing solutions or building something new.
 
               <br />
               As a developer passionate about solving real problems, I&apos;m open to collaborating 
-              at any stage—brainstorming, building, or testing. I also love sharing my journey, 
+              at any stage - brainstorming, system design, development, or testing. I also love sharing my journey, 
               documenting my learning process to grow and create better products.
+
+              <br />
+              Got an idea or a challenge? Let&apos;s bring it to life together!
+          </p> */}
+            <p className="text-xl md:text-2xl font-kanit text-black text-center md:text-right">
+              BellzStudio was born from an appreciation for what true collaboration can achieve and a desire to make a real impact.
+              At its core, it&apos;s about teaming up to turn ideas into impactful software — whether refining existing solutions or building something new.
+
+              <br />
+              As a developer passionate about solving real problems, I&apos;m open to collaborating at any stage — brainstorming, system design, development, or testing.
+              I also love sharing my journey, documenting my learning process to grow and create better products.
 
               <br />
               Got an idea or a challenge? Let&apos;s bring it to life together!

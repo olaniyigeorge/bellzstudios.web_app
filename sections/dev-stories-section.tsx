@@ -14,7 +14,7 @@ export default function DevStoriesSection() {
         >
         <section className="w-full flex flex-col md:flex-row items-center gap-6">
             <section className="w-full flex flex-col  gap-4 font-irishgrover">
-                <span className="text-xl md:text-2xl text-white font-irishgrover text-center md:text-start font-medium w-full my-3 ">
+                <span className="text-xl md:text-2xl text-white font-kanit text-center md:text-start font-normal w-full my-3 ">
                 Dev Stories is a series where I share my thought process as I develop 
                 products to tackle well-documented problems. I invite feedback and aim 
                 to validate both my approach and yours by openly discussing and blogging 
@@ -24,9 +24,9 @@ export default function DevStoriesSection() {
                 <Link href="/dev-stories" className="hover:scale-[102%] ease-in-out border-orange-500 shadow shadow-orange-500  transition-all duration-800 p-3 md:p-4 text-white border rounded-full">
                     Explore Stories
                 </Link>
-                <Link href={"#notes"} className="rounded-full text-white w-fit flex gap-2 items-center px-4 py-2 ">
+                <Link href={"#notes"} className="rounded-full orange-gradient w-fit flex gap-2 items-center px-4 py-2 ">
                     <>Notes</>
-                <ArrowDownIcon className="w-4 h-8 hover:animate-swivvleV text-white font-medium" />
+                    <ArrowDownIcon className="w-4 h-8 hover:animate-swivvleV text-orange-600  font-medium" />
                 </Link>
 
 

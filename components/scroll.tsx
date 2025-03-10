@@ -39,3 +39,36 @@ export default function ScrollDownAnimation(props: ScrollDownAnimationProps) {
 
   );
 };
+
+
+
+
+export function ScrollDownALittleAnimation(props: ScrollDownAnimationProps) {
+  const { scrollTopValue, targetId, className, child }= props
+  const scrollTargetRef = useRef<HTMLElement | null>(null);
+
+  const scrollDown = () => {
+    if (scrollTargetRef.current) {
+    const targetPosition = scrollTargetRef.current.offsetTop;
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
+    }
+  };
+
+  useEffect(() => {
+    scrollTargetRef.current = document.getElementById(targetId || "");
+  }, [scrollTopValue, targetId]);
+
+  return (
+    <button 
+      onClick={scrollDown} 
+      className={className}
+    >
+      {child}
+    </button>
+
+
+  );
+};

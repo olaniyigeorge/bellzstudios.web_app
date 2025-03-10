@@ -27,7 +27,7 @@ export const NewHeroSection= () => {
           /> 
           <span
             id='hero-mini' 
-            className="font-irishgrover text-xl md:text-3xl px-4 md:px-20 orange_gradient text-center" 
+            className="font-kanit text-xl md:text-3xl px-4 md:px-20 orange_gradient text-center" 
           >
               Building and contributing to open-source products we believe should exist.
           </span> 

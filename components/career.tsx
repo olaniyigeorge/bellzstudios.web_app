@@ -127,44 +127,35 @@ interface Project {
   }
   
 export const PROJECTS: Project[] = [
-    {
-      id: "mindstream",
-      title: "Mindstream",
-      description:
-        "Mindstream is a secure journaling web app enabling users to document thoughts and create memory stamps (tags) for quick and efficient thought recall.",
-      link: "https://mindstream-journal.onrender.com",
-      image: "https://olaniyigeorge.github.io/images/mindstream-inspo.jpeg",
-      started: "Apr 2023",
-      status: ["blue", "gray"],
-    },
-    {
-      id: "poll-y",
-      title: "Poll-y",
-      description:
-        "A poll app with some of the functionalities of a social media app built with the Django web framework.",
-      link: "/dev-stories",
-      image: "https://olaniyigeorge.github.io/images/poll-y.jpeg",
-      started: "Apr 2023",
-      status: ["", "gray"],
-    },
-    {
-      id: "cup-a-coffee",
-      title: "Cup-a-coffee",
-      description:
-        "Cup-a-coffee is a specialized API designed for coffee shop ordering applications. Whether you're creating a management app or delving into coffee-related data, this API is tailored to meet your needs.",
-      link: "",
-      image:
-        "https://static.vecteezy.com/system/resources/thumbnails/002/412/377/small/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg",
-      started: "Sept 2023",
-      status: ["", "gray"],
-    },
+
+    // {
+    //   id: "poll-y",
+    //   title: "Poll-y",
+    //   description:
+    //     "A poll app with some of the functionalities of a social media app built with the Django web framework.",
+    //   link: "/dev-stories",
+    //   image: "https://olaniyigeorge.github.io/images/poll-y.jpeg",
+    //   started: "Apr 2023",
+    //   status: ["", "gray"],
+    // },
+    // {
+    //   id: "cup-a-coffee",
+    //   title: "Cup-a-coffee",
+    //   description:
+    //     "Cup-a-coffee is a specialized API designed for coffee shop ordering applications. Whether you're creating a management app or delving into coffee-related data, this API is tailored to meet your needs.",
+    //   link: "#",
+    //   image:
+    //     "https://static.vecteezy.com/system/resources/thumbnails/002/412/377/small/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg",
+    //   started: "Sept 2023",
+    //   status: ["", "gray"],
+    // },
     {
       id: "lockedin",
       title: "LockedIn",
       description:
         "A NextJS full-stack habit-tracking application that helps users to track daily habits and view insights on their progress.",
-      link: "/i/lockedin", // Replace with your actual link
-      image: "/assets/images/lockedin.jpeg", // Replace with actual image
+      link: "https://lockedin-seven.vercel.app/", // Replace with your actual link
+      image: "/assets/images/lockedin.png", // Replace with actual image
       started: "Jan 2024",
       status: ["blue", "green"],
     },
@@ -173,11 +164,32 @@ export const PROJECTS: Project[] = [
       title: "Respace API",
       description:
         "A REST API that serves as the data provider and authentication backend for a real estate company's web app.",
-      link: "/dev-stories", // Replace with your actual link
-      image: "/assets/images/respace-api.jpeg", // Replace with actual image
+      link: "#", // http://raspa-client.onrender.com/
+      image: "/assets/images/respace.png", // Replace with actual image
       started: "Oct 2023",
       status: ["blue", "gray"],
     },
+    {
+      id: "mindstream",
+      title: "Mindstream",
+      description:
+        "Mindstream is a secure journaling web app built with Django to demonstrate a multi-factor authentication system. It features a three-step identity verification flow, ensuring users securely document their thoughts and create memory stamps (tags) for fast and efficient thought recall.",
+      link: "https://mindstream-journal.onrender.com",
+      image: "https://olaniyigeorge.github.io/images/mindstream-inspo.jpeg",
+      started: "Apr 2023",
+      status: ["blue", "gray"],
+    },
+    {
+      id: "ihr",
+      title: "iHR",
+      description:
+        "iHR is an AI-powered interview simulation platform that helps job seekers practice and improve performance through real-time, interactive sessions. Built with FastAPI, PostgreSQL, LangChain, and WebSockets, it features intelligent scoring, feedback, and context-aware question generation.",
+      link: "https://github.com/olaniyigeorge/ihr", // Replace with your actual link if different
+      image: "/assets/images/ihr.png", // Replace with your preferred image if you have one
+      started: "Feb 2025",
+      status: ["green", "gray"],
+    }
+    
   ];
   
 interface ProjectCardProps {
@@ -192,7 +204,7 @@ interface ProjectCardProps {
 export function ProjectCard(props: ProjectCardProps){
     const { title, description, link, image, started, status } = props
     return (
-      <div className="w-full rounded-2xl gap-2 flex justify-between shadow-sm shadow-orange-400 items-start bg-white h-36 p-2">
+      <div className="w-full rounded-2xl gap-2 flex justify-between shadow-sm shadow-orange-400 items-start bg-white min-h-36 p-2">
         <div className="w-full flex flex-col h-full gap-1">
           <a href={link} className="text-2xl font-bold">
             {title}
