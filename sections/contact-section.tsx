@@ -35,9 +35,9 @@ export default function ContactSection() {
     return (
         <section
             id="contact"
-            className="page-section bg-white w-full flex flex-col gap-10 md:gap-16 lg:gap-20"
+            className="page-section rbstd_orange-gradient-bg  w-full flex flex-col gap-10 md:gap-16 lg:gap-20"
         >
-            <h1 className=" w-full flex text-black irishgrover uppercase font-extrabold justify-center text-5xl tracking-tighter text-center">
+            <h1 className=" w-full flex orange_gradient font-irishgrover uppercase font-extrabold justify-center text-5xl tracking-tighter text-center">
                 Reach Out To Me
             </h1>
             <section className="w-full flex flex-col font- md:flex-row justify-between items-center gap-3 md:gap-5 lg:gap-8">
@@ -75,14 +75,15 @@ export default function ContactSection() {
                 <SmoothScrollButton pixels={400} className="w-full hover:animate-swivvleV">
                     <Link
                         href={"#dev-stories"}
-                        className="flex flex-col gap-1 underline text-black items-center"
+                        className="flex flex-col gap-1 underline text-white items-center"
                     >
                         <>Projects & Dev Stories</>
                         <Image 
-                            src="/assets/icons/down_line.png" 
-                            className="w-[150px] h-[15px] font-medium"
+                            src="/assets/icons/white_line.png" 
+                            className="w-[150px] h-[15px]"
                             width={4000}
                             height={4000}
+                            priority={true}
                             alt="down" 
                         />
                     </Link>

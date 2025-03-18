@@ -10,12 +10,12 @@ export default function AboutUsSection() {
     return (
         <section 
         id="about-us"
-        className="page-section font-irishgrover border border-[#F9890A] bstd_orange-gradient-bg w-full flex items-center gap-3 py-5 md:py-10"
+        className="page-section font-irishgrover  border-[#513F01] bstd_orange-gradient-bg w-full flex items-center gap-3 py-5 md:py-10"
     >
       <section className="w-full flex flex-col items-center md:items-start gap-3">
         <div className="flex flex-col items-center md:items-start  gap-3">
-          <h1 id="hero-title" className="text-black font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
-            <p className="text-xl md:text-2xl font-kanit text-black text-center md:text-right">
+          <h1 id="hero-title" className="orange_gradient font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
+            <p className="text-xl md:text-2xl font-kanit text-white text-center md:text-right">
               BellzStudio was born from an appreciation for what true collaboration can achieve and a desire to make a real impact.
               At its core, it&apos;s about teaming up to turn ideas into impactful software — whether refining existing solutions or building something new.
 
@@ -35,11 +35,11 @@ export default function AboutUsSection() {
           </SmoothScrollButton>
           
             
-          <span className="text-black flex gap-2 items-center">
+          <span className="orange-gradient flex gap-2 items-center">
             <Link href="/about-me" className=" ">
               Resume
             </Link> 
-              <ArrowRightIcon className="w-4 h-8 hover:animate-swivvleV  font-medium" />
+              <ArrowRightIcon className="w-4 h-8 hover:animate-swivvleV text-orange-500 font-medium" />
           </span>      
 
         </span>

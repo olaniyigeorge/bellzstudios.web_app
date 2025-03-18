@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 export default function DevStoriesHome() {
     const STORIES = DEV_STORIES
     return (
-        <div className="w-full h-full flex flex-col justify-center bg-black">
+        <div className="w-full h-full flex flex-col justify-center ">
             <span className="w-full flex items-center justify-between px-3 md:px-16 lg:px-24 mx-auto">
               <h1 className="text-5xl md:text-[100px] font-irishgrover font-extrabold orange_gradient">Dev Stories</h1>
               <Link href="#support-us" className="w-auto flex gap-2 items-center">

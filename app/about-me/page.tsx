@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AboutMe() {
     return (
-        <div className="bg-white w-full text-gray-900 font-kanit">
+        <div className="bg-slate-50 animate-fadeIn w-full text-gray-900 font-kanit">
         <div className="w-full h-auto px-10 py-3 md:px-36 sm:py-5 space-y-5">
             {/* Bio Section */}
             <section id="bio" className="w-full rounded-3xl gap-3 p-3 flex justify-between items-start">

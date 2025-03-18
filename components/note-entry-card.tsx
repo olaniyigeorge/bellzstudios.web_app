@@ -63,7 +63,7 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
   };
 
   return (
-    <div className="orange-gradient-bg w-full rounded-lg p-3 h-full ">
+    <div className="tbbstd_orange-gradient-bg w-full rounded-lg p-3 h-full ">
       <div className="flex justify-between items-start gap-5">
         <div
           className="flex-1 flex justify-start items-center gap-3 cursor-pointer"
@@ -79,12 +79,12 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
           />
 
           <div className="flex flex-col">
-            <h3 className="font-satoshi font-semibold text-black">
+            <h3 className="text-lg md:text-xl font-kanit font-semibold text-white">
               <Link href={`/notes/${post._id}`} className="cursor-pointer">
                 {post.title}
               </Link>
             </h3>
-            <p className="font-satochi text-xs text-gray-700">
+            <p className="font-satochi text-xs text-gray-500">
               Posted {timeAgo(post.written_at)}
             </p>
           </div>
@@ -118,7 +118,7 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
       
 
       <p 
-        className="my-4 font-irishgrover text-lg line-clamp-4 md:text-xl text-black font-medium"
+        className="my-4 font-kanit text-lg line-clamp-4 md:text-xl text-white font-light"
         >
           {post.body}
       </p>

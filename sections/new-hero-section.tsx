@@ -37,7 +37,7 @@ export const NewHeroSection= () => {
               <ScrollDownAnimation 
                   key={link.id} 
                   targetId={link.id} 
-                  className="w-full p-3 md:p-4 flex hover:animate-swivvleV  flex-col  rounded-[20px] border-[#F9890A] gap-3 shadow shadow-orange-500  items-center"
+                  className="w-full p-3 md:p-4 flex hover:animate-swivvleV  flex-col  rounded-[40px] border-[#110a02] gap-3 shadow shadow-black  items-center"
                   child={
                 <>
                   <span className="text-white text-xs md:text-lg font-irishgrover">{link.name}</span>
