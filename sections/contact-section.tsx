@@ -1,6 +1,5 @@
 "use client";
-
-import ArrowDownIcon from "@heroicons/react/24/outline/ArrowDownIcon";
+import SmoothScrollButton from "@/components/smoothscroll";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -38,10 +37,10 @@ export default function ContactSection() {
             id="contact"
             className="page-section bg-white w-full flex flex-col gap-10 md:gap-16 lg:gap-20"
         >
-            <h1 className=" w-full flex orange-gradient font-bebas-neue-bold uppercase font-extrabold justify-center text-5xl tracking-tighter text-center">
+            <h1 className=" w-full flex text-black irishgrover uppercase font-extrabold justify-center text-5xl tracking-tighter text-center">
                 Reach Out To Me
             </h1>
-            <section className="w-full flex flex-col md:flex-row justify-between items-center gap-3 md:gap-5 lg:gap-8">
+            <section className="w-full flex flex-col font- md:flex-row justify-between items-center gap-3 md:gap-5 lg:gap-8">
                 {contacts.map((contact) => (
                     <div
                         key={contact.name}
@@ -72,14 +71,23 @@ export default function ContactSection() {
                 ))}
             </section>
 
-            <span className="flex gap-2 w-full irishgrover justify-center item-center text-white  mt-12">
-                <Link
-                    href={"#dev-stories"}
-                    className="shadow-lg bg-black border-2 border-orange-500 rounded-full w-fit flex gap-2 font-medium items-center px-4 py-2"
-                >
-                    <>Projects & Dev Stories</>
-                    <ArrowDownIcon className="w-4 h-8 hover:animate-swivvleV  font-medium" />
-                </Link>
+            <span className="flex gap-2 w-full font-kanit justify-center item-center text-white  mt-12">
+                <SmoothScrollButton pixels={400} className="w-full hover:animate-swivvleV">
+                    <Link
+                        href={"#dev-stories"}
+                        className="flex flex-col gap-1 underline text-black items-center"
+                    >
+                        <>Projects & Dev Stories</>
+                        <Image 
+                            src="/assets/icons/down_line.png" 
+                            className="w-[150px] h-[15px] font-medium"
+                            width={4000}
+                            height={4000}
+                            alt="down" 
+                        />
+                    </Link>
+                </SmoothScrollButton>
+                
             </span>
         </section>
     );

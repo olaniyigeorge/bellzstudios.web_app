@@ -8,7 +8,7 @@ import { NewHeroSection } from "@/sections/new-hero-section";
 export default async function Landing() {
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="">
       <NewHeroSection />
       <AboutUsSection />
       <ContactSection />

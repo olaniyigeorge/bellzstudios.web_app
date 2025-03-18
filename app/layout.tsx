@@ -49,18 +49,20 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body
-        className={`min-h-screen relative bg-black  text-white font-opensans antialiased max-w-[1440px] mx-auto ${opensans.className}`}
-      >
-        <Provider session={session}>
-          <Header />
-
-          <main className="max-w-9xl flex ">{children}</main>
+      <Provider session={session}>
+        <body
+          className={`min-h-screen relative  text-white font-opensans antialiased bg-bellz-orang bg-black max-w-[1440px] mx-auto ${opensans.className}`}
+        >
           
-          <Footer />
-          <ToastContainer />
-        </Provider>
-      </body>
+            <Header />
+
+            <main className="max-w-9xl flex ">{children}</main>
+            
+            <Footer />
+            <ToastContainer />
+          
+        </body>
+      </Provider>
     </html>
   );
 }

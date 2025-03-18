@@ -98,7 +98,10 @@ body {
 }
 
 .orange-gradient-bg {
-  @apply bg-gradient-to-b from-yellow-500 via-orange-500 to-orange-600;
+  @apply bg-gradient-to-b from-[#FDC709] to-[#F9890A];
+}
+.bstd_orange-gradient-bg {
+  @apply bg-gradient-to-r from-[#FDC709] to-[#F9890A];
 }
 .orange-gradient {
   @apply bg-gradient-to-r from-yellow-500 via-orange-500 to-orange-600 bg-clip-text text-transparent;

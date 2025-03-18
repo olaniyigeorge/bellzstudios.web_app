@@ -10,13 +10,6 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    // container: {
-    //   center: true,
-    //   padding: "2rem",
-    //   screens: {
-    //       "2xl": "1400px",
-    //   },
-    // },
     extend: {
       boxShadow: {
         glow: '0 0 10px rgba(59, 130, 246, 0.6), 0 0 10px rgba(59, 130, 246, 0.6)', // Blue glow
@@ -28,6 +21,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'primary-orange': '#FF5722',
+        'bellz-orange': '#FDC709',
       },
       fontFamily: {
         opensans: ["var(--opensans)", ...fontFamily.sans],

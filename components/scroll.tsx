@@ -41,25 +41,21 @@ export default function ScrollDownAnimation(props: ScrollDownAnimationProps) {
 };
 
 
+interface ScrollDownALittleAnimationProps {
+  scrollTopValue?: number;
+  className: string;
+  child: React.ReactNode;
+}
 
-
-export function ScrollDownALittleAnimation(props: ScrollDownAnimationProps) {
-  const { scrollTopValue, targetId, className, child }= props
-  const scrollTargetRef = useRef<HTMLElement | null>(null);
+export function ScrollDownALittleAnimation(props: ScrollDownALittleAnimationProps) {
+  const { scrollTopValue = 0, className, child } = props;
 
   const scrollDown = () => {
-    if (scrollTargetRef.current) {
-    const targetPosition = scrollTargetRef.current.offsetTop;
-    window.scrollTo({
-      top: targetPosition,
+    window.scrollBy({
+      top: scrollTopValue,
       behavior: "smooth",
     });
-    }
   };
-
-  useEffect(() => {
-    scrollTargetRef.current = document.getElementById(targetId || "");
-  }, [scrollTopValue, targetId]);
 
   return (
     <button 
@@ -68,7 +64,5 @@ export function ScrollDownALittleAnimation(props: ScrollDownAnimationProps) {
     >
       {child}
     </button>
-
-
   );
 };
