@@ -19,6 +19,7 @@ const SmoothScrollButton: React.FC<SmoothScrollButtonProps> = ({
     const start = window.scrollY;
     const end = start + pixels;
     const startTime = performance.now();
+    console.log(end)
 
     const animateScroll = (currentTime: number) => {
       const elapsed = currentTime - startTime;
