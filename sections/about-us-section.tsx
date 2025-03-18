@@ -36,7 +36,7 @@ export default function AboutUsSection() {
           
             
           <span className="orange-gradient flex gap-2 items-center">
-            <Link href="/about-me" className=" ">
+            <Link href="/about-me" target="_blank" className=" ">
               Resume
             </Link> 
               <ArrowRightIcon className="w-4 h-8 hover:animate-swivvleV text-orange-500 font-medium" />

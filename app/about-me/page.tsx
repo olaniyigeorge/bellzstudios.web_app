@@ -68,7 +68,7 @@ export default function AboutMe() {
             </section>
 
             {/* Skills Section */}
-            <section id="skills" className="rounded-3xl text-white  bg-gray-900 w-full px-5 py-3">
+            <section id="skills" className="rounded-3xl text-white  bg-black w-full px-5 py-3">
             <div className="flex w-full justify-center">
                 <div className="flex orange-gradient-bg w-1/3 p-1 shadow justify-center rounded-xl">
                 <h2 className="text-white font-medium text-2xl">Skills</h2>
@@ -84,9 +84,10 @@ export default function AboutMe() {
                         { skill: "Python", level: 9 },
                         { skill: "Django", level: 8 },
                         { skill: "Django REST Framework", level: 8 },
-                        { skill: "FastAPI", level: 6 },
+                        { skill: "NodeJs", level: 6 },
+                        { skill: "FastAPI", level: 8 },
                         { skill: "Celery", level: 7 },
-                        { skill: "Alembic", level: 6 },
+                        { skill: "Alembic", level: 7 },
                     ].map(({ skill, level }) => (
                         <div key={skill} className="flex justify-between items-center">
                         <li className="font-medium list-disc text-lg">{skill}</li>
@@ -219,7 +220,7 @@ export default function AboutMe() {
             </section>
 
             {/* Projects Section */}
-            <section id="projects" className="rounded-3xl bg-orange-100 shadow-md w-full px-5 py-3">
+            <section id="projects" className="rounded-3xl bg-orange-950 shadow-md w-full px-5 py-3">
             <h2 className="text-2xl orange-gradient font-bold mb-2">Projects</h2>
             <div className="space-y-3">
                 {PROJECTS.map((project) => (
@@ -261,14 +262,14 @@ export default function AboutMe() {
                             <p className="text-2xl font-medium text-black">
                                 Computer Science, BSc
                             </p>
-                            <img alt="nigerian-flag" src="images/nigerian-flag.png" className="bg-gray-400 h-6 w-10"/>
+                            
                         </div>
                         <div className="flex justify-between items-start">
                             <p className=" text-black">
                                 National Open University, Lagos
                             </p>
                             <p className=" text-black">
-                                February  2022 ---  Ongoing
+                                Feb 2022 -- Dec 2025
                             </p>
                         </div>
                     </div>
@@ -288,7 +289,7 @@ export default function AboutMe() {
                         </div>
                         <div className="flex justify-between items-start">
                             <p className="text-black">ALX Africa</p>
-                            <p className="text-black">March 2025 — November 2026</p>
+                            <p className="text-black">March 2025 — November 2025</p>
                         </div>
                     </div>
 

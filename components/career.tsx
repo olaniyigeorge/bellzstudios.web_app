@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Experience = {
     company: string;
     role: string;
@@ -5,81 +7,85 @@ type Experience = {
     responsibilities: string[];
     keyLearnings: string[];
     date: string;
+    link: string;
 };
 
 export const EXPERIENCES: Experience[] = [
-    {
-        company: "WispTalkAfrica",
-        role: "Software Developer",
-        techStack: ["Django", "REST API", "AWS (S3, RDS)", "Next.js", "Zustand", "Redux"],
-        responsibilities: [
-            "Designed and developed a REST API catering to all organizational product needs.",
-            "Utilized AWS S3 for object storage and RDS for a scalable PostgreSQL database.",
-            "Collaborated with the team to transition the system seamlessly from development to production.",
-            "Built a frontend app with Next.js and integrated global state management using Zustand and Redux."
-        ],
-        keyLearnings: [
-            "Advanced experience in REST API design, cloud integration, and building scalable web solutions."
-        ],
-        date: "July 2023 - October 2024"
-    },
-    {
-        company: "iScheduler",
-        role: "Backend Developer",
-        techStack: ["Django", "Celery", "Python", "PostgreSQL", "Docker"],
-        responsibilities: [
-            "Built an intelligent scheduling app powered by AI and LLMs to dynamically organize user tasks.",
-            "Designed workflows that prioritize tasks based on deadlines, user preferences, and duration.",
-            "Optimized performance using Celery for task processing and concurrency, ensuring scalability and responsiveness."
-        ],
-        keyLearnings: [
-            "Improved skills in concurrency management, workflow optimization, and AI integration with Django-based systems."
-        ],
-        date: "2024"
-    },
-    {
-        company: "iHR",
-        role: "Backend Developer",
-        techStack: ["FastAPI", "Alembic", "Python", "PostgreSQL", "OpenAI API"],
-        responsibilities: [
-            "Developed a FastAPI backend for an AI-driven HR platform with advanced language model integration.",
-            "Optimized API endpoints to improve performance and support scalable operations.",
-            "Managed database migrations with Alembic and implemented logging for debugging and monitoring."
-        ],
-        keyLearnings: [
-            "Picked up FastAPI and Alembic during the project and applied them effectively to deliver core features.",
-            "Gained foundational experience in FastAPI development, database migrations, and implementing real-time monitoring."
-        ],
-        date: "2024"
-    },
-    {
-        company: "LockedIn",
-        role: "Backend",
-        techStack: ["Next.js", "MongoDB", "TypeScript", "Postman"],
-        responsibilities: [
-            "Built backend features for a habit-tracking app, converting business logic into robust, testable code.",
-            "Designed a data pipeline to efficiently react to user activities on the web app."
-        ],
-        keyLearnings: [
-            "Strengthened skills in building reactive web applications and handling real-time user interactions."
-        ],
-        date: "2024"
-    },
-    {
-        company: "WispTalkAfrica",
-        role: "Software Developer",
-        techStack: ["Django", "REST API", "AWS (S3, RDS)", "Next.js", "Zustand", "Redux"],
-        responsibilities: [
-            "Designed and developed a REST API catering to all organizational product needs.",
-            "Utilized AWS S3 for object storage and RDS for a scalable PostgreSQL database.",
-            "Collaborated with the team to transition the system seamlessly from development to production.",
-            "Built a frontend app with Next.js and integrated global state management using Zustand and Redux."
-        ],
-        keyLearnings: [
-            "Advanced experience in REST API design, cloud integration, and building scalable web solutions."
-        ],
-        date: "July 2023 - October 2024"
-    }
+  {
+    company: "Winnov8",
+    role: "Fullstack Developer",
+    techStack: ["React", "TypeScript", "NodeJS", "Redux", "MongoDB", "Redis", "TailwindCSS"],
+    responsibilities: [
+      "Implementing key features across both frontend and backend, including AI recommendation systems, API integrations.",
+      "Collaborating closely with the team to ship production-ready code and improve system architecture."
+    ],
+    keyLearnings: [
+      "Improved skills in fullstack development, real-time systems, and clean architectural patterns."
+    ],
+    date: "2025",
+    link: "https://winnov8hq.com"
+  },
+  {
+    company: "WispTalkAfrica",
+    role: "Software Developer",
+    techStack: ["Django", "REST API", "AWS (S3, RDS)", "Next.js", "Zustand", "Redux"],
+    responsibilities: [
+      "Designed and developed a REST API catering to all organizational product needs.",
+      "Utilized AWS S3 for object storage and RDS for a scalable PostgreSQL database.",
+      "Collaborated with the team to transition the system seamlessly from development to production.",
+      "Built a frontend app with Next.js and integrated global state management using Zustand and Redux."
+    ],
+    keyLearnings: [
+      "Advanced experience in REST API design, cloud integration, and building scalable web solutions."
+    ],
+    date: "July 2023 - October 2024",
+    link: "https://wisptalkafrica.com"
+  },
+  {
+    company: "iScheduler",
+    role: "Backend Developer",
+    techStack: ["Django", "Celery", "Python", "PostgreSQL", "Docker"],
+    responsibilities: [
+      "Built an intelligent scheduling app powered by AI and LLMs to dynamically organize user tasks.",
+      "Designed workflows that prioritize tasks based on deadlines, user preferences, and duration.",
+      "Optimized performance using Celery for task processing and concurrency, ensuring scalability and responsiveness."
+    ],
+    keyLearnings: [
+      "Improved skills in concurrency management, workflow optimization, and AI integration with Django-based systems."
+    ],
+    date: "2024",
+    link: "/dev-stories/i-scheduler"
+  },
+  {
+    company: "iHR",
+    role: "Backend Developer",
+    techStack: ["FastAPI", "Alembic", "Python", "PostgreSQL", "OpenAI API"],
+    responsibilities: [
+      "Developed a FastAPI backend for an AI-driven HR platform with advanced language model integration.",
+      "Optimized API endpoints to improve performance and support scalable operations.",
+      "Managed database migrations with Alembic and implemented logging for debugging and monitoring."
+    ],
+    keyLearnings: [
+      "Picked up FastAPI and Alembic during the project and applied them effectively to deliver core features.",
+      "Gained foundational experience in FastAPI development, database migrations, and implementing real-time monitoring."
+    ],
+    date: "2024",
+    link: "/dev-stories/ihr"
+  },
+  {
+    company: "LockedIn",
+    role: "Backend",
+    techStack: ["Next.js", "MongoDB", "TypeScript", "Postman"],
+    responsibilities: [
+      "Built backend features for a habit-tracking app, converting business logic into robust, testable code.",
+      "Designed a data pipeline to efficiently react to user activities on the web app."
+    ],
+    keyLearnings: [
+      "Strengthened skills in building reactive web applications and handling real-time user interactions."
+    ],
+    date: "2024",
+    link: "https://lockedin-seven.vercel.app/"
+  }
 ];
 
 
@@ -91,7 +97,7 @@ export function ExperienceCard(experience: Experience ) {
                 {/* <div className="rounded-full bg-blue-500 h-4 w-4"></div> */}
             </div>
             <div className="flex justify-between items-start">
-                <p className="text-black">{experience.company}</p>
+                <Link href={experience.link} target="_blank" className="text-black">{experience.company}</Link>
                 <p className="text-black">{experience.date}</p>
             </div>
             <p className="text-sm text-gray-600 mt-3">

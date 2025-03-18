@@ -18,7 +18,7 @@ export default function NotesSection() {
                     thought process while brainstorming, and leave notes on what I plan to build
                      next and how I intend to approach it.
                     </span>
-                    <Link href="/notes" className="flex items-center bg-white bg-opacity-10 text-white mt-8 gap-2 hover:scale-[110%] hover:animate-swivvleH transition-all duration-800 ease-in-out shadow shadow-orange-900 p-3 md:p-4  rounded-full">
+                    <Link href="/notes" className="flex items-center bg-white bg-opacity-10 text-white mt-8 gap-2 hover:scale-[110%] hover:animate-swivvleH transition-all duration-800 ease-in-out shadow p-3 md:p-4  rounded-full">
                         <Image 
                             src="/assets/images/b91e1131ca20f6369aa68d21cb3a8960.gif" 
                             className="object-contain rounded-full w-10 h-10" 

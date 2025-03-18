@@ -118,7 +118,7 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
       
 
       <p 
-        className="my-4 font-kanit text-lg line-clamp-4 md:text-xl text-white font-light"
+        className="my-4 font-kanit text-lg line-clamp-4 md:text-xl text-orange-200 font-light"
         >
           {post.body}
       </p>
