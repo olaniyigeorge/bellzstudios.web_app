@@ -15,11 +15,14 @@ export default function DevStoriesSection() {
         >
         <section className="w-full flex flex-col md:flex-row items-center gap-6">
             <section className="w-full flex flex-col  gap-4 font-irishgrover">
-                <span className="text-xl md:text-2xl text-white font-kanit text-center md:text-start font-normal w-full my-3 ">
-                Dev Stories is a series where I share my thought process as I develop 
-                products to tackle well-documented problems. I invite feedback and aim 
-                to validate both my approach and yours by openly discussing and blogging 
-                about the journey.
+                <span className="text-2xl md:text-2xl text-white font-kanit text-center md:text-start font-light w-full my-3 ">
+                    Dev Stories is a series where I share my thought process as 
+                    I develop products to tackle well-documented problems. I 
+                    invite feedback and aim to validate both my approach and 
+                    yours by openly discussing and  blogging about the journey. 
+                    Join me as we build meaningful solutions together, ensuring 
+                    every step is informed by real-world insights and collective 
+                    innovation.
                 </span>
                 <section className="w-full flex gap-2 text-white justify-center md:justify-start md:gap-8">
                 <Link href="/dev-stories" className="hover:scale-[102%] ease-in-out border-[#F9890A] shadow shadow-[#F9890A]  transition-all duration-800 p-3 md:p-4 text-white border rounded-full">

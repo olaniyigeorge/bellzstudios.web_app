@@ -32,7 +32,7 @@ export const NewHeroSection= () => {
               Building and contributing to open-source products we believe should exist.
           </span> 
   
-          <div className="w-full flex my-6 gap-3 justify-between items-center" >
+          <div className="w-full flex my-6 gap-3 justify-between items-center flex-col md:flex-row" >
             {links.map((link) => (
               <ScrollDownAnimation 
                   key={link.id} 
