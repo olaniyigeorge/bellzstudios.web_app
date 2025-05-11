@@ -35,7 +35,7 @@ export const DEV_STORIES: iDevStory[] = [
   },
   {
     id: "ihr",
-    title: "truefit ai",
+    title: "Truefit AI",
     tag: "interviews",
     description: `Truefit is an AI powered interview intelligence platform 
     helping companies and jobseekers discover their perfect fit. By powering
@@ -54,7 +54,7 @@ export const DEV_STORIES: iDevStory[] = [
     status: "dev",
     validatingTweets: [],
     notes: ["6","7", "4"],
-    image: "/assets/images/ihr.png"
+    image: "/assets/images/truefit.png"  //"/assets/images/ihr.png"
   },
   {
     id: "marketplace",
@@ -93,7 +93,10 @@ export const DEV_STORIES: iDevStory[] = [
     id: "bellz-mini",
     title: "Bellz Mini",
     tag: "super-apps",
-    description: "Bellz Mini focuses on creating mini apps within the Telegram ecosystem, exploring the benefits and drawbacks of super apps while evaluating the best platforms for building these mini applications.",
+    description: `Bellz Mini is my first attempt at building a mini app on 
+    the Telegram ecosystem, exploring the benefits and drawbacks of Super 
+    Apps while evaluating the best platforms for building these mini 
+    applications.`,
     tech_stack: [
       { icon: "/assets/images/tech_stack/typescript.png", name: "TypeScript" },
       { icon: "/assets/images/tech_stack/telegram.png", name: "Telegram" }
