@@ -35,9 +35,13 @@ export const DEV_STORIES: iDevStory[] = [
   },
   {
     id: "ihr",
-    title: "iHR",
+    title: "truefit ai",
     tag: "interviews",
-    description: "Intelligent HR Manager is an AI-powered platform designed to revolutionize interview preparation and feedback by simulating realistic interview experiences and providing actionable insights.",
+    description: `Truefit is an AI powered interview intelligence platform 
+    helping companies and jobseekers discover their perfect fit. By powering
+    live, AI-enhanced interview experiences and delivering tailored, data driven 
+    feedback. Truefit revolutionizes how talent is matched - making hiring faster, 
+    smarter, more cost-effective and driven by data, not bias`,
     tech_stack: [
       { icon: "/assets/images/tech_stack/python.png", name: "Python" },
       { icon: "/assets/images/tech_stack/fastapi.png", name: "FastAPI" },
@@ -46,7 +50,7 @@ export const DEV_STORIES: iDevStory[] = [
       { icon: "/assets/images/tech_stack/websockets.png", name: "WebSockets" }
     ],
     open_source_url: "https://github.com/olaniyigeorge/iHR",
-    product_url: "https://truefitai.vercel.app/", // "https://ihr-mfh9.onrender.com/",
+    product_url: "https://truefitai.vercel.app/",  // "https://ihr-mfh9.onrender.com/",
     status: "dev",
     validatingTweets: [],
     notes: ["6","7", "4"],
