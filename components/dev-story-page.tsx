@@ -71,11 +71,11 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
     }
 
     return (
-        <div className="font-irishgrover flex flex-col gap-2 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">
-            <section className="flex flex-col gap-3 bg-orange-500 z-0 bg-white/5 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg p-5 rounded-lg bg-opacity-10">
+        <div className="font-poppins flex flex-col gap-2 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">
+            <section className="flex flex-col gap-3 bg-black z-[-1] bg-white/9 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg p-5 rounded-lg bg-opacity-10">
                 <span className="flex justify-between items-start">
                     <span className="items-start">
-                        <h1 className="text-3xl md:text-5xl font-bold">{story.title}</h1>
+                        <h1 className="text-3xl md:text-5xl font-irishgrover font-bold">{story.title}</h1>
                         <p className="text-[8px] w-fit rounded-full p-1 border border-orange-900">{story.tag}</p>
                     </span>
                     <Link
@@ -89,7 +89,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                 </span>
 
                 <section className="">
-                    <p className="text-md md:text-xl lg:text-3xl text-pretty">{story.description}</p>
+                    <p className="text-md md:text-xl lg:text-2xl font-light text-pretty">{story.description}</p>
 
                     <section className="w-full flex flex-wrap gap-2 mt-4">
                         {story.tech_stack.map((comp) => (
@@ -152,7 +152,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                 </span>
             </form>
 
-            <section className="w-full flex flex-col mt-4 items-center bg-black bg-white/10 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.1)] backdrop-blur-lg rounded-xl p-2">
+            <section className="w-full flex flex-col mt-4 z-[-1] items-center bg-black bg-white/8 shadow-[inset_10px_-80px_94px_0_rgb(197,196,199,0.1)] backdrop-blur-lg rounded-xl p-2">
                 <h1 className="text-3xl text-center font-medium py-2">
                     Join the conversation on
                     <span className="orange-gradient">{" "}{story.title}</span>

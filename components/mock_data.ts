@@ -31,7 +31,7 @@ export const DEV_STORIES: iDevStory[] = [
       { tweetId: "1845054193783984432" }
     ],
     notes: ["5", "2", "1"],
-    image: "/assets/images/lockedin.png"
+    image: "/assets/images/lockedIn.png"
   },
   {
     id: "ihr",

@@ -34,22 +34,19 @@ export const metadata: Metadata = {
 export default function DevStoriesHome() {
     const STORIES = DEV_STORIES
     return (
-        <div className="w-full h-full flex flex-col justify-center ">
-            <span className="w-full flex items-center justify-between px-3 md:px-16 lg:px-24 mx-auto">
+        <div className="w-full h-full flex flex-col justify-center px-3 md:px-16 lg:px-24 mx-auto">
+            <span className="w-full flex items-center justify-between ">
               <h1 className="text-5xl md:text-[100px] font-irishgrover font-extrabold orange_gradient">Dev Stories</h1>
               <Link href="#support-us" className="w-auto flex gap-2 items-center">
                 <CurrencyDollarIcon className="w-5 h-5"/>
-                <p className="">Support Us</p>
+                <p className="font-poppins">Support Us</p>
               </Link>
             </span>
-            <p className="text-center font-irishgrover text-xl">Stories behind all the solutions and systems we are building</p>
+            <p className=" font-poppins text-lg">Stories behind all the solutions and systems we are building</p>
       
-            <h3 className="text-center mt-4">
-              The color on each story shows the status of the product:             
-            </h3>
-            <span className="flex flex-col md:flex-row justify-center items-center gap-2">
+            <span className="flex flex-col mt-12 md:flex-row text-transparent orange_gradient font-poppins justify-center text-sm md:text-base items-center gap-2">
               
-              <span className="flex items-center gap-3">
+              <span className="flex items-center   gap-3">
                 <span className="w-3 h-3 rounded-full bg-blue-500 ml-2"></span>
                 <>In Development</>
               </span>

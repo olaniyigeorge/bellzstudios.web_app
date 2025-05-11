@@ -46,12 +46,12 @@ export default function AboutUsSection() {
             
       </section>
       
-      <section className="w-full md:justify-center  md:items-center hidden px-2 py-5  md:flex">
-        <div className="w-full flex flex-col h-full relative items-center ">
+      <section className="w-full md:justify-center z-10 md:items-center hidden px-2 py-5  md:flex">
+        <div className="w-full flex flex-col  h-full relative items-center ">
            
                   <Image
                       src="/assets/images/ab_vector1.png"
-                      className="w-[380px] h-[220px] hover:animate-wiggle absolute bottom-0 right-2"
+                      className="w-[380px] h-[220px]  hover:animate-wiggle absolute bottom-0 right-2"
                       height={3000}
                       width={3000}
                       priority={true}

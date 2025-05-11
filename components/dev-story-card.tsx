@@ -24,7 +24,7 @@ export default function DevStoryCard(data: iDevStory) {
 
 
     return ( 
-    <div className="w-full p-3 gap-2 flex font-kanit flex-col items-start md:p-6 bg-[#1d1702]  rounded-lg shadow ">
+    <div className="w-full p-3 gap-2 flex font-poppins flex-col items-start md:p-6 bg-[#0e0b01]  rounded-lg shadow ">
 
             <span className="w-full flex justify-between items-center">
             <h2 className="font-bold text-2xl">
@@ -43,12 +43,12 @@ export default function DevStoryCard(data: iDevStory) {
             </Link>
             </span>    
             <span 
-                className="text-[7px] w-fit border font-medium border-orange-600 p-1 rounded-full"> 
+                className="text-[7px] w-fit border font-medium border-orange-900 p-1 rounded-full"> 
                 {data.tag}
             </span>
 
-            <p className="">
-                {data.description.slice(0, 150)} {" "}....
+            <p className="text-orange-100 font-normal">
+                {data.description.slice(0, 155)} {" "}....
             </p>
 
             <img src={data.image} className="rounded-xl min-w[30px] min-h-[30px] w-full h-full" />

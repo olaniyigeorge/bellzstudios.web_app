@@ -108,7 +108,7 @@ body {
 }
 
 .tbbstd_orange-gradient-bg {
-  @apply bg-gradient-to-t from-[#2F1900] to-[#3F3101];
+  @apply bg-gradient-to-t from-[#0a0800] to-[#0f0a03];
 }
 
 .orange-gradient {

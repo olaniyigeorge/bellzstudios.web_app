@@ -79,12 +79,12 @@ const NoteEntryCard = (props: NoteEntryCardProps) => {
           />
 
           <div className="flex flex-col">
-            <h3 className="text-lg md:text-xl font-kanit font-semibold text-white">
+            <h3 className="text-lg md:text-xl font-semibold text-white">
               <Link href={`/notes/${post._id}`} className="cursor-pointer">
                 {post.title}
               </Link>
             </h3>
-            <p className="font-satochi text-xs text-gray-500">
+            <p className="text-xs text-gray-500">
               Posted {timeAgo(post.written_at)}
             </p>
           </div>

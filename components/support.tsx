@@ -35,7 +35,7 @@ import { toast } from "react-toastify";
         };
 
         return (
-            <div className="w-full flex justify-center my-4">
+            <div className="w-full flex justify-center font-poppins my-4">
                 <div id="support-us" className="w-full md:w-[60%] flex flex-col items-center text-center p-4 bg-white/5 shadow-[inset_10px_-80px_94px_0_rgb(199,199,199,0.01)] backdrop-blur-lg rounded-lg bg-opacity-10">
                     <h1 className="text-3xl font-bold mb-2">How Can You Support Us?</h1>
 
