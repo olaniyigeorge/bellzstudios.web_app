@@ -54,7 +54,7 @@ export const DEV_STORIES: iDevStory[] = [
     status: "dev",
     validatingTweets: [],
     notes: ["6","7", "4"],
-    image: "/assets/images/truefit.png"  //"/assets/images/ihr.png"
+    image: "/assets/images/truefitai.png"  //"/assets/images/ihr.png"
   },
   {
     id: "marketplace",
