@@ -138,7 +138,7 @@ import { toast } from "react-toastify";
                             onClick={() => setCurrentView("support")}
                         >
                             <CurrencyDollarIcon className="w-4 h-4 mr-2" />
-                            Support Us
+                            Donate
                         </Button>
                     </div>
 
