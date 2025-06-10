@@ -35,10 +35,10 @@ export default function DevStoryCard(data: iDevStory) {
                 target="_blank" 
                 className={`w-3 h-3 rounded-full animate-pulse 
                     ${
-                        data.status === 'live' ? 'bg-green-500' :
+                        data.status === 'building-in-public' ? 'bg-green-500' :
                         data.status === 'dev' ? 'bg-blue-500' :
                         data.status === 'paused' ? 'bg-red-600' :
-                        data.status === 'building-in-public' ? 'bg-yellow-500' : 
+                        data.status === 'live' ? 'bg-yellow-500' : 
                         'bg-gray-700'} `}>
             </Link>
             </span>    

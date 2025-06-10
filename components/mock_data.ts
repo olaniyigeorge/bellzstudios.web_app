@@ -10,6 +10,34 @@ export const DISCOVERY_LOCATION: string[] = [
 ]
 export const DEV_STORIES: iDevStory[] = [
   {
+    id: "coopwise",
+    title: "Coopwise",
+    tag: "african-cooperative",
+    description: "CoopWise is an AI-powered savings platform that lets users create or join trusted savings groups, track contributions, and receive payouts all with transparency, automation, and smart financial tips.",
+    tech_stack: [
+      { icon: "/assets/images/tech_stack/typescript.png", name: "TypeScript" },
+      { icon: "/assets/images/tech_stack/fastapi.png", name: "FastAPI" },
+      { icon: "/assets/images/tech_stack/next_js.png", name: "Next Js" },
+      { icon: "/assets/images/tech_stack/postgres.png", name: "Postgres" },
+      { icon: "/assets/images/tech_stack/cloudinary.png", name: "Cloudinary" },
+      { icon: "/assets/images/tech_stack/zustand.png", name: "Zustand" },
+      { icon: "/assets/images/tech_stack/vercel.svg", name: "Vercel" },
+      { icon: "/assets/images/tech_stack/render.png", name: "Render" }
+    ],
+    open_source_url: "https://github.com/olaniyigeorge/coopwise",
+    product_url: "https://coopwise-seven.vercel.app/", // "https://lockedin-app.vercel.app/", // "https://lockedin-seven.vercel.app/",
+    status: "building-in-public",
+    validatingTweets: [
+      { tweetId: "1664596789276581888" },
+      { tweetId: "1769479657210982424" },
+      { tweetId: "1809581690710343810" },
+      { tweetId: "1770364966110970002" },
+      { tweetId: "1745025685029077205" }
+    ],
+    notes: ["10", "11", "12", "13", "14", "15", "16", "17"],
+    image: "/assets/images/coopwise.png"
+  },
+  {
     id: "lockedin",
     title: "LockedIn",
     tag: "habit-tracking",
@@ -278,21 +306,126 @@ export const noteEntries: iNoteEntry[] = [
     image: "/assets/images/ai-tutor.png",
     written_at: new Date("2025-02-11T12:28:17Z")
   },
-  // {
-  //   _id: "10",
-  //   author: {
-  //     _id: "user",
-  //     username: "olaniyi_george",
-  //     email: "olaniyigeorge77@gmail.com",
-  //     image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
-  //   },
-  //   title: "",
-  //   body: "",
-  //   tags: ["bellzstudio"],
-  //   privacy_level: "public",
-  //   image: "",
-  //   written_at: new Date("2025-02-11T12:28:17Z")
-  // },
+  {
+    _id: "10",
+    author: {
+      _id: "user1",
+      username: "olaniyi_george",
+      email: "olaniyigeorge@example.com",
+      image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+    },
+    title: "Building a Modular API the Right Way",
+    body: "Spent the day making sure the API is super modular. FastAPI is great for this, letting me keep things clean and scalable. This project is my first shot at building something real, so I want the foundation solid enough to grow without breaking.",
+    tags: ["FastAPI", "API", "modularity", "scalability", "backend"],
+    privacy_level: "public",
+    description: "Initial work on modular API architecture.",
+    written_at: new Date("2024-03-01T10:00:00Z"),
+  },
+  {
+    _id: "11",
+    author: {
+      _id: "user1",
+      username: "olaniyi_george",
+      email: "olaniyigeorge@example.com",
+      image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+    },
+    title: "Paystack & Chapa - Payment Gateways Got Me",
+    body: "Integrated Paystack and Chapa today. The docs were a bit all over the place but got payments flowing smoothly. Nothing like finally seeing money move in your own app. This is the real deal, no more toy projects.",
+    tags: ["payments", "Paystack", "Chapa", "integration", "api"],
+    privacy_level: "public",
+    description: "Payment gateway integration progress.",
+    written_at: new Date("2024-03-05T14:15:00Z"),
+  },
+  {
+    _id: "12",
+    author: {
+      _id: "user1",
+      username: "olaniyi_george",
+      email: "olaniyigeorge@example.com",
+      image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+    },
+    title: "WebSockets for Real-Time Magic",
+    body: "Got WebSockets working for notifications. Feels amazing to see real-time updates pop in instantly. This kind of polish really pushes the user experience over the edge — one step closer to a product that feels alive.",
+    tags: ["websockets", "notifications", "realtime", "backend"],
+    privacy_level: "public",
+    description: "Real-time notification system implementation.",
+    written_at: new Date("2024-03-10T16:45:00Z"),
+  },
+  {
+    _id: "13",
+    author: {
+      _id: "user1",
+      username: "olaniyi_george",
+      email: "olaniyigeorge@example.com",
+      image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+    },
+    title: "Security First: JWT & RBAC",
+    body: "Spent the day locking down auth with JWT and role-based access control. Making sure users and admins have just the right permissions. Feels good knowing my backend isn’t just functional, but secure too.",
+    tags: ["security", "jwt", "auth", "rbac", "backend"],
+    privacy_level: "public",
+    description: "Implemented secure auth and permissions.",
+    written_at: new Date("2024-03-15T09:20:00Z"),
+  },
+  {
+    _id: "14",
+    author: {
+      _id: "user1",
+      username: "olaniyi_george",
+      email: "olaniyigeorge@example.com",
+      image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+    },
+    title: "Database Design Grind",
+    body: "Designing PostgreSQL schemas is surprisingly fun. Had to get user groups, transactions, and payouts to all play nice together with strong data integrity. Queries are lightning fast after some indexing tweaks!",
+    tags: ["postgresql", "database", "schema", "optimization"],
+    privacy_level: "public",
+    description: "Database schema design and query optimization.",
+    written_at: new Date("2024-03-20T11:30:00Z"),
+  },
+  {
+    _id: "15",
+    author: {
+      _id: "user1",
+      username: "olaniyi_george",
+      email: "olaniyigeorge@example.com",
+      image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+    },
+    title: "Cloudinary for Media Handling",
+    body: "Set up Cloudinary for storing and delivering images. The user experience improves massively when images load fast and are handled reliably — plus, offloading media makes the backend lighter.",
+    tags: ["cloudinary", "media", "storage", "performance"],
+    privacy_level: "public",
+    description: "Media storage and delivery integration.",
+    written_at: new Date("2024-03-25T13:00:00Z"),
+  },
+  {
+    _id: "16",
+    author: {
+      _id: "user1",
+      username: "olaniyi_george",
+      email: "olaniyigeorge@example.com",
+      image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+    },
+    title: "Deployment, CI/CD, and the Wild Ride",
+    body: "Configuring CI/CD on Render and Vercel was tricky, but now deployments are smooth. Seeing my work go live with every push is addicting — next stop: monitoring and error tracking!",
+    tags: ["deployment", "ci/cd", "render", "vercel", "devops"],
+    privacy_level: "public",
+    description: "CI/CD setup and deployment success.",
+    written_at: new Date("2024-03-30T15:45:00Z"),
+  },
+  {
+    _id: "17",
+    author: {
+      _id: "user1",
+      username: "olaniyi_george",
+      email: "olaniyigeorge@example.com",
+      image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
+    },
+    title: "Syncing Frontend & Backend Like a Pro",
+    body: "Working closely with frontend using Next.js and Zustand keeps the whole app tight. API contracts need to be rock solid, and every sprint feels like leveling up as a full-stack dev.",
+    tags: ["frontend", "nextjs", "zustand", "fullstack", "collaboration"],
+    privacy_level: "public",
+    description: "Frontend-backend collaboration highlights.",
+    written_at: new Date("2024-04-05T12:00:00Z"),
+  }
 ];
 
 

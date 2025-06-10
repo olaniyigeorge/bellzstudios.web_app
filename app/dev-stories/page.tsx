@@ -44,27 +44,23 @@ export default function DevStoriesHome() {
             </span>
             <p className=" font-poppins text-lg">Stories behind all the solutions and systems we are building</p>
       
-            <span className="flex flex-col mt-12 md:flex-row text-transparent orange_gradient font-poppins justify-center text-sm md:text-base items-center gap-2">
+            <span className="flex flex-col mt-12 md:flex-row orange_gradient font-poppins justify-center text-sm md:text-base items-center gap-2">
               
               <span className="flex items-center   gap-3">
-                <span className="w-3 h-3 rounded-full bg-blue-500 ml-2"></span>
+                <span className="w-3 h-3 opacity-50 rounded-full bg-blue-500 ml-2"></span>
                 <>In Development</>
               </span>
-              <span className="flex items-center gap-3">
-                <span className="w-3 h-3 rounded-full bg-green-500 ml-2"></span>
-                <>Live</>
-              </span>
-              <span className="flex items-center gap-3">
-                <span className="w-3 h-3 rounded-full bg-yellow-500 ml-2"></span>
+               <span className="flex items-center gap-3">
+                <span className="w-3 h-3 opacity-50 rounded-full bg-green-500   ml-2"></span>
                 <>Building In Public</>
               </span>
               <span className="flex items-center gap-3">
-                <span className="w-3 h-3 rounded-full bg-red-500 ml-2"></span>
-                <>Dropped</>
+                <span className="w-3 h-3 opacity-50 bg-yellow-500 rounded-full ml-2"></span>
+                <>Live</>
               </span>
               <span className="flex items-center gap-3">
-                <span className="w-3 h-3 rounded-full bg-gray-500 ml-2"></span>
-                <>Other</>
+                <span className="w-3 h-3 rounded-full opacity-40 bg-red-500 ml-2"></span>
+                <>Others</>
               </span>
             </span>
 
