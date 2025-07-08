@@ -1,6 +1,6 @@
 'use client';
 
-import { useUser } from "@/services/stores.user";
+// import { useUser } from "@/services/stores.user";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -29,7 +29,7 @@ const NavLink = ({ href, children, className = "", isActive = false }: NavLinkPr
 
 export default function Header() {
   const pathname = usePathname();
-  const user = useUser(state => state.user);
+  // const user = useUser(state => state.user);
 
   // Only show header on specific routes
   const showHeader = pathname === "/" || 
