@@ -72,8 +72,8 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
 
     return (
         <div className="font-poppins flex flex-col gap-2 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">
-            <section className="flex flex-colnpm r gap-3 bg- p-5 rounded-lg bg-opacity-10">
-                <span className="flex justify-between items-start">
+            <section className="flex flex-col r gap-3 bg- p-5 rounded-lg bg-opacity-10">
+                <span className="flex  justify-between items-start">
                     <span className="items-start">
                         <h1 className="text-3xl md:text-5xl font-irishgrover font-bold">{story.title}</h1>
                         <p className="text-[8px] w-fit rounded-full p-1 border border-orange-900">{story.tag}</p>
