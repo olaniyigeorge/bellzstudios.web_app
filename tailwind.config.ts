@@ -75,6 +75,10 @@ const config: Config = {
             "0%, 100%": { transform: "rotate(-5deg)" },
             "50%": { transform: "rotate(5deg)" },
         },
+        wigggle: {
+          "0%, 100%": { transform: "rotate(-1deg)" },
+          "50%": { transform: "rotate(1deg)" },
+        },
         swivvleV: {
           "0%, 100%": { transform: "translateY(-10%)" },
           "50%": { transform: "translateY(10%)" },
@@ -114,6 +118,7 @@ const config: Config = {
           "accordion-up": "accordion-up 0.2s ease-out",
           fadeIn: "fadeIn 1.5s ease-in-out",
           wiggle: "wiggle 1s ease-in infinite",
+          wigggle: "wigggle 1s ease-in infinite",
           swivvleV: "swivvleV 1.5s ease-in-out infinite",
           swivvle: "swivvle 1.5s ease-in-out infinite",
           slideRtL: "slideRtL 1s ease-in-out",

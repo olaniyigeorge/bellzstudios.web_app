@@ -1,65 +1,103 @@
 'use client';
 
 import { useUser } from "@/services/stores.user";
-import Image from "next/image"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { HomeIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
+interface NavLinkProps {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+  isActive?: boolean;
+}
 
+const NavLink = ({ href, children, className = "", isActive = false }: NavLinkProps) => {
+  const baseClasses = "text-sm px-6 py-2 rounded-full font-medium transition-all duration-500";
+  const activeClasses = "text-orange-400";
+  const inactiveClasses = "text-white hover:animate-wigggle hover:text-orange-400";
+  
+  return (
+    <Link 
+      href={href}
+      className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses} ${className}`}
+    >
+      {children}
+    </Link>
+  );
+};
 
 export default function Header() {
-    const pathname = usePathname()
-    const user = useUser(state => state.user)
+  const pathname = usePathname();
+  const user = useUser(state => state.user);
 
+  // Only show header on specific routes
+  const showHeader = pathname === "/" || 
+                    pathname.startsWith("/notes") || 
+                    pathname.startsWith("/dev-stories");
 
-    console.log("User: ", user)
+  if (!showHeader) return null;
 
-    if (pathname == "/" || pathname.startsWith("/notes") || pathname.startsWith("/dev-stories")) return (
-        <header className="font-irishgrover px-6 py-2 w-full border-none bg-black max-w-[1440px] shadow sticky top-0 right-0 z-100 ">
-            <nav className="flex justify-between items-center px-3 md:px-5 container mx-auto">
-                <Link 
-                    href="/"
-                    className="font-extrabold  flex gap-2 items-center text-purple-600 text-3xl">
-                    <Image
-                        src="/assets/images/bellzstudio.png"
-                        className="object-contain rounded-full shadow shadow-orange-900 p-1"
-                        height={40}
-                        width={40}
-                        priority={true}
-                        alt="product-link"
-                    /> 
-                    <h1 className="text-sm hidden tracking-tighter font-irishgrover font-extrabold md:flex text-white ">Bellz Studio</h1>
-                </Link>
-                <span className="font-medium flex justify-end items-center gap-2">
-                    {
-                        pathname.includes("/dev-stories") && 
-                            <h1 className="font-medium">
-                                <Link href="/dev-stories">...dev stories</Link>
-                            </h1>
-                    
-                    }
-                    {
-                        pathname.includes("/notes") && 
-                            <span className="flex items-center gap-2  "> 
-                                {user&&
-                                    <Link className="orange_gradient" href="/"> Write </Link>
-                                }
-                                <h1 className="font-medium">
-                                    <Link href="/#notes">...notes</Link>
-                                </h1>
-                            </span>
-                    
-                    }
-                    <a
-                    href="mailto:olaniyigeorge77@gmail.com"
-                    className="orange-gradient-bg font-kanit text-sm text-white px-6 py-2 rounded-full  font-medium transition-all duration-300"
-                    >
-                    Hire Me
-                    </a>
-                </span>
-            </nav>
-        </header>  
-    );
+  // Helper function to check if a path is active
+  const isActiveRoute = (route: string): boolean => {
+    if (route === "/") return pathname === "/";
+    return pathname.startsWith(route);
+  };
 
-    return null;
+  return (
+    <header className="font-poppins px-6 py-2 w-full border-none bg-black max-w-[1440px] shadow sticky top-0 right-0 z-[100]">
+      <nav className="w-full gap-4 py-3 md:gap-10 lg:gap-14 flex justify-center items-center px-3 md:px-5 mx-auto">
+        {/* About Me Link */}
+        <NavLink 
+          href="/about-me" 
+          isActive={isActiveRoute("/about-me")}
+        >
+          About Me
+        </NavLink>
+
+        {/* Contact Link */}
+        <NavLink 
+          href="/contact" 
+          isActive={isActiveRoute("/contact")}
+        >
+          Contact
+        </NavLink>
+
+        {/* Home Icon and Hire Me Button */}
+        <div className="font-medium flex justify-end items-center gap-2">
+          <Link 
+            href="/"
+           
+            aria-label="Home"
+          >
+            <HomeIcon className={`w-4 h-4 ${isActiveRoute("/") ? "text-orange-400" : "text-orange-400"}`} />
+          </Link>
+          
+          <a
+            href="mailto:olaniyigeorge77@gmail.com"
+            className="orange-gradient-bg font-kanit text-sm text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:shadow-lg"
+            aria-label="Hire me via email"
+          >
+            Hire Me
+          </a>
+        </div>
+
+        {/* Dev Stories Link */}
+        <NavLink 
+          href="/dev-stories" 
+          isActive={isActiveRoute("/dev-stories")}
+        >
+          Dev Stories
+        </NavLink>
+
+        {/* Notes Link */}
+        <NavLink 
+          href="/notes" 
+          isActive={isActiveRoute("/notes")}
+        >
+          Notes
+        </NavLink>
+      </nav>
+    </header>
+  );
 }

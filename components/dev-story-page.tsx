@@ -72,7 +72,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
 
     return (
         <div className="font-poppins flex flex-col gap-2 md:gap-4 container px-2 md:px-8 lg:px-16 mx-auto">
-            <section className="flex flex-col  gap-3 bg- p-5 rounded-lg bg-opacity-10">
+            <section className="flex flex-colnpm r gap-3 bg- p-5 rounded-lg bg-opacity-10">
                 <span className="flex justify-between items-start">
                     <span className="items-start">
                         <h1 className="text-3xl md:text-5xl font-irishgrover font-bold">{story.title}</h1>
@@ -81,7 +81,7 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
                     <Link
                         href={story.product_url}
                         target="_blank"
-                        className="font-bold items-center  flex gap-2 p-2 transition-all duration-500 ease-in-out text-[12px] orange-gradient border light-btn"
+                        className="font-bold items-center  flex gap-2 p-2 transition-all duration-500 ease-in-out text-[12px] orange-gradient border light-"
                     >
                         Try {story.title}
                         <ArrowLongRightIcon className="w-6 h-6 text-orange-500" />

@@ -14,18 +14,21 @@ export default function AboutUsSection() {
     >
       <section className="w-full flex flex-col items-center md:items-start gap-3">
         <div className="flex flex-col items-center md:items-start  gap-3">
-          <h1 id="hero-title" className="orange_gradient font-extrabold text-3xl  tracking-tighter"> ABOUT US </h1>
-            <p className="text-xl md:text-2xl font-kanit text-white text-center md:text-right">
-              BellzStudio was born from an appreciation for what true collaboration can achieve and a desire to make a real impact.
-              At its core, it&apos;s about teaming up to turn ideas into impactful software — whether refining existing solutions or building something new.
+        <h1 id="hero-title" className="orange_gradient font-extrabold text-3xl tracking-tighter">
+          ABOUT US
+        </h1>
+        <p className="text-xl md:text-[24px] font-poppins text-white text-center md:text-right">
+          BellzStudio was founded on the belief that meaningful collaboration and efficient engineering can drive real-world change. 
+          We specialize in building systems that empower communities and support data-intensive applications, solutions shaped through iteration, feedback, and real stakeholder needs.
+          
+          <br />
+          Whether it&apos;s architecting scalable backends, refining complex workflows, or bringing bold ideas to life, we thrive at the intersection of problem-solving and precision. 
+          Our work is driven by a deep curiosity, a commitment to clarity, and a mindset rooted in growth and real impact.
+          
+          <br />
+          Got an idea or a technical challenge? Let&apos;s build something powerful together.
+        </p>
 
-              <br />
-              As a developer passionate about solving real problems, I&apos;m open to collaborating at any stage — brainstorming, system design, development, or testing.
-              I also love sharing my journey, documenting my learning process to grow and create better products.
-
-              <br />
-              Got an idea or a challenge? Let&apos;s bring it to life together!
-          </p>
 
         </div>
 

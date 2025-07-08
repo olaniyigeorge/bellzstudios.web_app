@@ -314,12 +314,12 @@ export const noteEntries: iNoteEntry[] = [
       email: "olaniyigeorge@example.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    title: "Building a Modular API the Right Way",
-    body: "Spent the day making sure the API is super modular. FastAPI is great for this, letting me keep things clean and scalable. This project is my first shot at building something real, so I want the foundation solid enough to grow without breaking.",
-    tags: ["FastAPI", "API", "modularity", "scalability", "backend"],
+    title: "CoopWise Architecture - Laying the Foundation",
+    body: "Started sketching out the whole architecture of CoopWise today. PostgreSQL, Redis, Celery — the full backend ops. I’m making sure each layer is swappable, like payment processors or notification providers. This thing’s going to be a beast. If I do this right, scaling later won’t kill me.",
+    tags: ["architecture", "backend", "postgres", "redis", "celery"],
     privacy_level: "public",
-    description: "Initial work on modular API architecture.",
-    written_at: new Date("2024-03-01T10:00:00Z"),
+    description: "Initial architectural decisions for CoopWise backend.",
+    written_at: new Date("2024-04-01T10:00:00Z"),
   },
   {
     _id: "11",
@@ -329,12 +329,12 @@ export const noteEntries: iNoteEntry[] = [
       email: "olaniyigeorge@example.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    title: "Paystack & Chapa - Payment Gateways Got Me",
-    body: "Integrated Paystack and Chapa today. The docs were a bit all over the place but got payments flowing smoothly. Nothing like finally seeing money move in your own app. This is the real deal, no more toy projects.",
-    tags: ["payments", "Paystack", "Chapa", "integration", "api"],
+    title: "Notification System - Redis Meets Celery",
+    body: "Finally built out the notification flow. Redis queues with Celery workers pushing out emails. Multi-channel support is coming next. This is the stuff no one sees but makes your product feel alive. Delays feel like bugs. Real-time or nothing.",
+    tags: ["notifications", "celery", "redis", "async", "fastapi"],
     privacy_level: "public",
-    description: "Payment gateway integration progress.",
-    written_at: new Date("2024-03-05T14:15:00Z"),
+    description: "Async notification architecture with Celery + Redis.",
+    written_at: new Date("2024-04-05T14:30:00Z"),
   },
   {
     _id: "12",
@@ -344,12 +344,12 @@ export const noteEntries: iNoteEntry[] = [
       email: "olaniyigeorge@example.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    title: "WebSockets for Real-Time Magic",
-    body: "Got WebSockets working for notifications. Feels amazing to see real-time updates pop in instantly. This kind of polish really pushes the user experience over the edge — one step closer to a product that feels alive.",
-    tags: ["websockets", "notifications", "realtime", "backend"],
+    title: "Redis in Prod Fights Back",
+    body: "Redis gave me drama today in production. Localhost Redis in dev, but Render Redis in prod — SSL, decoding, environment handling — a whole movie. Got it stable now. Lesson: don't assume prod will behave like dev.",
+    tags: ["redis", "production", "environment", "bugfixing"],
     privacy_level: "public",
-    description: "Real-time notification system implementation.",
-    written_at: new Date("2024-03-10T16:45:00Z"),
+    description: "Redis environment configuration drama.",
+    written_at: new Date("2024-04-10T18:10:00Z"),
   },
   {
     _id: "13",
@@ -359,12 +359,12 @@ export const noteEntries: iNoteEntry[] = [
       email: "olaniyigeorge@example.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    title: "Security First: JWT & RBAC",
-    body: "Spent the day locking down auth with JWT and role-based access control. Making sure users and admins have just the right permissions. Feels good knowing my backend isn’t just functional, but secure too.",
-    tags: ["security", "jwt", "auth", "rbac", "backend"],
+    title: "AI Insight Engine - First Draft",
+    body: "Started roughing out the AI Insight engine. Templates, placeholders, dynamic data from activity logs — it's all starting to come together. Redis caching for generated insights already saving me compute cycles. This is the fun part. Making features that feel like magic.",
+    tags: ["ai", "promptengineering", "insights", "fastapi", "redis"],
     privacy_level: "public",
-    description: "Implemented secure auth and permissions.",
-    written_at: new Date("2024-03-15T09:20:00Z"),
+    description: "Initial implementation of CoopWise's AI Insight engine.",
+    written_at: new Date("2024-04-15T16:00:00Z"),
   },
   {
     _id: "14",
@@ -374,12 +374,12 @@ export const noteEntries: iNoteEntry[] = [
       email: "olaniyigeorge@example.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    title: "Database Design Grind",
-    body: "Designing PostgreSQL schemas is surprisingly fun. Had to get user groups, transactions, and payouts to all play nice together with strong data integrity. Queries are lightning fast after some indexing tweaks!",
-    tags: ["postgresql", "database", "schema", "optimization"],
+    title: "The Wallet Saga - Accrue Integration Begins",
+    body: "Wallet feature in motion today. Starting with Accrue API integration for stablecoin wallets. Weird thing about money APIs — everything looks easy until currency conversions, floats, and rounding start showing up. Stablecoins in, Naira out. This is real fintech work now.",
+    tags: ["wallets", "accrue", "payments", "api", "fintech"],
     privacy_level: "public",
-    description: "Database schema design and query optimization.",
-    written_at: new Date("2024-03-20T11:30:00Z"),
+    description: "Progress on wallet and payments integration with Accrue.",
+    written_at: new Date("2024-04-20T13:40:00Z"),
   },
   {
     _id: "15",
@@ -389,43 +389,15 @@ export const noteEntries: iNoteEntry[] = [
       email: "olaniyigeorge@example.com",
       image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
     },
-    title: "Cloudinary for Media Handling",
-    body: "Set up Cloudinary for storing and delivering images. The user experience improves massively when images load fast and are handled reliably — plus, offloading media makes the backend lighter.",
-    tags: ["cloudinary", "media", "storage", "performance"],
+    title: "Database Migrations - Alembic, Why You Like This?",
+    body: "Alembic migration threw a fit today over UUID fields not matching SQL definitions. Had to generate raw SQL, adjust, and manually apply. Never underestimate the chaos of schema evolution. That’s why I document everything.",
+    tags: ["alembic", "migrations", "sqlalchemy", "postgresql"],
     privacy_level: "public",
-    description: "Media storage and delivery integration.",
-    written_at: new Date("2024-03-25T13:00:00Z"),
-  },
-  {
-    _id: "16",
-    author: {
-      _id: "user1",
-      username: "olaniyi_george",
-      email: "olaniyigeorge@example.com",
-      image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
-    },
-    title: "Deployment, CI/CD, and the Wild Ride",
-    body: "Configuring CI/CD on Render and Vercel was tricky, but now deployments are smooth. Seeing my work go live with every push is addicting — next stop: monitoring and error tracking!",
-    tags: ["deployment", "ci/cd", "render", "vercel", "devops"],
-    privacy_level: "public",
-    description: "CI/CD setup and deployment success.",
-    written_at: new Date("2024-03-30T15:45:00Z"),
-  },
-  {
-    _id: "17",
-    author: {
-      _id: "user1",
-      username: "olaniyi_george",
-      email: "olaniyigeorge@example.com",
-      image: "https://lh3.googleusercontent.com/a/ACg8ocKMGmRvm7nzT-dv4uGOduWFj6GCFfy3H7MZFcfSxGgaZwtHD8hR=s96-c"
-    },
-    title: "Syncing Frontend & Backend Like a Pro",
-    body: "Working closely with frontend using Next.js and Zustand keeps the whole app tight. API contracts need to be rock solid, and every sprint feels like leveling up as a full-stack dev.",
-    tags: ["frontend", "nextjs", "zustand", "fullstack", "collaboration"],
-    privacy_level: "public",
-    description: "Frontend-backend collaboration highlights.",
-    written_at: new Date("2024-04-05T12:00:00Z"),
+    description: "Database migration debugging saga with Alembic.",
+    written_at: new Date("2024-04-25T11:20:00Z"),
   }
+  
+  
 ];
 
 
