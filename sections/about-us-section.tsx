@@ -14,10 +14,13 @@ export default function AboutUsSection() {
     >
       <section className="w-full flex flex-col items-center md:items-start gap-3">
         <div className="flex flex-col items-center md:items-start  gap-3">
-        <h1 id="hero-title" className="orange_gradient font-extrabold text-3xl tracking-tighter">
+        <h1 id="hero-title" className="text-black font-extrabold text-3xl tracking-tighter">
           ABOUT US
         </h1>
-        <p className="text-xl md:text-[24px] font-poppins text-white text-center md:text-right">
+
+        <p 
+          className="text-xl md:text-[20px] font-poppins text-orange-950 text-center md:text-right"
+        >
           BellzStudio was founded on the belief that meaningful collaboration and efficient engineering can drive real-world change. 
           We specialize in building systems that empower communities and support data-intensive applications, solutions shaped through iteration, feedback, and real stakeholder needs.
           
@@ -33,17 +36,17 @@ export default function AboutUsSection() {
         </div>
 
         <span className="w-full flex gap-6 md:gap-20 item-center">
-          <SmoothScrollButton pixels={500} className=" text-white shadow-lg border border-black rounded-full w-fit flex gap-2 font-medium items-center px-4 py-2 black_btn">
-            Contact
-          </SmoothScrollButton>
-          
-            
-          <span className="orange-gradient flex gap-2 items-center">
+                   
+          <span className=" shadow-lg border border-black bg-black hover:bg-white/20 hover:scale-105 hover:text-black rounded-full w-fit flex gap-2 font-medium items-center px-4 py-2 text-white">
             <Link href="/about-me" target="_blank" className=" ">
               Resume
             </Link> 
-              <ArrowRightIcon className="w-4 h-8 hover:animate-swivvleV text-orange-500 font-medium" />
-          </span>      
+              <ArrowRightIcon className=" h-4 w-4" />
+          </span>    
+          <SmoothScrollButton pixels={500} className="text-black px-4 py-2 rounded-full hover:bg-white/20 transition-all duration-700 ease-in-out font-medium">
+            Contact
+          </SmoothScrollButton>
+            
 
         </span>
             

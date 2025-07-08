@@ -100,11 +100,13 @@ body {
 .orange-gradient-bg {
   @apply bg-gradient-to-b from-[#FDC709] to-[#F9890A];
 }
+
 .bstd_orange-gradient-bg {
-  @apply bg-gradient-to-r from-[#3F3101] to-[#2F1900];
+  @apply bg-gradient-to-r from-[#FDC709] to-[#F9890A];
 }
+
 .rbstd_orange-gradient-bg {
-  @apply bg-gradient-to-r from-[#2F1900] to-[#3F3101];
+  @apply bg-gradient-to-r from-[#F9890A] to-[#FDC709];
 }
 
 .tbbstd_orange-gradient-bg {

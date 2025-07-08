@@ -9,7 +9,7 @@ export default function NotesSection() {
     return (
         <section 
             id="notes"
-            className="page-section tbbstd_orange-gradient-bg  w-full flex  flex-col gap-2 p-10 lg:p-16 justify-center"
+            className="page-section bg-[#090700]  w-full flex  flex-col gap-2 p-10 lg:p-16 justify-center"
         >
         <section className="w-full flex flex-col font-irishgrover justify-center items-center gap-3">
             <section className="w-full flex text-center justify-center items-center flex-col  gap-4">

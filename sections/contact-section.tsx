@@ -35,16 +35,16 @@ export default function ContactSection() {
     return (
         <section
             id="contact"
-            className="page-section rbstd_orange-gradient-bg  w-full flex flex-col gap-10 md:gap-16 lg:gap-20"
+            className="page-section bg-[#090700]  w-full flex flex-col gap-10 md:gap-16 lg:gap-20"
         >
-            <h1 className=" w-full flex orange_gradient font-irishgrover uppercase font-extrabold justify-center text-5xl tracking-tighter text-center">
+            <h1 className=" w-full flex orange_gradient font-irishgrover hover:scale-[103%] uppercase hover:tracking-wide font-extrabold justify-center text-5xl tracking-tighter text-center transition-all duration-700 ease-in-out">
                 Reach Out To Me
             </h1>
             <section className="w-full flex flex-col font- md:flex-row justify-between items-center gap-3 md:gap-5 lg:gap-8">
                 {contacts.map((contact) => (
                     <div
                         key={contact.name}
-                        className="shadow shadow-slate-600  w-full bg-black text-white rounded-2xl items-center gap-5 p-3 md:p-5 flex flex-col"
+                        className="shadow shadow-[#090700]  w-full bg-black text-white rounded-2xl items-center gap-5 p-3 md:p-5 flex flex-col"
                     >
                         <Image
                             src={contact.social_logo}
