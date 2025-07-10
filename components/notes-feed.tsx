@@ -35,13 +35,24 @@ const Feed = () => {
   const [searchedResults, setSearchedResults] = useState<iNoteEntry[]>([]);
 
   const fetchPosts = async () => {
-    // const response = await fetch("/api/notes/");
-    // console.log(response);
-    const data = noteEntries; // await response.json();
-
-    // Sort the data by updatedAt field in descending order
-    const sortedData = data.sort((a, b) => new Date(b.written_at ?? 0).getTime() - new Date(a.written_at ?? 0).getTime());
-    setAllPosts(sortedData);
+    try {
+      const response = await fetch("/api/notes/");
+      const fetchedNotes: iNoteEntry[] = await response.json();
+  
+      // Combine hardcoded and fetched notes
+      const combinedNotes = [...noteEntries, ...fetchedNotes];
+  
+      // Sort combined notes by written_at (most recent first)
+      const sortedNotes = combinedNotes.sort((a, b) => {
+        const dateA = new Date(a.written_at ?? 0).getTime();
+        const dateB = new Date(b.written_at ?? 0).getTime();
+        return dateB - dateA;
+      });
+  
+      setAllPosts(sortedNotes);
+    } catch (error) {
+      console.error("Failed to fetch notes:", error);
+    }
   };
 
   useEffect(() => {

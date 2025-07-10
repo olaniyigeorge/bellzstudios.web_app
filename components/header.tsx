@@ -65,7 +65,7 @@ export default function Header() {
 
           <a
             href="mailto:olaniyigeorge77@gmail.com"
-            className="orange-gradient-bg font-kanit text-sm text-white px-4 py-2 rounded-full transition-all duration-300 hover:shadow-lg"
+            className="orange-gradient-bg font-medium text-sm text-white px-4 py-2 rounded-full transition-all duration-300 hover:shadow-lg"
             aria-label="Hire me via email"
           >
             Hire Me

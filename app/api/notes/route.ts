@@ -7,6 +7,7 @@ export const GET = async (req: Request) => {
     await connectToDB();
     const noteEntries = await NoteEntry.find({}).populate("author");
 
+    
     return new Response(JSON.stringify(noteEntries), {
       status: 200,
       headers: { "Content-Type": "application/json" },
@@ -19,10 +20,18 @@ export const GET = async (req: Request) => {
     });
   }
 };
+
+
+
 export const POST = async (req: Request) => {
   try {
     await connectToDB();
     const data = await req.json();
+
+    console.log(`\n\nCreating note with...  ${JSON.stringify(data)}\n`)
+
+
+
     const newNoteEntry = new NoteEntry(data);
     await newNoteEntry.save();
 
