@@ -14,7 +14,7 @@ export default function ContactSection() {
     const contacts: iSocial[] = [
         {
             name: "Twitter",
-            url: "https://x.com/imoctborn",
+            url: "https://x.com/abeleje_olaniyi",
             msg: "Follow and send a DM",
             social_logo: "/assets/images/socials/twit.png",
         },

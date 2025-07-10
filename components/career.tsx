@@ -13,7 +13,7 @@ type Experience = {
 export const EXPERIENCES: Experience[] = [
   {
     company: "Winnov8",
-    role: "Fullstack Developer",
+    role: "Backend Developer",
     techStack: ["React", "TypeScript", "NodeJS", "Redux", "MongoDB", "Redis", "TailwindCSS"],
     responsibilities: [
       "Implementing key features across both frontend and backend, including AI recommendation systems, API integrations.",
@@ -26,8 +26,23 @@ export const EXPERIENCES: Experience[] = [
     link: "https://winnov8hq.com"
   },
   {
+    company: "ECO Africa",
+    role: "Backend Engineer",
+    techStack: ["Django", "Redis", "Render", "REST API"],
+    responsibilities: [
+      "Optimized and refactored key parts of the backend infrastructure to improve performance and scalability.",
+      "Set up and deployed the entire backend architecture on Render, ensuring a reliable and maintainable PAAS environment.",
+      "Collaborated with the product team to implement stable RESTful APIs that support ECO Africas sustainability platform."
+    ],
+    keyLearnings: [
+      "Deepened experience in backend performance tuning, scalable deployments, and production-grade Django setups on PAAS."
+    ],
+    date: "Mar - Jul 2025",
+    link: "https://www.theecoplatform.com"
+  },
+  {
     company: "WispTalkAfrica",
-    role: "Software Developer",
+    role: "Software Engineer",
     techStack: ["Django", "REST API", "AWS (S3, RDS)", "Next.js", "Zustand", "Redux"],
     responsibilities: [
       "Designed and developed a REST API catering to all organizational product needs.",
@@ -57,7 +72,7 @@ export const EXPERIENCES: Experience[] = [
     link: "/dev-stories/i-scheduler"
   },
   {
-    company: "iHR",
+    company: "truefit.ai",
     role: "Backend Developer",
     techStack: ["FastAPI", "Alembic", "Python", "PostgreSQL", "OpenAI API"],
     responsibilities: [
@@ -91,27 +106,27 @@ export const EXPERIENCES: Experience[] = [
 
 export function ExperienceCard(experience: Experience ) {
     return (
-        <div className="rounded-2xl bg-white w-full px-5 py-3 mb-3">
+        <div className="rounded-2xl bg-black w-full px-5 py-3 mb-3">
             <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-medium text-gray-800">{experience.role}</h2>
+                <h2 className="text-2xl font-medium text-orange-200">{experience.role}</h2>
                 {/* <div className="rounded-full bg-blue-500 h-4 w-4"></div> */}
             </div>
             <div className="flex justify-between items-start">
-                <Link href={experience.link} target="_blank" className="text-black">{experience.company}</Link>
+                <Link href={experience.link} target="_blank" className="text-orange-400 font-bold">{experience.company}</Link>
                 <p className="text-black">{experience.date}</p>
             </div>
-            <p className="text-sm text-gray-600 mt-3">
+            <p className="text-sm  mt-3">
                 <strong>Tech Stack:</strong> {experience.techStack.join(", ")}
             </p>
-            <ul className="text-sm text-gray-600 mt-2 list-disc pl-5">
+            <ul className="text-sm font-light  mt-2 list-disc pl-5">
                 {experience.responsibilities.map((responsibility, index) => (
                     <li key={index}>{responsibility}</li>
                 ))}
             </ul>
-            <p className="text-sm text-gray-600 mt-3">
+            <p className="text-sm mt-3">
                 <strong>Key Learnings:</strong>
             </p>
-            <ul className="text-sm text-gray-600 mt-2 list-disc pl-5">
+            <ul className="text-sm font-light mt-2 list-disc pl-5">
                 {experience.keyLearnings.map((learning, index) => (
                     <li key={index}>{learning}</li>
                 ))}
@@ -132,70 +147,58 @@ interface Project {
     status: string[];
   }
   
-export const PROJECTS: Project[] = [
-
-    // {
-    //   id: "poll-y",
-    //   title: "Poll-y",
-    //   description:
-    //     "A poll app with some of the functionalities of a social media app built with the Django web framework.",
-    //   link: "/dev-stories",
-    //   image: "https://olaniyigeorge.github.io/images/poll-y.jpeg",
-    //   started: "Apr 2023",
-    //   status: ["", "gray"],
-    // },
-    // {
-    //   id: "cup-a-coffee",
-    //   title: "Cup-a-coffee",
-    //   description:
-    //     "Cup-a-coffee is a specialized API designed for coffee shop ordering applications. Whether you're creating a management app or delving into coffee-related data, this API is tailored to meet your needs.",
-    //   link: "#",
-    //   image:
-    //     "https://static.vecteezy.com/system/resources/thumbnails/002/412/377/small/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg",
-    //   started: "Sept 2023",
-    //   status: ["", "gray"],
-    // },
+  export const PROJECTS: Project[] = [
+        {
+      id: "coopwise",
+      title: "CoopWise",
+      description:
+        "CoopWise is a full-stack financial tool for African cooperatives (Ajo, Esusu, Chama), helping groups save, contribute, and manage funds transparently. Built with FastAPI, PostgreSQL, Next.js, and integrated with stablecoin escrows, CoopWise bridges traditional savings with modern tools.",
+      link: "https://coopwise-seven.vercel.app/",
+      image: "/assets/images/coopwise.png", // Optional: update with your actual image
+      started: "May 2025",
+      status: ["blue", "green"],
+    },
     {
       id: "lockedin",
       title: "LockedIn",
       description:
         "A NextJS full-stack habit-tracking application that helps users to track daily habits and view insights on their progress.",
-      link: "https://lockedin-seven.vercel.app/", // Replace with your actual link
-      image: "/assets/images/lockedin.png", // Replace with actual image
+      link: "https://lockedin-seven.vercel.app/",
+      image: "/assets/images/lockedin.png",
       started: "Jan 2024",
       status: ["blue", "green"],
     },
+    // {
+    //   id: "respace-api",
+    //   title: "Respace API",
+    //   description:
+    //     "A REST API that serves as the data provider and authentication backend for a real estate company's web app.",
+    //   link: "#",
+    //   image: "/assets/images/respace.png",
+    //   started: "Oct 2023",
+    //   status: ["blue", "gray"],
+    // },
+    // {
+    //   id: "mindstream",
+    //   title: "Mindstream",
+    //   description:
+    //     "Mindstream is a secure journaling web app built with Django to demonstrate a multi-factor authentication system. It features a three-step identity verification flow, ensuring users securely document their thoughts and create memory stamps (tags) for fast and efficient thought recall.",
+    //   link: "https://mindstream-journal.onrender.com",
+    //   image: "https://olaniyigeorge.github.io/images/mindstream-inspo.jpeg",
+    //   started: "Apr 2023",
+    //   status: ["blue", "gray"],
+    // },
+
     {
-      id: "respace-api",
-      title: "Respace API",
+      id: "truefit-ai",
+      title: "Truefit.ai",
       description:
-        "A REST API that serves as the data provider and authentication backend for a real estate company's web app.",
-      link: "#", // http://raspa-client.onrender.com/
-      image: "/assets/images/respace.png", // Replace with actual image
-      started: "Oct 2023",
-      status: ["blue", "gray"],
+        "Truefit.ai is an AI-powered interview assistant that runs automated mock interviews at scale. Using FastAPI, WebRTC, OpenAI, and real-time voice interaction, it provides candidates with smart interview simulations, scoring, and tailored feedback.",
+      link: "https://truefitai.vercel.app/",
+      image: "/assets/images/truefitai.png", // Optional: update with your actual image
+      started: "June 2025",
+      status: ["blue", "green"],
     },
-    {
-      id: "mindstream",
-      title: "Mindstream",
-      description:
-        "Mindstream is a secure journaling web app built with Django to demonstrate a multi-factor authentication system. It features a three-step identity verification flow, ensuring users securely document their thoughts and create memory stamps (tags) for fast and efficient thought recall.",
-      link: "https://mindstream-journal.onrender.com",
-      image: "https://olaniyigeorge.github.io/images/mindstream-inspo.jpeg",
-      started: "Apr 2023",
-      status: ["blue", "gray"],
-    },
-    {
-      id: "ihr",
-      title: "iHR",
-      description:
-        "iHR is an AI-powered interview simulation platform that helps job seekers practice and improve performance through real-time, interactive sessions. Built with FastAPI, PostgreSQL, LangChain, and WebSockets, it features intelligent scoring, feedback, and context-aware question generation.",
-      link: "https://github.com/olaniyigeorge/ihr", // Replace with your actual link if different
-      image: "/assets/images/ihr.png", // Replace with your preferred image if you have one
-      started: "Feb 2025",
-      status: ["green", "gray"],
-    }
-    
   ];
   
 interface ProjectCardProps {
@@ -210,12 +213,12 @@ interface ProjectCardProps {
 export function ProjectCard(props: ProjectCardProps){
     const { title, description, link, image, started, status } = props
     return (
-      <div className="w-full rounded-2xl gap-2 flex justify-between shadow-sm shadow-orange-400 items-start bg-white min-h-36 p-2">
+      <div className="w-full text-[#090700] rounded-2xl gap-2 flex justify-between shadow-sm shadow-orange-400 items-start bg-white min-h-36 p-2">
         <div className="w-full flex flex-col h-full gap-1">
           <a href={link} className="text-2xl font-bold">
             {title}
           </a>
-          <p className="font- text-gray-700 line-clamp-3">{description}</p>
+          <p className="font- line-clamp-3">{description}</p>
           <div className="flex justify-between items-center">
             <p className="font-light">Started: {started}</p>
             <span className="flex gap-1">
