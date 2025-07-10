@@ -172,7 +172,7 @@ interface Project {
     //   id: "respace-api",
     //   title: "Respace API",
     //   description:
-    //     "A REST API that serves as the data provider and authentication backend for a real estate company's web app.",
+    //     "A REST API that serves as the data provider and authentication backend for a real estate company&apos;s web app.",
     //   link: "#",
     //   image: "/assets/images/respace.png",
     //   started: "Oct 2023",

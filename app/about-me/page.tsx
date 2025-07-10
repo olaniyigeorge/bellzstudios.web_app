@@ -70,7 +70,7 @@ export default function AboutMe() {
         <div className="md:w-3/4 bg-[#090700] rounded-xl p-6 shadow-lg space-y-4">
           <h1 className="text-4xl font-extrabold orange-gradient">Software Developer</h1>
           <p className="text-gray-300 leading-relaxed">
-            I'm a software developer with a strong focus on backend systems. I enjoy 
+            I&apos;m a software developer with a strong focus on backend systems. I enjoy 
             designing and building scalable, reliable software that solves real problems. 
             I specialize in writing clean, tested, and maintainable code with a strong 
             emphasis on performance, security, and long-term scalability. 
