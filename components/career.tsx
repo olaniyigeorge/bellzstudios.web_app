@@ -213,7 +213,7 @@ interface ProjectCardProps {
 export function ProjectCard(props: ProjectCardProps){
     const { title, description, link, image, started, status } = props
     return (
-      <div className="w-full text-[#090700] rounded-2xl gap-2 flex justify-between shadow-sm shadow-orange-400 items-start bg-white min-h-36 p-2">
+      <div className="w-full text-[#090700] bg-orange-100 rounded-2xl gap-2 flex justify-between shadow-sm shadow-orange-400 items-start min-h-36 p-2">
         <div className="w-full flex flex-col h-full gap-1">
           <a href={link} className="text-2xl font-bold">
             {title}
