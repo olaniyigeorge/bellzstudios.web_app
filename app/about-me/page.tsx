@@ -1,7 +1,7 @@
 import { ExperienceCard, EXPERIENCES, ProjectCard, PROJECTS } from "@/components/career";
 import Image from "next/image";
 import Link from "next/link";
-import { Key } from "react";
+
 
 export default function AboutMe() {
   const socialLinks =[
