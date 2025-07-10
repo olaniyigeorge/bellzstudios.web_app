@@ -42,7 +42,7 @@ export const NewHeroSection = () => {
         id="hero"
         delay={90}
         loop={true}
-        className="font-irishgrover text-[60px] md:text-[160px] text-white font-extrabold"
+        className="font-irishgrover text-[75px] md:text-[160px] text-white font-extrabold"
         words={["bellzstudio", "bellzstudio"]}
       />
 
