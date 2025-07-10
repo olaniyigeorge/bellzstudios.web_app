@@ -7,19 +7,29 @@ import { User } from "next-auth";
 import { toast } from "react-toastify";
 import Link from "next/link";
 
+
+type PrivacyLevel = "public" | "private" | "restricted";
+type Note = {
+  title: string;
+  body: string;
+  image: string;
+  tags: string;
+  description: string;
+  privacy_level: PrivacyLevel;
+};
+
 export default function CreateNewNotePage() {
   const router = useRouter();
   const [user, setUser] = useState<User>();
   const [submitting, setSubmitting] = useState(false);
-  const [note, setNote] = useState({
+  const [note, setNote] = useState<Note>({
     title: "",
     body: "",
     image: "",
     tags: "",
     description: "",
-    privacy_level: "public" as "public" | "private" | "restricted",
+    privacy_level: "public",
   });
-
   useEffect(() => {
     const fetchUser = async () => {
       const user = await getUser();
@@ -126,7 +136,7 @@ export default function CreateNewNotePage() {
         <select
           value={note.privacy_level}
           onChange={(e) =>
-            setNote({ ...note, privacy_level: e.target.value as any })
+            setNote({ ...note, privacy_level: e.target.value as PrivacyLevel })
           }
           className="bg-black border border-orange-500 text-white rounded-md px-4 py-2 outline-none shadow-md"
         >
@@ -134,7 +144,6 @@ export default function CreateNewNotePage() {
           <option value="private">Private</option>
           <option value="restricted">Restricted</option>
         </select>
-
         <button
           type="submit"
           disabled={submitting}

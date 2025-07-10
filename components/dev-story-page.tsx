@@ -50,7 +50,6 @@ export default function DevStoryPage({ id }: DevStoryPageProps) {
       body: JSON.stringify({ email, product, discovery_location: location }),
     });
 
-    const res = await response.json();
     if (response.ok) {
       toast.success("Thanks for joining our waitlist");
     } else if (response.status === 409) {
