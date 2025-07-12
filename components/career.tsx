@@ -54,7 +54,7 @@ export const EXPERIENCES: Experience[] = [
       "Advanced experience in REST API design, cloud integration, and building scalable web solutions."
     ],
     date: "July 2023 - October 2024",
-    link: "https://wisptalkafrica.com"
+    link: "https://wta-app.vercel.app/" // "https://wisptalkafrica.com"
   },
   {
     company: "iScheduler",
